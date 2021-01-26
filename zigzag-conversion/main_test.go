@@ -36,10 +36,26 @@ func Test_convert(t *testing.T) {
 			},
 			want: "A",
 		},
+		{
+			name: "equal",
+			args: args{
+				s:       "AB",
+				numRows: 1,
+			},
+			want: "AB",
+		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			if got := convert(tt.args.s, tt.args.numRows); got != tt.want {
+				t.Errorf("convert() = %v, want %v", got, tt.want)
+			}
+
+			if got := convertO1(tt.args.s, tt.args.numRows); got != tt.want {
+				t.Errorf("convert() = %v, want %v", got, tt.want)
+			}
+
+			if got := convertO2(tt.args.s, tt.args.numRows); got != tt.want {
 				t.Errorf("convert() = %v, want %v", got, tt.want)
 			}
 		})
