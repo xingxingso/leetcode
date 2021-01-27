@@ -14,15 +14,13 @@ https://leetcode-cn.com/problems/group-shifted-strings/
 */
 package group_shifted_strings
 
-import (
-	"fmt"
-	"strconv"
-)
-
 // --- 自己
 
 /*
 方法一:
+	自己想到了使用hash key 但是对于 az ba 没处理好， 参考了下面的方法
+	https://leetcode-cn.com/problems/group-shifted-strings/solution/zhong-gui-zhong-ju-qiao-miao-ji-suan-has-ys3z/
+	https://leetcode-cn.com/problems/group-shifted-strings/solution/golangha-xi-biao-yi-ci-bian-li-su-du-zui-ca39/
 
 时间复杂度：
 空间复杂度：
@@ -30,24 +28,18 @@ import (
 func groupStrings(strings []string) [][]string {
 	s := make(map[string][]string)
 	for i := 0; i < len(strings); i++ {
-		var mark string
-		if len(strings[i]) == 1 {
-			mark = "#"
-		} else {
-			for j := 0; j < len(strings[i])-1; j++ {
-				if strings[i][j+1] > 
-				mark += strconv.Itoa(int(strings[i][j+1] - strings[i][j]))
-			}
+		mark := []byte(strings[i])
+		// fmt.Println("ok", mark)
+		for j := 1; j < len(mark); j++ {
+			mark[j-1] = (26 + mark[j] - mark[j-1]) % 26
 		}
-
-		if _, ok := s[mark]; !ok {
-			s[mark] = []string{strings[i]}
-		} else {
-			s[mark] = append(s[mark], strings[i])
-		}
+		// 最后一位没有处理 统一置为0
+		mark[len(mark)-1] = '0'
+		// fmt.Println(mark)
+		s[string(mark)] = append(s[string(mark)], strings[i])
 	}
 
-	fmt.Println(s)
+	// fmt.Println(s)
 	var res [][]string
 	for _, v := range s {
 		res = append(res, v)
@@ -55,18 +47,3 @@ func groupStrings(strings []string) [][]string {
 
 	return res
 }
-
-/*func min(x, y int) int {
-	if x < y {
-		return x
-	}
-	return y
-}
-
-func max(x, y int) int {
-	if x > y {
-		return x
-	}
-	return y
-}
-*/
