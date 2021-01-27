@@ -1,4 +1,4 @@
-package name
+package template
 
 import "testing"
 
@@ -24,9 +24,6 @@ func Test_findMedianSortedArrays(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			if got := findMedianSortedArrays(tt.args.nums1, tt.args.nums2); got != tt.want {
-				t.Errorf("nums1: %v, nums2: %v, findMedianSortedArrays() = %v, want %v", tt.args.nums1, tt.args.nums2, got, tt.want)
-			}
-			if got := findMedianSortedArraysO1(tt.args.nums1, tt.args.nums2); got != tt.want {
 				t.Errorf("nums1: %v, nums2: %v, findMedianSortedArrays() = %v, want %v", tt.args.nums1, tt.args.nums2, got, tt.want)
 			}
 		})

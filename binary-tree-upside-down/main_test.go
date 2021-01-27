@@ -27,7 +27,33 @@ func Test_upsideDownBinaryTreeP1(t *testing.T) {
 			if got := upsideDownBinaryTreeP1(tt.args.root); !reflect.DeepEqual(got, tt.want) {
 				t.Errorf("upsideDownBinaryTreeP1() = %v, want %v", got, tt.want)
 			}
+			// 放在一起上一次执行已变更
+			// if got := upsideDownBinaryTreeP2(tt.args.root); !reflect.DeepEqual(got, tt.want) {
+			// 	t.Errorf("upsideDownBinaryTreeP2() = %v, want %v", got, tt.want)
+			// }
+		})
+	}
+}
 
+func Test_upsideDownBinaryTreeP2(t *testing.T) {
+	type args struct {
+		root *TreeNode
+	}
+	tests := []struct {
+		name string
+		args args
+		want *TreeNode
+	}{
+		{
+			name: "equal",
+			args: args{
+				root: root1(),
+			},
+			want: want1(),
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
 			if got := upsideDownBinaryTreeP2(tt.args.root); !reflect.DeepEqual(got, tt.want) {
 				t.Errorf("upsideDownBinaryTreeP2() = %v, want %v", got, tt.want)
 			}
