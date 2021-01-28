@@ -106,8 +106,3 @@ func want1() *TreeNode {
 
 	return node4
 }
-
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
