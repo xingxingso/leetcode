@@ -22,18 +22,3 @@ package template
 func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
 	return 0
 }
-
-/*func min(x, y int) int {
-	if x < y {
-		return x
-	}
-	return y
-}
-
-func max(x, y int) int {
-	if x > y {
-		return x
-	}
-	return y
-}
-*/

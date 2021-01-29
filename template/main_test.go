@@ -162,3 +162,16 @@ func getListNodeBySlice(s []int) *ListNode {
 	}
 	return tmp.Next
 }
+
+func isListNodeValEqual(node1, node2 *ListNode) bool {
+	for node1 != nil {
+		if node2 == nil || node1.Val != node2.Val {
+			return false
+		}
+
+		node1 = node1.Next
+		node2 = node2.Next
+	}
+
+	return node2 == nil
+}
