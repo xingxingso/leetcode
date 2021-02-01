@@ -1,35 +1,41 @@
-package diameter_of_binary_tree
+package same_tree
 
 import "testing"
 
-func Test_diameterOfBinaryTree(t *testing.T) {
+func Test_isSameTree(t *testing.T) {
 	type args struct {
-		root *TreeNode
+		p *TreeNode
+		q *TreeNode
 	}
 	tests := []struct {
 		name string
 		args args
-		want int
+		want bool
 	}{
 		{
 			name: "equal",
 			args: args{
-				root: CreateTreeByArray([]int{1, 2, 3, 4, 5}),
+				p: CreateTreeByArray([]int{1, 2, 3}),
+				q: CreateTreeByArray([]int{1, 2, 3}),
 			},
-			want: 3,
+			want: true,
 		},
 		{
 			name: "equal",
 			args: args{
-				root: CreateTreeByArray([]int{1, 2, 3, 0, 5}),
+				p: CreateTreeByArray([]int{1, 2}),
+				q: CreateTreeByArray([]int{1, 0, 2}),
 			},
-			want: 3,
+			want: false,
 		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := diameterOfBinaryTree(tt.args.root); got != tt.want {
-				t.Errorf("diameterOfBinaryTree() = %v, want %v", got, tt.want)
+			if got := isSameTreeO1(tt.args.p, tt.args.q); got != tt.want {
+				t.Errorf("isSameTree() = %v, want %v", got, tt.want)
+			}
+			if got := isSameTreeO2(tt.args.p, tt.args.q); got != tt.want {
+				t.Errorf("isSameTree() = %v, want %v", got, tt.want)
 			}
 		})
 	}
