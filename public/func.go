@@ -14,10 +14,9 @@ func max(x, y int) int {
 	return y
 }
 
-func abs(x, y int) int {
-	if x > y {
-		return x - y
+func abs(x int) int {
+	if x < 0 {
+		return -1 * x
 	}
-
-	return y - x
+	return x
 }
