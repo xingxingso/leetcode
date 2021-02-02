@@ -14,6 +14,8 @@ https://leetcode-cn.com/problems/meeting-rooms/
 */
 package meeting_rooms
 
+import "sort"
+
 // --- 自己
 
 /*
@@ -38,9 +40,24 @@ func canAttendMeetings(intervals [][]int) bool {
 	return true
 }
 
+// --- 官方
+
 /*
 方法二: 排序
 
 时间复杂度 : O(n log n) 。时间复杂度由排序决定。一旦排序完成，只需要 O(n) 的时间来判断交叠。
 空间复杂度 : O(1)。没有使用额外空间。
 */
+func canAttendMeetingsO2(intervals [][]int) bool {
+	sort.Slice(intervals, func(i, j int) bool {
+		return intervals[i][0] < intervals[j][0]
+	})
+
+	for i := 0; i < len(intervals)-1; i++ {
+		if intervals[i][1] > intervals[i+1][0] {
+			return false
+		}
+	}
+
+	return true
+}

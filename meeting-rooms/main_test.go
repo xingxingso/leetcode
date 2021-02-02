@@ -45,6 +45,10 @@ func Test_canAttendMeetings(t *testing.T) {
 			if got := canAttendMeetings(tt.args.intervals); got != tt.want {
 				t.Errorf("canAttendMeetings() = %v, want %v", got, tt.want)
 			}
+
+			if got := canAttendMeetingsO2(tt.args.intervals); got != tt.want {
+				t.Errorf("canAttendMeetings() = %v, want %v", got, tt.want)
+			}
 		})
 	}
 }
