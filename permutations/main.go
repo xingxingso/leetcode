@@ -48,9 +48,9 @@ func permuteO1(nums []int) [][]int {
 // --- 他人
 
 /*
+https://leetcode-cn.com/problems/permutations/solution/di-gui-shuang-bai-dao-shou-by-xiaoma_nmg/
 方法一: 递归
-	// 我也是这么想的，但是没有想到 copy
-	https://leetcode-cn.com/problems/permutations/solution/di-gui-shuang-bai-dao-shou-by-xiaoma_nmg/
+	// 我也是这么想的，但是没有想到
 
 时间复杂度：
 空间复杂度：
