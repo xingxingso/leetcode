@@ -19,30 +19,74 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
-// --- 自己
+// --- 他人
 
 /*
-方法一:
+https://leetcode-cn.com/problems/find-leaves-of-binary-tree/solution/c-hou-xu-bian-li-fan-xiang-ding-yi-shen-du-by-fatk/
+方法一: 后序遍历，反向定义深度
+
+时间复杂度：O(n)
+空间复杂度：
+*/
+func findLeavesP1(root *TreeNode) [][]int {
+	var res [][]int
+	var dfs func(node *TreeNode) int
+	dfs = func(node *TreeNode) int {
+		if node == nil {
+			return -1
+		}
+		// 左
+		left := dfs(node.Left)
+		// 右
+		right := dfs(node.Right)
+		// 本节点
+		cur := max(left, right) + 1
+		if cur >= len(res) {
+			res = append(res, []int{})
+		}
+		res[cur] = append(res[cur], node.Val)
+		return cur
+	}
+
+	dfs(root)
+	return res
+}
+
+func max(x, y int) int {
+	if x > y {
+		return x
+	}
+	return y
+}
+
+/*
+https://leetcode-cn.com/problems/find-leaves-of-binary-tree/solution/di-gui-100-by-gennji61/
+方法一: 递归
 
 时间复杂度：
 空间复杂度：
 */
-func findLeaves(root *TreeNode) [][]int {
-	if root == nil {
-		return nil
+func findLeavesP2(root *TreeNode) [][]int {
+	var res [][]int
+	var recur func(node *TreeNode, list *[]int) *TreeNode
+	recur = func(node *TreeNode, list *[]int) *TreeNode {
+		if node == nil {
+			return nil
+		}
+		if node.Left == nil && node.Right == nil {
+			*list = append(*list, node.Val)
+			return nil
+		}
+		node.Left = recur(node.Left, list)
+		node.Right = recur(node.Right, list)
+		return node
 	}
 
-	if isLeaves(root) {
-		// 加入
+	for root != nil {
+		list := make([]int, 0)
+		root = recur(root, &list)
+		res = append(res, list)
 	}
 
-	if root.Left != nil {
-		findLeaves(root.Left)
-	}
-
-	if
-}
-
-func isLeaves(node *TreeNode) bool {
-	return node.Left == nil && node.Right == nil
+	return res
 }

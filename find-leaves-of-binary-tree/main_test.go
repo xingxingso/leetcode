@@ -17,14 +17,32 @@ func Test_findLeaves(t *testing.T) {
 		{
 			name: "equal",
 			args: args{
-				root: CreateTreeByArray([]int{1, 2, 3, 4, 5}),
+				root: CreateTreeByArray([]int{1}),
 			},
-			want: [][]int{{4, 5, 3}, {2}, {1}},
+			want: [][]int{{1}},
 		},
+		{
+			name: "equal",
+			args: args{
+				root: CreateTreeByArray([]int{1, 2, 3}),
+			},
+			want: [][]int{{2, 3}, {1}},
+		},
+		// {
+		// 	name: "equal",
+		// 	args: args{
+		// 		root: CreateTreeByArray([]int{1, 2, 3, 4, 5}),
+		// 	},
+		// 	want: [][]int{{4, 5, 3}, {2}, {1}},
+		// },
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := findLeaves(tt.args.root); !reflect.DeepEqual(got, tt.want) {
+			// if got := findLeavesP1(tt.args.root); !reflect.DeepEqual(got, tt.want) {
+			// 	t.Errorf("findLeaves() = %v, want %v", got, tt.want)
+			// }
+
+			if got := findLeavesP2(tt.args.root); !reflect.DeepEqual(got, tt.want) {
 				t.Errorf("findLeaves() = %v, want %v", got, tt.want)
 			}
 		})
