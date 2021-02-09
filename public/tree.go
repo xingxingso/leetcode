@@ -9,7 +9,7 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
-func bfs(root *TreeNode) []int {
+func Bfs(root *TreeNode) []int {
 	var res []int
 	if root == nil {
 		return res
