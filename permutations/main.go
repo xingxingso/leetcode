@@ -8,8 +8,6 @@ https://leetcode-cn.com/problems/permutations/
 */
 package permutations
 
-import "fmt"
-
 // --- 官方
 
 /*
@@ -26,7 +24,6 @@ func permuteO1(nums []int) [][]int {
 
 	var backtrack func(position int, currentArray []int)
 	backtrack = func(position int, currentArray []int) {
-		fmt.Println(currentArray)
 		if position == length {
 			result = append(result, append([]int(nil), currentArray...))
 			return
@@ -76,18 +73,3 @@ func permuteP1(nums []int) [][]int {
 	}
 	return res
 }
-
-/*func min(x, y int) int {
-	if x < y {
-		return x
-	}
-	return y
-}
-
-func max(x, y int) int {
-	if x > y {
-		return x
-	}
-	return y
-}
-*/

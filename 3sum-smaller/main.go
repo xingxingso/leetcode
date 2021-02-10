@@ -71,9 +71,9 @@ func threeSumSmallerO2(nums []int, target int) int {
 
 func twoSumSmaller(nums []int, start, target int) int {
 	sum := 0
-	for i := start; i > len(nums)-1; i++ {
+	for i := start; i < len(nums)-1; i++ {
 		j := binarySearch(nums, i, target-nums[i])
-		sum += j - 1
+		sum += j - i
 	}
 	return sum
 }

@@ -1,7 +1,6 @@
 package permutations
 
 import (
-	"reflect"
 	"testing"
 )
 
@@ -15,7 +14,7 @@ func Test_permute(t *testing.T) {
 		want [][]int
 	}{
 		{
-			name: "equal",
+			name: "equal0",
 			args: args{
 				nums: []int{1},
 			},
@@ -24,7 +23,7 @@ func Test_permute(t *testing.T) {
 			},
 		},
 		{
-			name: "equal",
+			name: "equal1",
 			args: args{
 				nums: []int{1, 2},
 			},
@@ -34,7 +33,7 @@ func Test_permute(t *testing.T) {
 			},
 		},
 		{
-			name: "equal",
+			name: "equal2",
 			args: args{
 				nums: []int{1, 2, 3},
 			},
@@ -50,7 +49,7 @@ func Test_permute(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := permuteO1(tt.args.nums); !reflect.DeepEqual(got, tt.want) {
+			if got := permuteO1(tt.args.nums); !intSliceSliceEqual(got, tt.want) {
 				t.Errorf("permute() = %v, want %v", got, tt.want)
 			}
 
