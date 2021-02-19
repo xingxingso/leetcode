@@ -108,6 +108,31 @@ func isSameTree(p *TreeNode, q *TreeNode) bool {
 	return isSameTree(p.Left, q.Left) && isSameTree(p.Right, q.Right)
 }
 
+func createNAryTree() *Node {
+	return &Node{
+		Val: 1,
+		Children: []*Node{
+			&Node{
+				Val: 3,
+				Children: []*Node{
+					&Node{
+						Val: 5,
+					},
+					&Node{
+						Val: 6,
+					},
+				},
+			},
+			&Node{
+				Val: 2,
+			},
+			&Node{
+				Val: 4,
+			},
+		},
+	}
+}
+
 func root1() *TreeNode {
 	node5 := &TreeNode{}
 	node5.Val = 5
