@@ -41,37 +41,3 @@ func sortedArrayToBST(nums []int) *TreeNode {
 	root.Right = sortedArrayToBST(nums[mid+1:])
 	return root
 }
-
-func Bfs(root *TreeNode) []int {
-	var res []int
-	if root == nil {
-		return res
-	}
-
-	queue := make([]*TreeNode, 0)
-	queue = append(queue, root)
-
-	for len(queue) > 0 {
-		node := queue[0]
-		queue = queue[1:]
-		if node == nil {
-			res = append(res, 0)
-			continue
-		}
-
-		res = append(res, node.Val)
-		queue = append(queue, node.Left)
-		queue = append(queue, node.Right)
-	}
-
-	// 移除右边的0
-	for i := len(res) - 1; i >= 0; i-- {
-		if res[i] == 0 {
-			continue
-		}
-
-		return res[:i+1]
-	}
-
-	return res
-}
