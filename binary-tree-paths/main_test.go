@@ -1,47 +1,45 @@
-package closest_binary_search_tree_value
+package binary_tree_paths
 
-import "testing"
+import (
+	"reflect"
+	"testing"
+)
 
-func Test_closestValue(t *testing.T) {
+func Test_binaryTreePaths(t *testing.T) {
 	type args struct {
-		root   *TreeNode
-		target float64
+		root *TreeNode
 	}
 	tests := []struct {
 		name string
 		args args
-		want int
+		want []string
 	}{
 		{
-			name: "equal",
+			name: "equal0",
 			args: args{
-				root:   CreateTreeByArray([]int{4, 2, 5, 1, 3}),
-				target: 3.714286,
+				root: CreateTreeByArray([]int{1, 2, 3, 0, 5}),
 			},
-			want: 4,
+			want: []string{"1->2->5", "1->3"},
 		},
 		{
-			name: "equal",
+			name: "equal1",
 			args: args{
-				root:   CreateTreeByArray([]int{5, 2, 6, 1, 4}),
-				target: 3.714286,
+				root: CreateTreeByArray([]int{}),
 			},
-			want: 4,
+			want: []string{},
 		},
-
 		{
-			name: "equal",
+			name: "equal2",
 			args: args{
-				root:   CreateTreeByArray([]int{5, 2, 6, 1, 4}),
-				target: 2.714286,
+				root: CreateTreeByArray([]int{1}),
 			},
-			want: 2,
+			want: []string{"1"},
 		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := closestValue(tt.args.root, tt.args.target); got != tt.want {
-				t.Errorf("closestValue() = %v, want %v", got, tt.want)
+			if got := binaryTreePaths(tt.args.root); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("binaryTreePaths() = %v, want %v", got, tt.want)
 			}
 		})
 	}

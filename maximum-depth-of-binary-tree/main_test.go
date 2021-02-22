@@ -1,11 +1,10 @@
-package closest_binary_search_tree_value
+package maximum_depth_of_binary_tree
 
 import "testing"
 
-func Test_closestValue(t *testing.T) {
+func Test_maxDepth(t *testing.T) {
 	type args struct {
-		root   *TreeNode
-		target float64
+		root *TreeNode
 	}
 	tests := []struct {
 		name string
@@ -13,35 +12,21 @@ func Test_closestValue(t *testing.T) {
 		want int
 	}{
 		{
-			name: "equal",
+			name: "equal0",
 			args: args{
-				root:   CreateTreeByArray([]int{4, 2, 5, 1, 3}),
-				target: 3.714286,
+				root: CreateTreeByArray([]int{3, 9, 20, 0, 0, 15, 7}),
 			},
-			want: 4,
-		},
-		{
-			name: "equal",
-			args: args{
-				root:   CreateTreeByArray([]int{5, 2, 6, 1, 4}),
-				target: 3.714286,
-			},
-			want: 4,
-		},
-
-		{
-			name: "equal",
-			args: args{
-				root:   CreateTreeByArray([]int{5, 2, 6, 1, 4}),
-				target: 2.714286,
-			},
-			want: 2,
+			want: 3,
 		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := closestValue(tt.args.root, tt.args.target); got != tt.want {
-				t.Errorf("closestValue() = %v, want %v", got, tt.want)
+			if got := maxDepth(tt.args.root); got != tt.want {
+				t.Errorf("maxDepth() = %v, want %v", got, tt.want)
+			}
+
+			if got := maxDepthO1(tt.args.root); got != tt.want {
+				t.Errorf("maxDepth() = %v, want %v", got, tt.want)
 			}
 		})
 	}

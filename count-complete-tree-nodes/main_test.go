@@ -1,11 +1,10 @@
-package closest_binary_search_tree_value
+package count_complete_tree_nodes
 
 import "testing"
 
-func Test_closestValue(t *testing.T) {
+func Test_countNodes(t *testing.T) {
 	type args struct {
-		root   *TreeNode
-		target float64
+		root *TreeNode
 	}
 	tests := []struct {
 		name string
@@ -13,35 +12,38 @@ func Test_closestValue(t *testing.T) {
 		want int
 	}{
 		{
-			name: "equal",
+			name: "equal0",
 			args: args{
-				root:   CreateTreeByArray([]int{4, 2, 5, 1, 3}),
-				target: 3.714286,
+				root: CreateTreeByArray([]int{1, 2, 3, 4, 5, 6}),
 			},
-			want: 4,
+			want: 6,
 		},
 		{
-			name: "equal",
+			name: "equal1",
 			args: args{
-				root:   CreateTreeByArray([]int{5, 2, 6, 1, 4}),
-				target: 3.714286,
+				root: CreateTreeByArray([]int{}),
 			},
-			want: 4,
+			want: 0,
 		},
-
 		{
-			name: "equal",
+			name: "equal2",
 			args: args{
-				root:   CreateTreeByArray([]int{5, 2, 6, 1, 4}),
-				target: 2.714286,
+				root: CreateTreeByArray([]int{1}),
 			},
-			want: 2,
+			want: 1,
+		},
+		{
+			name: "equal3",
+			args: args{
+				root: CreateTreeByArray([]int{1, 2, 3, 4, 5}),
+			},
+			want: 5,
 		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := closestValue(tt.args.root, tt.args.target); got != tt.want {
-				t.Errorf("closestValue() = %v, want %v", got, tt.want)
+			if got := countNodes(tt.args.root); got != tt.want {
+				t.Errorf("countNodes() = %v, want %v", got, tt.want)
 			}
 		})
 	}

@@ -1,47 +1,31 @@
-package closest_binary_search_tree_value
+package binary_tree_level_order_traversal_ii
 
-import "testing"
+import (
+	"reflect"
+	"testing"
+)
 
-func Test_closestValue(t *testing.T) {
+func Test_levelOrderBottom(t *testing.T) {
 	type args struct {
-		root   *TreeNode
-		target float64
+		root *TreeNode
 	}
 	tests := []struct {
 		name string
 		args args
-		want int
+		want [][]int
 	}{
 		{
-			name: "equal",
+			name: "equal0",
 			args: args{
-				root:   CreateTreeByArray([]int{4, 2, 5, 1, 3}),
-				target: 3.714286,
+				root: CreateTreeByArray([]int{3, 9, 20, 0, 0, 15, 7}),
 			},
-			want: 4,
-		},
-		{
-			name: "equal",
-			args: args{
-				root:   CreateTreeByArray([]int{5, 2, 6, 1, 4}),
-				target: 3.714286,
-			},
-			want: 4,
-		},
-
-		{
-			name: "equal",
-			args: args{
-				root:   CreateTreeByArray([]int{5, 2, 6, 1, 4}),
-				target: 2.714286,
-			},
-			want: 2,
+			want: [][]int{{15, 7}, {9, 20}, {3}},
 		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := closestValue(tt.args.root, tt.args.target); got != tt.want {
-				t.Errorf("closestValue() = %v, want %v", got, tt.want)
+			if got := levelOrderBottom(tt.args.root); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("levelOrderBottom() = %v, want %v", got, tt.want)
 			}
 		})
 	}

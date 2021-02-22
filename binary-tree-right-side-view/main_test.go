@@ -1,47 +1,42 @@
-package closest_binary_search_tree_value
+package binary_tree_right_side_view
 
-import "testing"
+import (
+	"reflect"
+	"testing"
+)
 
-func Test_closestValue(t *testing.T) {
+func Test_rightSideView(t *testing.T) {
 	type args struct {
-		root   *TreeNode
-		target float64
+		root *TreeNode
 	}
 	tests := []struct {
 		name string
 		args args
-		want int
+		want []int
 	}{
 		{
-			name: "equal",
+			name: "equal0",
 			args: args{
-				root:   CreateTreeByArray([]int{4, 2, 5, 1, 3}),
-				target: 3.714286,
+				root: CreateTreeByArray([]int{1, 2, 3, 0, 5, 0, 4}),
 			},
-			want: 4,
+			want: []int{1, 3, 4},
 		},
 		{
-			name: "equal",
+			name: "equal1",
 			args: args{
-				root:   CreateTreeByArray([]int{5, 2, 6, 1, 4}),
-				target: 3.714286,
+				root: CreateTreeByArray([]int{1, 2, 3, 4}),
 			},
-			want: 4,
-		},
-
-		{
-			name: "equal",
-			args: args{
-				root:   CreateTreeByArray([]int{5, 2, 6, 1, 4}),
-				target: 2.714286,
-			},
-			want: 2,
+			want: []int{1, 3, 4},
 		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := closestValue(tt.args.root, tt.args.target); got != tt.want {
-				t.Errorf("closestValue() = %v, want %v", got, tt.want)
+			if got := rightSideView(tt.args.root); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("rightSideView() = %v, want %v", got, tt.want)
+			}
+
+			if got := rightSideViewS1(tt.args.root); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("rightSideView() = %v, want %v", got, tt.want)
 			}
 		})
 	}

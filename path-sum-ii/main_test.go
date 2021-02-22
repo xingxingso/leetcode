@@ -1,47 +1,49 @@
-package closest_binary_search_tree_value
+package path_sum_ii
 
-import "testing"
+import (
+	"reflect"
+	"testing"
+)
 
-func Test_closestValue(t *testing.T) {
+func Test_pathSum(t *testing.T) {
 	type args struct {
-		root   *TreeNode
-		target float64
+		root      *TreeNode
+		targetSum int
 	}
 	tests := []struct {
 		name string
 		args args
-		want int
+		want [][]int
 	}{
 		{
-			name: "equal",
+			name: "equal0",
 			args: args{
-				root:   CreateTreeByArray([]int{4, 2, 5, 1, 3}),
-				target: 3.714286,
+				root:      CreateTreeByArray([]int{5, 4, 8, 11, 0, 13, 4, 7, 2, 0, 0, 5, 1}),
+				targetSum: 22,
 			},
-			want: 4,
+			want: [][]int{{5, 4, 11, 2}, {5, 8, 4, 5}},
 		},
 		{
-			name: "equal",
+			name: "equal1",
 			args: args{
-				root:   CreateTreeByArray([]int{5, 2, 6, 1, 4}),
-				target: 3.714286,
+				root:      CreateTreeByArray([]int{}),
+				targetSum: 0,
 			},
-			want: 4,
+			want: [][]int{},
 		},
-
 		{
-			name: "equal",
+			name: "equal2",
 			args: args{
-				root:   CreateTreeByArray([]int{5, 2, 6, 1, 4}),
-				target: 2.714286,
+				root:      CreateTreeByArray([]int{0}),
+				targetSum: 0,
 			},
-			want: 2,
+			want: [][]int{{0}},
 		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := closestValue(tt.args.root, tt.args.target); got != tt.want {
-				t.Errorf("closestValue() = %v, want %v", got, tt.want)
+			if got := pathSum(tt.args.root, tt.args.targetSum); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("pathSum() = %v, want %v", got, tt.want)
 			}
 		})
 	}
