@@ -19,6 +19,30 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
+// --- 自己
+
+/*
+方法一：
+
+时间复杂度：
+空间复杂度：
+*/
+func diameterOfBinaryTreeS1(root *TreeNode) int {
+	ans := 0
+	var depth func(root *TreeNode, dep int) int
+	depth = func(root *TreeNode, dep int) int {
+		if root == nil {
+			return 0
+		}
+		left := depth(root.Left, dep)
+		right := depth(root.Right, dep)
+		ans = max(ans, left+right)
+		return max(left, right) + 1
+	}
+	depth(root, 0)
+	return ans
+}
+
 // --- 官方
 
 /*

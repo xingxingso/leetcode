@@ -1,53 +1,60 @@
-package diameter_of_binary_tree
+package validate_binary_search_tree
 
 import "testing"
 
-func Test_diameterOfBinaryTree(t *testing.T) {
+func Test_isValidBST(t *testing.T) {
 	type args struct {
 		root *TreeNode
 	}
 	tests := []struct {
 		name string
 		args args
-		want int
+		want bool
 	}{
 		{
 			name: "equal0",
 			args: args{
-				root: CreateTreeByArray([]int{1, 2, 3, 4, 5}),
+				root: CreateTreeByArray([]int{2, 1, 3}),
 			},
-			want: 3,
+			want: true,
 		},
 		{
 			name: "equal1",
 			args: args{
-				root: CreateTreeByArray([]int{1, 2, 3, 0, 5}),
+				root: CreateTreeByArray([]int{5, 1, 4, 0, 0, 3, 6}),
 			},
-			want: 3,
+			want: false,
 		},
 		{
 			name: "equal2",
 			args: args{
-				root: CreateTreeByArray([]int{1}),
+				root: CreateTreeByArray([]int{4, 1, 5, 0, 2, 3, 6}),
 			},
-			want: 0,
+			want: false,
 		},
 		{
 			name: "equal3",
 			args: args{
-				root: CreateTreeByArray([]int{1, 2, 3}),
+				root: CreateTreeByArray([]int{4, 1, 5, 0, 2, 0, 6}),
 			},
-			want: 2,
+			want: true,
+		},
+		{
+			name: "equal4",
+			args: args{
+				root: CreateTreeByArray([]int{1, 1}),
+			},
+			want: false,
 		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := diameterOfBinaryTreeS1(tt.args.root); got != tt.want {
-				t.Errorf("diameterOfBinaryTree() = %v, want %v", got, tt.want)
+			if got := isValidBST(tt.args.root); got != tt.want {
+				t.Errorf("isValidBST() = %v, want %v", got, tt.want)
 			}
 
-			if got := diameterOfBinaryTree(tt.args.root); got != tt.want {
-				t.Errorf("diameterOfBinaryTree() = %v, want %v", got, tt.want)
+			if got := isValidBSTO1(tt.args.root); got != tt.want {
+				t.Errorf("isValidBST() = %v, want %v", got, tt.want)
 			}
 		})
 	}
@@ -60,12 +67,12 @@ func CreateTreeByArray(nums []int) *TreeNode {
 	queue := make([]*TreeNode, 0)
 	head := &TreeNode{Val: nums[0]}
 	queue = append(queue, head)
-	for i := 1; i < len(nums)-1; {
+	for i := 1; i < len(nums); {
 		if nums[i] != 0 {
 			queue[0].Left = &TreeNode{Val: nums[i]}
 			queue = append(queue, queue[0].Left)
 		}
-		if nums[i+1] != 0 {
+		if i+1 < len(nums) && nums[i+1] != 0 {
 			queue[0].Right = &TreeNode{Val: nums[i+1]}
 			queue = append(queue, queue[0].Right)
 		}
