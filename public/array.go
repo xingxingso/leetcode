@@ -2,6 +2,15 @@ package public
 
 import "reflect"
 
+func sum(nums []int) int {
+	ans := 0
+	for _, v := range nums {
+		ans += v
+	}
+
+	return ans
+}
+
 func stringSliceSliceEqual(v1, v2 [][]string) bool {
 	if len(v1) != len(v2) {
 		return false
