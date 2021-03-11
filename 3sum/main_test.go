@@ -1,4 +1,4 @@
-package _sum
+package _3sum
 
 import (
 	"reflect"
@@ -39,6 +39,10 @@ func Test_threeSum(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			if got := threeSum(tt.args.nums); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("threeSum() = %v, want %v", got, tt.want)
+			}
+
+			if got := threeSumS1(tt.args.nums); !reflect.DeepEqual(got, tt.want) {
 				t.Errorf("threeSum() = %v, want %v", got, tt.want)
 			}
 		})

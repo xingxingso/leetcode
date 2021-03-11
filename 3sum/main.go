@@ -13,9 +13,65 @@ https://leetcode-cn.com/problems/3sum/
 	- -105 <= nums[i] <= 105
 
 */
-package _sum
+package _3sum
 
 import "sort"
+
+// --- 自己
+
+/*
+方法一: 排序 + 双指针
+
+时间复杂度：O(N^2)，其中 N 是数组 nums 的长度。
+空间复杂度：O(logN)。我们忽略存储答案的空间，额外的排序的空间复杂度为 O(logN)。然而我们修改了输入的数组 nums，在实际情况下不一定允许，
+	因此也可以看成使用了一个额外的数组存储了 nums 的副本并进行排序，空间复杂度为 O(N)。
+*/
+func threeSumS1(nums []int) [][]int {
+	sort.Slice(nums, func(i, j int) bool {
+		return nums[i] < nums[j]
+	})
+	r := len(nums) - 1
+	ans := make([][]int, 0)
+	var twoSum func(l, r int, target int) [][]int
+	twoSum = func(l, r int, target int) [][]int {
+		res := make([][]int, 0)
+		for l < r {
+			left := nums[l]
+			right := nums[r]
+			sum := left + right
+			if sum == target {
+				res = append(res, []int{left, right})
+				for l < r && nums[l] == left {
+					l++
+				}
+				for l < r && nums[r] == right {
+					r--
+				}
+			} else if sum < target {
+				for l < r && nums[l] == left {
+					l++
+				}
+			} else {
+				for l < r && nums[r] == right {
+					r--
+				}
+			}
+		}
+		return res
+	}
+
+	for i := 0; i < len(nums); {
+		left := nums[i]
+		res := twoSum(i+1, r, 0-left)
+		for _, v := range res {
+			ans = append(ans, []int{nums[i], v[0], v[1]})
+		}
+		for i++; i < len(nums) && nums[i] == left; i++ {
+		}
+	}
+
+	return ans
+}
 
 // --- 官方
 
