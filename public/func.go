@@ -28,6 +28,20 @@ func maxN(nums ...int) int {
 	return max
 }
 
+func minN(nums ...int) int {
+	if len(nums) == 0 {
+		return 0
+	}
+	min := nums[0]
+	for _, num := range nums {
+		if min > num {
+			min = num
+		}
+	}
+
+	return min
+}
+
 func abs(x int) int {
 	if x < 0 {
 		return -1 * x
