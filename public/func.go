@@ -24,7 +24,6 @@ func maxN(nums ...int) int {
 			max = num
 		}
 	}
-
 	return max
 }
 
