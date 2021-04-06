@@ -6,6 +6,7 @@
 
 - [4. 寻找两个正序数组的中位数](https://leetcode-cn.com/problems/median-of-two-sorted-arrays/)
 - [5. 最长回文子串](https://leetcode-cn.com/problems/longest-palindromic-substring/)
+- [10. 正则表达式匹配](https://leetcode-cn.com/problems/regular-expression-matching/)
 - [15. 三数之和](https://leetcode-cn.com/problems/3sum/)
 - [20. 有效的括号](https://leetcode-cn.com/problems/valid-parentheses/)
 - [25. K 个一组翻转链表](https://leetcode-cn.com/problems/reverse-nodes-in-k-group/)
@@ -68,6 +69,7 @@
 - [712. 两个字符串的最小ASCII删除和](https://leetcode-cn.com/problems/minimum-ascii-delete-sum-for-two-strings/)
 - [716. 最大栈](https://leetcode-cn.com/problems/max-stack/)
 - [751. IP 到 CIDR](https://leetcode-cn.com/problems/ip-to-cidr/)
+- [887. 鸡蛋掉落](https://leetcode-cn.com/problems/super-egg-drop/)
 - [897. 递增顺序查找树](https://leetcode-cn.com/problems/increasing-order-search-tree/)
 - [1059. 从始点到终点的所有路径](https://leetcode-cn.com/problems/all-paths-from-source-lead-to-destination/)
 - [1099. 小于 K 的两数之和](https://leetcode-cn.com/problems/two-sum-less-than-k/)
