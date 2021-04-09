@@ -158,8 +158,8 @@ func superEggDropO2(k int, n int) int {
 方法二: 数学法
 
 
-时间复杂度：O(kn)。我们需要计算 O(kn) 个状态，同时对于每个 k，最优解指针只会从 0 到 n 走一次，复杂度也是 O(kn)。因此总体复杂度为 O(kn)。
-空间复杂度：O(n)。因为 dp 每一层的解只依赖于上一层的解，因此我们每次只保留一层的解，需要的空间复杂度为 O(n)。
+时间复杂度：O(kn)。事实上，更准确的时间复杂度应当为 O(kt)O(kt)，我们不加证明地给出 n = O(t^k)，因此有 O(kt) = O(k\sqrt[k]{n})
+空间复杂度：O(kn)
 */
 func superEggDropO3(k int, n int) int {
 	if n == 1 {

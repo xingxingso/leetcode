@@ -49,6 +49,7 @@
 - [255. 验证前序遍历序列二叉搜索树](https://leetcode-cn.com/problems/verify-preorder-sequence-in-binary-search-tree/)
 - [259. 较小的三数之和](https://leetcode-cn.com/problems/3sum-smaller/)
 - [300. 最长递增子序列](https://leetcode-cn.com/problems/longest-increasing-subsequence/)
+- [312. 戳气球](https://leetcode-cn.com/problems/burst-balloons/)
 - [322. 零钱兑换](https://leetcode-cn.com/problems/coin-change/)
 - [337. 打家劫舍 III](https://leetcode-cn.com/problems/house-robber-iii/)
 - [351. 安卓系统手势解锁](https://leetcode-cn.com/problems/android-unlock-patterns/)
