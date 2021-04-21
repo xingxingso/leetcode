@@ -19,11 +19,58 @@ package stone_game_v
 // --- 自己
 
 /*
-方法一:
+方法一: 动态规划
+	!!! 超出时间限制
 
 时间复杂度：
 空间复杂度：
 */
 func stoneGameV(stoneValue []int) int {
+	l := len(stoneValue)
+	dp := make([][]int, l)
+
+	for i := l - 1; i >=0; i-- {
+		dp[i] = make([]int, l)
+		for j := i+1; j < l; j++ {
+			for k := i; k < j; k++ {
+				left, right := sum(stoneValue[i:k+1]),sum(stoneValue[k+1:j+1])
+				if left > right   {
+					dp[i][j] = max(dp[i][j], dp[k+1][j]+right)
+				} else if left == right {
+					dp[i][j] = max(dp[i][j], max(dp[i][k], dp[k+1][j])+left)
+				} else {
+					dp[i][j] = max(dp[i][j], dp[i][k]+left)
+				}
+			}
+		}
+	}
+	return dp[0][l-1]
+}
+
+func max(x, y int) int {
+	if x > y {
+		return x
+	}
+	return y
+}
+
+func sum(nums []int) int {
+	ans := 0
+	for _, v := range nums {
+		ans += v
+	}
+
+	return ans
+}
+
+/*
+方法一: 动态规划
+
+时间复杂度：
+空间复杂度：
+*/
+func stoneGameVS2(stoneValue []int) int {
+
+
 	return 0
 }
