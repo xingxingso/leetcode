@@ -29,12 +29,12 @@ func stoneGameV(stoneValue []int) int {
 	l := len(stoneValue)
 	dp := make([][]int, l)
 
-	for i := l - 1; i >=0; i-- {
+	for i := l - 1; i >= 0; i-- {
 		dp[i] = make([]int, l)
-		for j := i+1; j < l; j++ {
+		for j := i + 1; j < l; j++ {
 			for k := i; k < j; k++ {
-				left, right := sum(stoneValue[i:k+1]),sum(stoneValue[k+1:j+1])
-				if left > right   {
+				left, right := sum(stoneValue[i:k+1]), sum(stoneValue[k+1:j+1])
+				if left > right {
 					dp[i][j] = max(dp[i][j], dp[k+1][j]+right)
 				} else if left == right {
 					dp[i][j] = max(dp[i][j], max(dp[i][k], dp[k+1][j])+left)
@@ -63,14 +63,58 @@ func sum(nums []int) int {
 	return ans
 }
 
+// --- 官方
+
 /*
 方法一: 动态规划
 
-时间复杂度：
-空间复杂度：
+时间复杂度：O(n^3)，其中 n 是数组 stoneValue 的长度。
+空间复杂度：O(n^2)，为存储所有状态需要的空间。
 */
-func stoneGameVS2(stoneValue []int) int {
+func stoneGameVO1(stoneValue []int) int {
+	n := len(stoneValue)
+	var dfs func(left, right int) int
+	// f[i][j] 为 下标 [i,j] 的最大分数
+	f := make([][]int, n)
+	for i := 0; i < n; i++ {
+		f[i] = make([]int, n)
+	}
+	dfs = func(left, right int) int {
+		if left == right {
+			return 0
+		}
+		if f[left][right] != 0 {
+			return f[left][right]
+		}
+		s := 0
+		for i := left; i <= right; i++ {
+			s += stoneValue[i]
+		}
+		sumL := 0
+		for i := left; i < right; i++ {
+			sumL += stoneValue[i]
+			sumR := s - sumL
+			if sumL < sumR {
+				f[left][right] = max(f[left][right], dfs(left, i)+sumL)
+			} else if sumL > sumR {
+				f[left][right] = max(f[left][right], dfs(i+1, right)+sumR)
+			} else {
+				f[left][right] = max(f[left][right], max(dfs(left, i), dfs(i+1, right))+sumL)
+			}
+		}
+		return f[left][right]
+	}
 
-
-	return 0
+	return dfs(0, n-1)
 }
+
+/*
+方法二: 动态规划优化
+	// 没看懂， 先不写了
+
+时间复杂度：O(n^2)，其中 n 是数组 stoneValue 的长度。
+空间复杂度：O(n^2)，为存储所有状态以及辅助数组需要的空间。
+*/
+// func stoneGameVO2(stoneValue []int) int {
+//
+// }

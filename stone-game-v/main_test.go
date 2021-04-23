@@ -35,7 +35,7 @@ func Test_stoneGameV(t *testing.T) {
 		{
 			name: "equal3",
 			args: args{
-				stoneValue: []int{2,1,1},
+				stoneValue: []int{2, 1, 1},
 			},
 			want: 3,
 		},
@@ -64,14 +64,18 @@ func Test_stoneGameV(t *testing.T) {
 		{
 			name: "equal5",
 			args: args{
-				stoneValue: []int{6,6},
+				stoneValue: []int{6, 6},
 			},
-			want: 3,
+			want: 6,
 		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			if got := stoneGameV(tt.args.stoneValue); got != tt.want {
+				t.Errorf("stoneGameV() = %v, want %v", got, tt.want)
+			}
+
+			if got := stoneGameVO1(tt.args.stoneValue); got != tt.want {
 				t.Errorf("stoneGameV() = %v, want %v", got, tt.want)
 			}
 		})
