@@ -5,18 +5,23 @@ import (
 	"testing"
 )
 
-func Test_reverseKGroup(t *testing.T) {
-	type args struct {
-		head *ListNode
-		k    int
-	}
-	tests := []struct {
+type args struct {
+	head *ListNode
+	k    int
+}
+
+func getTests() []struct {
+	name string
+	args args
+	want *ListNode
+} {
+	return []struct {
 		name string
 		args args
 		want *ListNode
 	}{
 		{
-			name: "equal",
+			name: "equal0",
 			args: args{
 				head: getListNodeBySlice([]int{1, 2, 3, 4, 5}),
 				k:    2,
@@ -24,18 +29,49 @@ func Test_reverseKGroup(t *testing.T) {
 			want: getListNodeBySlice([]int{2, 1, 4, 3, 5}),
 		},
 		{
-			name: "equal",
+			name: "equal1",
 			args: args{
 				head: getListNodeBySlice([]int{1, 2, 3, 4, 5}),
 				k:    3,
 			},
 			want: getListNodeBySlice([]int{3, 2, 1, 4, 5}),
 		},
+		{
+			name: "equal2",
+			args: args{
+				head: getListNodeBySlice([]int{1, 2}),
+				k:    2,
+			},
+			want: getListNodeBySlice([]int{2, 1}),
+		},
 	}
-	for _, tt := range tests {
+}
+
+func Test_reverseKGroup(t *testing.T) {
+	for _, tt := range getTests() {
 		t.Run(tt.name, func(t *testing.T) {
 			if got := reverseKGroup(tt.args.head, tt.args.k); !reflect.DeepEqual(got, tt.want) {
 				t.Errorf("reverseKGroup() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
+
+func Test_reverseKGroupS1(t *testing.T) {
+	for _, tt := range getTests() {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := reverseKGroupS1(tt.args.head, tt.args.k); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("reverseKGroupS1() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
+
+func Test_reverseKGroupP1(t *testing.T) {
+	for _, tt := range getTests() {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := reverseKGroupP1(tt.args.head, tt.args.k); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("reverseKGroupP1() = %v, want %v", got, tt.want)
 			}
 		})
 	}

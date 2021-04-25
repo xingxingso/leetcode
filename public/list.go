@@ -1,5 +1,7 @@
 package public
 
+import "fmt"
+
 /**
 Definition for singly-linked list.
 */
@@ -31,4 +33,12 @@ func isListNodeValEqual(node1, node2 *ListNode) bool {
 	}
 
 	return node2 == nil
+}
+
+func printList(node *ListNode) {
+	for node != nil {
+		fmt.Printf("%d,", node.Val)
+		node = node.Next
+	}
+	fmt.Println()
 }

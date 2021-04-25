@@ -14,7 +14,7 @@ func Test_reverseList(t *testing.T) {
 		want *ListNode
 	}{
 		{
-			name: "equal",
+			name: "equal0",
 			args: args{
 				head: getListNodeBySlice([]int{1, 2, 3, 4, 5}),
 			},
