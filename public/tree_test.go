@@ -15,7 +15,7 @@ func Test_createTreeByArray(t *testing.T) {
 		want *TreeNode
 	}{
 		{
-			name: "equal",
+			name: "equal0",
 			args: args{
 				nums: []int{5, 4, 8, 11, 0, 13, 4, 7, 2, 0, 0, 0, 1},
 			},
@@ -23,7 +23,7 @@ func Test_createTreeByArray(t *testing.T) {
 			want: want11(),
 		},
 		{
-			name: "equal",
+			name: "equal1",
 			args: args{
 				nums: []int{3, 9, 8, 4, 6, 1, 7, 0, 0, 0, 2, 5},
 			},

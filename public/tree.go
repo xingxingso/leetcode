@@ -51,6 +51,12 @@ func Bfs(root *TreeNode) []int {
 	return res
 }
 
+// 通过数组生成二叉树，0 为 nil, 类似 leetcode 中数组转化为 二叉树
+// [1,2,3,0,4,0,5,0,6] 为二叉树
+//                  1
+//          2              3
+//   nil         4      nil   5
+// nil nil   nil   6
 func CreateTreeByArray(nums []int) *TreeNode {
 	if len(nums) <= 0 {
 		return nil
@@ -108,6 +114,7 @@ func isSameTree(p *TreeNode, q *TreeNode) bool {
 	return isSameTree(p.Left, q.Left) && isSameTree(p.Right, q.Right)
 }
 
+// 多维数组
 func createNAryTree() *Node {
 	return &Node{
 		Val: 1,
@@ -131,50 +138,4 @@ func createNAryTree() *Node {
 			},
 		},
 	}
-}
-
-func root1() *TreeNode {
-	node5 := &TreeNode{}
-	node5.Val = 5
-
-	node4 := &TreeNode{}
-	node4.Val = 4
-
-	node3 := &TreeNode{}
-	node3.Val = 3
-
-	node2 := &TreeNode{}
-	node2.Val = 2
-	node2.Left = node4
-	node2.Right = node5
-
-	node1 := &TreeNode{}
-	node1.Val = 1
-	node1.Left = node2
-	node1.Right = node3
-
-	return node1
-}
-
-func want1() *TreeNode {
-	node3 := &TreeNode{}
-	node3.Val = 3
-
-	node1 := &TreeNode{}
-	node1.Val = 1
-
-	node5 := &TreeNode{}
-	node5.Val = 5
-
-	node2 := &TreeNode{}
-	node2.Val = 2
-	node2.Left = node3
-	node2.Right = node1
-
-	node4 := &TreeNode{}
-	node4.Val = 4
-	node4.Left = node5
-	node4.Right = node2
-
-	return node4
 }

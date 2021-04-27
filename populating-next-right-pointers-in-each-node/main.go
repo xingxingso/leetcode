@@ -123,3 +123,29 @@ func connectO1(root *Node) *Node {
 	// 返回根节点
 	return root
 }
+
+// --- 他人
+// https://mp.weixin.qq.com/s?__biz=MzAxODQxMDM0Mw==&mid=2247487126&idx=1&sn=4de13e66397bc35970963c5a1330ce18&chksm=9bd7f09eaca0798853c41fba05ad5fa958b31054eba18b69c785ae92f4bd8e4cc7a2179d7838&scene=21#wechat_redirect
+
+/*
+方法一:
+
+时间复杂度：
+空间复杂度：
+*/
+func connectP1(root *Node) *Node {
+	var connectNode func(node1, node2 *Node)
+	connectNode = func(node1, node2 *Node) {
+		if node1 == nil || node2 == nil {
+			return
+		}
+
+		node1.Next = node2
+		connectNode(node1.Left, node1.Right)
+		connectNode(node2.Left, node2.Right)
+		// 连接跨越父节点的两个子节点
+		connectNode(node1.Right, node2.Left)
+	}
+	connectNode(root.Left, root.Right)
+	return root
+}

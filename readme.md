@@ -45,6 +45,7 @@
 - [206. 反转链表](https://leetcode-cn.com/problems/reverse-linked-list/)
 - [213. 打家劫舍 II](https://leetcode-cn.com/problems/house-robber-ii/)
 - [222. 完全二叉树的节点个数](https://leetcode-cn.com/problems/count-complete-tree-nodes/)
+- [234. 回文链表](https://leetcode-cn.com/problems/palindrome-linked-list/)
 - [236. 二叉树的最近公共祖先](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/)
 - [243. 最短单词距离](https://leetcode-cn.com/problems/shortest-word-distance/)
 - [253. 会议室 II](https://leetcode-cn.com/problems/meeting-rooms-ii/)

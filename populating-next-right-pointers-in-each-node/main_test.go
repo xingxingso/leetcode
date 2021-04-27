@@ -36,11 +36,15 @@ func Test_connect(t *testing.T) {
 			}
 
 			if got := connectS2(tt.args.root); !reflect.DeepEqual(got, tt.want) {
-				t.Errorf("connect() = %v, want %v", got, tt.want)
+				t.Errorf("connectS2() = %v, want %v", got, tt.want)
 			}
 
 			if got := connectO1(tt.args.root); !reflect.DeepEqual(got, tt.want) {
-				t.Errorf("connect() = %v, want %v", got, tt.want)
+				t.Errorf("connectO1() = %v, want %v", got, tt.want)
+			}
+
+			if got := connectP1(tt.args.root); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("connectP1() = %v, want %v", got, tt.want)
 			}
 		})
 	}
