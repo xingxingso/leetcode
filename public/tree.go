@@ -1,5 +1,7 @@
 package public
 
+import "fmt"
+
 /**
 Definition for a binary tree node.
 */
@@ -112,6 +114,16 @@ func isSameTree(p *TreeNode, q *TreeNode) bool {
 		return false
 	}
 	return isSameTree(p.Left, q.Left) && isSameTree(p.Right, q.Right)
+}
+
+func inOrderPrint(root *TreeNode) {
+	if root == nil {
+		return
+	}
+	inOrderPrint(root.Left)
+	fmt.Printf("%d,", root.Val)
+	inOrderPrint(root.Right)
+	// fmt.Println()
 }
 
 // 多维数组
