@@ -45,6 +45,10 @@ func Test_countNodes(t *testing.T) {
 			if got := countNodes(tt.args.root); got != tt.want {
 				t.Errorf("countNodes() = %v, want %v", got, tt.want)
 			}
+
+			if got := countNodesS1(tt.args.root); got != tt.want {
+				t.Errorf("countNodesS1() = %v, want %v", got, tt.want)
+			}
 		})
 	}
 }

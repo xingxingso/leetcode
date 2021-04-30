@@ -20,6 +20,8 @@ https://leetcode-cn.com/problems/count-complete-tree-nodes/
 package count_complete_tree_nodes
 
 import (
+	"fmt"
+	"math"
 	"sort"
 )
 
@@ -30,6 +32,52 @@ type TreeNode struct {
 	Val   int
 	Left  *TreeNode
 	Right *TreeNode
+}
+
+// --- 自己
+
+/*
+方法一:
+
+时间复杂度：
+空间复杂度：
+*/
+func countNodesS1(root *TreeNode) int {
+	// 计算最大高度
+	h := 0
+	head := root
+	for head != nil {
+		head = head.Left
+		h++
+	}
+	full := int(math.Pow(2, float64(h)) - 1)
+	// fmt.Println(full)
+
+	// 最靠右的叶子节点
+	l := 0
+	newHigh := 0
+	var dfs func(root, pre *TreeNode, high int)
+	dfs = func(root, pre *TreeNode, high int) {
+		if root == nil {
+			return
+		}
+		if newHigh == h {
+			return
+		}
+
+		dfs(root.Right, root, high+1)
+		fmt.Println("hhh:", high+1)
+		if high+1 == h {
+			return
+		}
+		l++
+		fmt.Println("lll:", l)
+		dfs(root.Left, high+1)
+		return
+	}
+	dfs(root, 0)
+	fmt.Println("123123", l)
+	return full
 }
 
 // --- 官方
