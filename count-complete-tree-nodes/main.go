@@ -20,8 +20,6 @@ https://leetcode-cn.com/problems/count-complete-tree-nodes/
 package count_complete_tree_nodes
 
 import (
-	"fmt"
-	"math"
 	"sort"
 )
 
@@ -34,50 +32,30 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
-// --- 自己
+// --- 他人
+//https://mp.weixin.qq.com/s?__biz=MzAxODQxMDM0Mw==&mid=2247485057&idx=1&sn=45a3b89a4efef236cb662d5505d7ce36&chksm=9bd7f889aca0719f4915de681f983355e187151030991ab1944494ffe4b73e484068b85eb01e&scene=21#wechat_redirect
 
 /*
 方法一:
 
-时间复杂度：
+时间复杂度：O(logN*logN)
 空间复杂度：
 */
-func countNodesS1(root *TreeNode) int {
-	// 计算最大高度
-	h := 0
-	head := root
-	for head != nil {
-		head = head.Left
-		h++
+func countNodesP1(root *TreeNode) int {
+	hl, hr := 0, 0
+	l, r := root, root
+	for l != nil {
+		l = l.Left
+		hl++
 	}
-	full := int(math.Pow(2, float64(h)) - 1)
-	// fmt.Println(full)
-
-	// 最靠右的叶子节点
-	l := 0
-	newHigh := 0
-	var dfs func(root, pre *TreeNode, high int)
-	dfs = func(root, pre *TreeNode, high int) {
-		if root == nil {
-			return
-		}
-		if newHigh == h {
-			return
-		}
-
-		dfs(root.Right, root, high+1)
-		fmt.Println("hhh:", high+1)
-		if high+1 == h {
-			return
-		}
-		l++
-		fmt.Println("lll:", l)
-		dfs(root.Left, high+1)
-		return
+	for r != nil {
+		r = r.Right
+		hr++
 	}
-	dfs(root, 0)
-	fmt.Println("123123", l)
-	return full
+	if hl == hr {
+		return 1<<hl - 1
+	}
+	return 1 + countNodesP1(root.Left) + countNodesP1(root.Right)
 }
 
 // --- 官方
