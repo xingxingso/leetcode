@@ -101,6 +101,12 @@ func (uf *unionFind) find(x int) int {
 		uf.parent[x] = uf.find(uf.parent[x])
 	}
 	return uf.parent[x]
+	//for uf.parent[x] != x {
+	//	// 进行路径压缩
+	//	uf.parent[x] = uf.parent[uf.parent[x]]
+	//	x = uf.parent[x]
+	//}
+	//return uf.parent[x]
 }
 
 func (uf *unionFind) union(x, y int) {

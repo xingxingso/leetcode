@@ -17,11 +17,124 @@ https://leetcode-cn.com/problems/lru-cache/
 
 	- 1 <= capacity <= 3000
 	- 0 <= key <= 3000
-	- 0 <= value <= 104
-	- 最多调用 3 * 104 次 get 和 put
+	- 0 <= value <= 10^4
+	- 最多调用 3 * 10^4 次 get 和 put
 
 */
 package lru_cache
+
+import "fmt"
+
+//type LRUCache struct{}
+//func Constructor(capacity int) LRUCache       {}
+//func (this *LRUCache) Get(key int) int        {}
+//func (this *LRUCache) Put(key int, value int) {}
+
+/**
+ * Your LRUCache object will be instantiated and called as such:
+ * obj := Constructor(capacity);
+ * param_1 := obj.Get(key);
+ * obj.Put(key,value);
+ */
+
+// --- 自己
+
+/*
+方法一:
+
+时间复杂度：
+空间复杂度：
+*/
+
+type LRUCacheS1 struct {
+	cap, len   int
+	cache      map[int]*DoubleList
+	head, tail *DoubleList
+}
+
+type DoubleList struct {
+	key, val  int
+	pre, next *DoubleList
+}
+
+func ConstructorS1(capacity int) LRUCacheS1 {
+	head := &DoubleList{}
+	tail := &DoubleList{}
+	head.next = tail
+	tail.pre = head
+
+	return LRUCacheS1{
+		cap:   capacity,
+		len:   0,
+		cache: make(map[int]*DoubleList, 0),
+		head:  head,
+		tail:  tail,
+	}
+}
+
+func (this *LRUCacheS1) Get(key int) int {
+	if node, ok := this.cache[key]; ok {
+		this.moveToHead(node)
+		return node.val
+	}
+	return -1
+}
+
+func (this *LRUCacheS1) Put(key int, value int) {
+	if node, ok := this.cache[key]; ok {
+		node.val = value
+		this.moveToHead(node)
+		return
+	}
+	node := &DoubleList{
+		key: key,
+		val: value,
+	}
+	this.cache[key] = node
+	this.len++
+	this.addToHead(node)
+	this.removeTail()
+}
+
+func (this *LRUCacheS1) moveToHead(node *DoubleList) {
+	this.removeNode(node)
+	this.addToHead(node)
+}
+
+func (this *LRUCacheS1) removeNode(node *DoubleList) {
+	node.pre.next = node.next
+	node.next.pre = node.pre
+}
+
+func (this *LRUCacheS1) addToHead(node *DoubleList) {
+	node.pre = this.head
+	node.next = this.head.next
+	//this.head.next.pre = node
+	node.next.pre = node
+	this.head.next = node
+}
+
+func (this *LRUCacheS1) removeTail() {
+	if this.len <= this.cap {
+		return
+	}
+	node := this.tail.pre
+	// remove from list
+	//this.tail.pre = node.pre
+	//node.pre.next = this.tail
+	this.removeNode(node)
+	// remove from cache
+	delete(this.cache, node.key)
+	this.len--
+}
+
+func printList(node *DoubleList) {
+	for node != nil {
+		fmt.Printf("%d,", node.val)
+		node = node.next
+	}
+	fmt.Println()
+}
 
 // --- 官方
 
@@ -112,10 +225,3 @@ func (this *LRUCache) removeNode(node *DLinkedNode) {
 	node.pre.next = node.next
 	node.next.pre = node.pre
 }
-
-/**
- * Your LRUCache object will be instantiated and called as such:
- * obj := Constructor(capacity);
- * param_1 := obj.Get(key);
- * obj.Put(key,value);
- */
