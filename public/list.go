@@ -10,6 +10,11 @@ type ListNode struct {
 	Next *ListNode
 }
 
+type DoubleList struct {
+	key, val  int
+	pre, next *DoubleList
+}
+
 func getListNodeBySlice(s []int) *ListNode {
 	head := &ListNode{Val: 0}
 	tmp := head

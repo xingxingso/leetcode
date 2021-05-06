@@ -67,6 +67,7 @@
 - [435. 无重叠区间](https://leetcode-cn.com/problems/non-overlapping-intervals/)
 - [438. 找到字符串中所有字母异位词](https://leetcode-cn.com/problems/find-all-anagrams-in-a-string/)
 - [450. 删除二叉搜索树中的节点](https://leetcode-cn.com/problems/delete-node-in-a-bst/)
+- [460. LFU 缓存](https://leetcode-cn.com/problems/lfu-cache/)
 - [494. 目标和](https://leetcode-cn.com/problems/target-sum/)
 - [536. 从字符串生成二叉树](https://leetcode-cn.com/problems/construct-binary-tree-from-string/)
 - [543. 二叉树的直径](https://leetcode-cn.com/problems/diameter-of-binary-tree/)
