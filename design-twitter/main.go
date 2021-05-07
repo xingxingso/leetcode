@@ -83,7 +83,11 @@ func (h *IntHeap) Push(x interface{}) {
 
 /** Initialize your data structure here. */
 func Constructor() Twitter {
-	return Twitter{}
+	return Twitter{
+		follow:     map[int][]int{},
+		news:       map[int][]tweet{},
+		tweetCount: 0,
+	}
 }
 
 /** Compose a new tweet. */
@@ -104,7 +108,7 @@ func (this *Twitter) GetNewsFeed(userId int) []int {
 		}
 		heap.Push(h, news[len(news)-1])
 	}
-
+	return res
 }
 
 /** Follower follows a followee. If the operation is invalid, it should be a no-op. */

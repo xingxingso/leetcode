@@ -3,7 +3,7 @@ package main
 import count_complete_tree_nodes "github.com/xingxingso/leetcode/count-complete-tree-nodes"
 
 func main() {
-	count_complete_tree_nodes.CountNodesS1(CreateTreeByArray([]int{1, 2, 3, 4, 5, 6}))
+	//count_complete_tree_nodes.CountNodesS1(CreateTreeByArray([]int{1, 2, 3, 4, 5, 6}))
 }
 
 func CreateTreeByArray(nums []int) *count_complete_tree_nodes.TreeNode {
