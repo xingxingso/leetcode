@@ -52,6 +52,7 @@
 - [253. 会议室 II](https://leetcode-cn.com/problems/meeting-rooms-ii/)
 - [255. 验证前序遍历序列二叉搜索树](https://leetcode-cn.com/problems/verify-preorder-sequence-in-binary-search-tree/)
 - [259. 较小的三数之和](https://leetcode-cn.com/problems/3sum-smaller/)
+- [295. 数据流的中位数](https://leetcode-cn.com/problems/find-median-from-data-stream/)
 - [297. 二叉树的序列化与反序列化](https://leetcode-cn.com/problems/serialize-and-deserialize-binary-tree/)
 - [300. 最长递增子序列](https://leetcode-cn.com/problems/longest-increasing-subsequence/)
 - [312. 戳气球](https://leetcode-cn.com/problems/burst-balloons/)

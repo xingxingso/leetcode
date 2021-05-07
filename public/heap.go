@@ -32,6 +32,8 @@ func (h *IntHeap) Push(x interface{}) {
 	*h = append(*h, x.(int))
 }
 
+func (h *IntHeap) Peek() interface{} { return (*h)[0] }
+
 // 使用案例
 func minMeetingRoomsO1(intervals [][]int) int {
 	h := &IntHeap{}

@@ -19,13 +19,13 @@ https://leetcode-cn.com/problems/find-median-from-data-stream/
 */
 package find_median_from_data_stream
 
-import "fmt"
+import "container/heap"
 
-//type MedianFinder struct {}
-///** initialize your data structure here. */
-//func Constructor() MedianFinder {}
-//func (this *MedianFinder) AddNum(num int)  {}
-//func (this *MedianFinder) FindMedian() float64 {}
+// type MedianFinder struct {}
+// /** initialize your data structure here. */
+// func Constructor() MedianFinder {}
+// func (this *MedianFinder) AddNum(num int)  {}
+// func (this *MedianFinder) FindMedian() float64 {}
 /**
  * Your MedianFinder object will be instantiated and called as such:
  * obj := Constructor();
@@ -36,23 +36,20 @@ import "fmt"
 // --- 自己
 
 /*
-方法一:
+方法一: 双顶堆
 
 时间复杂度：
 空间复杂度：
 */
 
-// 大顶堆
+// 小顶堆 -中位数右边的
 type bigHeap []int
 
 func (h bigHeap) Len() int           { return len(h) }
-func (h bigHeap) Less(i, j int) bool { return h[i] > h[j] }
+func (h bigHeap) Less(i, j int) bool { return h[i] < h[j] }
 func (h bigHeap) Swap(i, j int)      { h[i], h[j] = h[j], h[i] }
 
 func (h *bigHeap) Push(x interface{}) {
-	// Push and Pop use pointer receivers because they modify the slice's length,
-	// not just its contents.
-	//*h = append(*h, x.(*element))
 	*h = append(*h, x.(int))
 }
 
@@ -66,17 +63,14 @@ func (h *bigHeap) Pop() interface{} {
 
 func (h *bigHeap) Peek() interface{} { return (*h)[0] }
 
-// 小顶堆
+// 大顶堆 -中位数左边的
 type littleHeap []int
 
 func (h littleHeap) Len() int           { return len(h) }
-func (h littleHeap) Less(i, j int) bool { return h[i] < h[j] }
+func (h littleHeap) Less(i, j int) bool { return h[i] > h[j] }
 func (h littleHeap) Swap(i, j int)      { h[i], h[j] = h[j], h[i] }
 
 func (h *littleHeap) Push(x interface{}) {
-	// Push and Pop use pointer receivers because they modify the slice's length,
-	// not just its contents.
-	//*h = append(*h, x.(*element))
 	*h = append(*h, x.(int))
 }
 
@@ -91,61 +85,80 @@ func (h *littleHeap) Pop() interface{} {
 func (h *littleHeap) Peek() interface{} { return (*h)[0] }
 
 type MedianFinder struct {
-	bigHeap    bigHeap
-	littleHeap littleHeap
+	bigHeap    *bigHeap
+	littleHeap *littleHeap
 }
 
 /** initialize your data structure here. */
 func Constructor() MedianFinder {
-	return MedianFinder{}
+	return MedianFinder{
+		bigHeap:    &bigHeap{},
+		littleHeap: &littleHeap{},
+	}
 }
 
 func (this *MedianFinder) AddNum(num int) {
-	fmt.Println("bigHeap:", this.bigHeap)
-	fmt.Println("littleHeap:", this.littleHeap)
-	if this.bigHeap.Len() == 0 {
-		this.bigHeap.Push(num)
-		return
-	}
-	big := this.bigHeap.Peek().(int)
-	if this.littleHeap.Len() == 0 {
-		if big > num {
-			this.littleHeap.Push(num)
-			return
-		}
-		this.bigHeap.Pop()
-		this.littleHeap.Push(big)
-		this.bigHeap.Push(num)
-		return
-	}
-	little := this.littleHeap.Peek().(int)
-	if num > big {
-		this.bigHeap.Push(num)
-	} else if num < little {
-		this.littleHeap.Push(num)
-	} else {
-		this.bigHeap.Push(num)
-	}
-	fmt.Println("bigHeap2:", this.bigHeap)
-	for this.bigHeap.Len() > this.littleHeap.Len()+1 {
-		big := this.bigHeap.Pop()
-		fmt.Println("big:", big)
-		this.littleHeap.Push(big)
+	// 直接加入大顶堆
+	heap.Push(this.bigHeap, num)
+	// 保证两个顶堆的 一大 一小
+	heap.Push(this.littleHeap, heap.Pop(this.bigHeap))
+
+	// 保持两个堆差值不能超过1
+	for this.bigHeap.Len() < this.littleHeap.Len() {
+		heap.Push(this.bigHeap, heap.Pop(this.littleHeap))
 	}
 
-	//if this.littleHeap.Len() >= this.bigHeap.Len() {
-	//	this.bigHeap.Push(num)
-	//} else {
-	//	this.littleHeap.Push(num)
-	//}
-
+	// fmt.Println("after", this.bigHeap.Len(), this.littleHeap.Len())
+	// fmt.Println(this.bigHeap)
+	// fmt.Println(this.littleHeap)
 }
+
+// 早期的复杂做法，不过好像效率高一些
+// func (this *MedianFinder) AddNum(num int) {
+// 	// fmt.Println(this.bigHeap)
+// 	// fmt.Println(this.littleHeap)
+// 	if this.bigHeap.Len() == 0 {
+// 		heap.Push(this.bigHeap, num)
+// 		return
+// 	}
+// 	big := this.bigHeap.Peek().(int)
+// 	if this.littleHeap.Len() == 0 {
+// 		if big > num {
+// 			heap.Push(this.littleHeap, num)
+// 			return
+// 		}
+// 		heap.Pop(this.bigHeap)
+// 		heap.Push(this.littleHeap, big)
+// 		heap.Push(this.bigHeap, num)
+// 		return
+// 	}
+// 	little := this.littleHeap.Peek().(int)
+// 	if num > big {
+// 		heap.Push(this.bigHeap, num)
+// 	} else if num < little {
+// 		heap.Push(this.littleHeap, num)
+// 	} else {
+// 		heap.Push(this.bigHeap, num)
+// 	}
+// 	for this.bigHeap.Len() > this.littleHeap.Len()+1 {
+// 		big := heap.Pop(this.bigHeap)
+// 		heap.Push(this.littleHeap, big)
+// 	}
+// 	for this.littleHeap.Len() > this.bigHeap.Len() {
+// 		little := heap.Pop(this.littleHeap)
+// 		heap.Push(this.bigHeap, little)
+// 	}
+// 	// fmt.Println("after", this.bigHeap.Len(), this.littleHeap.Len())
+// 	// fmt.Println(this.bigHeap)
+// 	// fmt.Println(this.littleHeap)
+// }
 
 func (this *MedianFinder) FindMedian() float64 {
 	if this.bigHeap.Len() > this.littleHeap.Len() {
 		value := this.bigHeap.Peek()
 		return float64(value.(int))
 	}
+
 	left, right := this.bigHeap.Peek(), this.littleHeap.Peek()
-	return float64(left.(int) + right.(int))
+	return float64(left.(int)+right.(int)) / 2
 }
