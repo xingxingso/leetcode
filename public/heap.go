@@ -8,18 +8,10 @@ import (
 // 小顶堆类
 type IntHeap []int
 
-func (h IntHeap) Len() int {
-	return len(h)
-}
-
-func (h IntHeap) Less(i, j int) bool {
-	return h[i] < h[j]
-}
-
-func (h IntHeap) Swap(i, j int) {
-	h[i], h[j] = h[j], h[i]
-}
-
+func (h IntHeap) Len() int            { return len(h) }
+func (h IntHeap) Less(i, j int) bool  { return h[i] < h[j] }
+func (h IntHeap) Swap(i, j int)       { h[i], h[j] = h[j], h[i] }
+func (h *IntHeap) Push(x interface{}) { *h = append(*h, x.(int)) }
 func (h *IntHeap) Pop() interface{} {
 	old := *h
 	n := len(old)
@@ -28,10 +20,7 @@ func (h *IntHeap) Pop() interface{} {
 	return x
 }
 
-func (h *IntHeap) Push(x interface{}) {
-	*h = append(*h, x.(int))
-}
-
+// 获取堆顶元素 不弹出
 func (h *IntHeap) Peek() interface{} { return (*h)[0] }
 
 // 使用案例

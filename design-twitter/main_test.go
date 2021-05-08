@@ -8,6 +8,9 @@ import (
 func TestTwitter(t *testing.T) {
 	s := Constructor()
 	testEx1(&s, t)
+
+	s2 := Constructor()
+	testEx2(&s2, t)
 }
 
 type TwitterInterface interface {
@@ -46,5 +49,15 @@ func testEx1(twitter TwitterInterface, t *testing.T) {
 	// 因为用户1已经不再关注用户2.
 	if got := twitter.GetNewsFeed(1); !reflect.DeepEqual(got, []int{5}) {
 		t.Errorf("GetNewsFeed() = %v, want %v", got, []int{5})
+	}
+}
+
+func testEx2(twitter TwitterInterface, t *testing.T) {
+	twitter.PostTweet(1, 5)
+	twitter.PostTweet(1, 3)
+
+	// 用户1的获取推文应当返回一个列表，其中包含一个id为5的推文.
+	if got := twitter.GetNewsFeed(1); !reflect.DeepEqual(got, []int{3, 5}) {
+		t.Errorf("GetNewsFeed() = %v, want %v", got, []int{3, 5})
 	}
 }

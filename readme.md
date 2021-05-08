@@ -61,6 +61,7 @@
 - [341. 扁平化嵌套列表迭代器](https://leetcode-cn.com/problems/flatten-nested-list-iterator/)
 - [351. 安卓系统手势解锁](https://leetcode-cn.com/problems/android-unlock-patterns/)
 - [354. 俄罗斯套娃信封问题](https://leetcode-cn.com/problems/russian-doll-envelopes/)__
+- [355. 设计推特](https://leetcode-cn.com/problems/design-twitter/)
 - [358. K 距离间隔重排字符串](https://leetcode-cn.com/problems/rearrange-string-k-distance-apart/)
 - [366. 寻找二叉树的叶子节点](https://leetcode-cn.com/problems/find-leaves-of-binary-tree/)
 - [369. 给单链表加一](https://leetcode-cn.com/problems/plus-one-linked-list/)
