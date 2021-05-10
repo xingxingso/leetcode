@@ -1,20 +1,27 @@
 package public
 
-type Stack struct {
+type Stack interface {
+	IsEmpty() bool
+	Pop() int
+	Push(val int)
+	Peek() int
+}
+
+type StackList struct {
 	head *ListNode
 }
 
-func NewStack() *Stack {
-	return &Stack{
+func NewStackList() *StackList {
+	return &StackList{
 		head: &ListNode{},
 	}
 }
 
-func (stack *Stack) IsEmpty() bool {
+func (stack *StackList) IsEmpty() bool {
 	return stack.head.Next == nil
 }
 
-func (stack *Stack) Pop() int {
+func (stack *StackList) Pop() int {
 	if stack.head.Next == nil {
 		return -1
 	}
@@ -24,7 +31,7 @@ func (stack *Stack) Pop() int {
 	return val
 }
 
-func (stack *Stack) Push(val int) {
+func (stack *StackList) Push(val int) {
 	node := &ListNode{
 		Val: val,
 	}
@@ -33,10 +40,43 @@ func (stack *Stack) Push(val int) {
 	stack.head.Next = node
 }
 
-func (stack *Stack) Peek() int {
+func (stack *StackList) Peek() int {
 	if stack.head.Next == nil {
 		return -1
 	}
 
 	return stack.head.Next.Val
+}
+
+type StackSlice []int
+
+func NewStackSlice() *StackSlice {
+	return &StackSlice{}
+}
+
+func (s *StackSlice) IsEmpty() bool {
+	return len(*s) == 0
+}
+
+func (s *StackSlice) Pop() int {
+	if s.IsEmpty() {
+		return -1
+	}
+
+	val := (*s)[len(*s)-1]
+	*s = (*s)[0 : len(*s)-1]
+
+	return val
+}
+
+func (s *StackSlice) Push(val int) {
+	*s = append(*s, val)
+}
+
+func (s *StackSlice) Peek() int {
+	if s.IsEmpty() {
+		return 0
+	}
+
+	return (*s)[len(*s)-1]
 }

@@ -2,6 +2,13 @@
 
 # readme
 
+## 待成为会员再看
+
+- [1118.一月有多少天](https://leetcode-cn.com/problems/number-of-days-in-a-month/)
+
+- [651. 4键键盘](https://leetcode-cn.com/problems/4-keys-keyboard/)
+
+
 ## 好题收集
 
 - [4. 寻找两个正序数组的中位数](https://leetcode-cn.com/problems/median-of-two-sorted-arrays/)
@@ -71,6 +78,7 @@
 - [450. 删除二叉搜索树中的节点](https://leetcode-cn.com/problems/delete-node-in-a-bst/)
 - [460. LFU 缓存](https://leetcode-cn.com/problems/lfu-cache/)
 - [494. 目标和](https://leetcode-cn.com/problems/target-sum/)
+- [496. 下一个更大元素 I](https://leetcode-cn.com/problems/next-greater-element-i/)
 - [536. 从字符串生成二叉树](https://leetcode-cn.com/problems/construct-binary-tree-from-string/)
 - [543. 二叉树的直径](https://leetcode-cn.com/problems/diameter-of-binary-tree/)
 - [567. 字符串的排列](https://leetcode-cn.com/problems/permutation-in-string/)
