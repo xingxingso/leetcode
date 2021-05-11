@@ -11,8 +11,8 @@ type ListNode struct {
 }
 
 type DoubleList struct {
-	key, val  int
-	pre, next *DoubleList
+	Key, Val  int
+	Pre, Next *DoubleList
 }
 
 func getListNodeBySlice(s []int) *ListNode {
