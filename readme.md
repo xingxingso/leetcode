@@ -91,6 +91,7 @@
 - [712. 两个字符串的最小ASCII删除和](https://leetcode-cn.com/problems/minimum-ascii-delete-sum-for-two-strings/)
 - [716. 最大栈](https://leetcode-cn.com/problems/max-stack/)
 - [751. IP 到 CIDR](https://leetcode-cn.com/problems/ip-to-cidr/)
+- [875. 爱吃香蕉的珂珂](https://leetcode-cn.com/problems/koko-eating-bananas/)
 - [877. 石子游戏](https://leetcode-cn.com/problems/stone-game/)
 - [886. 可能的二分法](https://leetcode-cn.com/problems/possible-bipartition/)
 - [887. 鸡蛋掉落](https://leetcode-cn.com/problems/super-egg-drop/)
