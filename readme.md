@@ -2,14 +2,15 @@
 
 # readme
 
-## 待成为会员再看
+## 好题收集
+
+### 会员
 
 - [1118.一月有多少天](https://leetcode-cn.com/problems/number-of-days-in-a-month/)
 
 - [651. 4键键盘](https://leetcode-cn.com/problems/4-keys-keyboard/)
 
-
-## 好题收集
+### leetcode
 
 - [4. 寻找两个正序数组的中位数](https://leetcode-cn.com/problems/median-of-two-sorted-arrays/)
 - [5. 最长回文子串](https://leetcode-cn.com/problems/longest-palindromic-substring/)
@@ -42,6 +43,7 @@
 - [123. 买卖股票的最佳时机 III](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii/)
 - [124. 二叉树中的最大路径和](https://leetcode-cn.com/problems/binary-tree-maximum-path-sum/)
 - [141. 环形链表](https://leetcode-cn.com/problems/linked-list-cycle/)
+- [142. 环形链表 II](https://leetcode-cn.com/problems/linked-list-cycle-ii/)
 - [144. 二叉树的前序遍历](https://leetcode-cn.com/problems/binary-tree-preorder-traversal/)
 - [145. 二叉树的后序遍历](https://leetcode-cn.com/problems/binary-tree-postorder-traversal/)
 - [146. LRU 缓存机制](https://leetcode-cn.com/problems/lru-cache/)
@@ -93,6 +95,7 @@
 - [716. 最大栈](https://leetcode-cn.com/problems/max-stack/)
 - [751. IP 到 CIDR](https://leetcode-cn.com/problems/ip-to-cidr/)
 - [875. 爱吃香蕉的珂珂](https://leetcode-cn.com/problems/koko-eating-bananas/)
+- [876. 链表的中间结点](https://leetcode-cn.com/problems/middle-of-the-linked-list/)
 - [877. 石子游戏](https://leetcode-cn.com/problems/stone-game/)
 - [886. 可能的二分法](https://leetcode-cn.com/problems/possible-bipartition/)
 - [887. 鸡蛋掉落](https://leetcode-cn.com/problems/super-egg-drop/)
@@ -110,3 +113,7 @@
 - [1563. 石子游戏 V](https://leetcode-cn.com/problems/stone-game-v/)
 - [1631. 最小体力消耗路径](https://leetcode-cn.com/problems/path-with-minimum-effort/)
 - [1686. 石子游戏 VI](https://leetcode-cn.com/problems/stone-game-vi/)
+
+### 剑指Offer 
+
+- [剑指 Offer 22. 链表中倒数第k个节点](https://leetcode-cn.com/problems/lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof/)
