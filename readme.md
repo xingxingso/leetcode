@@ -12,6 +12,19 @@
 
 ### leetcode
 
+#### 结构设计类
+
+- [146. LRU 缓存机制](https://leetcode-cn.com/problems/lru-cache/)
+- [295. 数据流的中位数](https://leetcode-cn.com/problems/find-median-from-data-stream/)
+- [341. 扁平化嵌套列表迭代器](https://leetcode-cn.com/problems/flatten-nested-list-iterator/)
+- [346. 数据流中的移动平均值](https://leetcode-cn.com/problems/moving-average-from-data-stream/)
+- [355. 设计推特](https://leetcode-cn.com/problems/design-twitter/)
+- [380. O(1) 时间插入、删除和获取随机元素](https://leetcode-cn.com/problems/insert-delete-getrandom-o1/)
+- [460. LFU 缓存](https://leetcode-cn.com/problems/lfu-cache/)
+- [716. 最大栈](https://leetcode-cn.com/problems/max-stack/)
+
+#### 其他
+
 - [4. 寻找两个正序数组的中位数](https://leetcode-cn.com/problems/median-of-two-sorted-arrays/)
 - [5. 最长回文子串](https://leetcode-cn.com/problems/longest-palindromic-substring/)
 - [10. 正则表达式匹配](https://leetcode-cn.com/problems/regular-expression-matching/)
@@ -46,7 +59,6 @@
 - [142. 环形链表 II](https://leetcode-cn.com/problems/linked-list-cycle-ii/)
 - [144. 二叉树的前序遍历](https://leetcode-cn.com/problems/binary-tree-preorder-traversal/)
 - [145. 二叉树的后序遍历](https://leetcode-cn.com/problems/binary-tree-postorder-traversal/)
-- [146. LRU 缓存机制](https://leetcode-cn.com/problems/lru-cache/)
 - [159. 至多包含两个不同字符的最长子串](https://leetcode-cn.com/problems/longest-substring-with-at-most-two-distinct-characters/)
 - [161. 相隔为 1 的编辑距离](https://leetcode-cn.com/problems/one-edit-distance/)
 - [188. 买卖股票的最佳时机 IV](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iv/)
@@ -63,16 +75,13 @@
 - [253. 会议室 II](https://leetcode-cn.com/problems/meeting-rooms-ii/)
 - [255. 验证前序遍历序列二叉搜索树](https://leetcode-cn.com/problems/verify-preorder-sequence-in-binary-search-tree/)
 - [259. 较小的三数之和](https://leetcode-cn.com/problems/3sum-smaller/)
-- [295. 数据流的中位数](https://leetcode-cn.com/problems/find-median-from-data-stream/)
 - [297. 二叉树的序列化与反序列化](https://leetcode-cn.com/problems/serialize-and-deserialize-binary-tree/)
 - [300. 最长递增子序列](https://leetcode-cn.com/problems/longest-increasing-subsequence/)
 - [312. 戳气球](https://leetcode-cn.com/problems/burst-balloons/)
 - [322. 零钱兑换](https://leetcode-cn.com/problems/coin-change/)
 - [337. 打家劫舍 III](https://leetcode-cn.com/problems/house-robber-iii/)
-- [341. 扁平化嵌套列表迭代器](https://leetcode-cn.com/problems/flatten-nested-list-iterator/)
 - [351. 安卓系统手势解锁](https://leetcode-cn.com/problems/android-unlock-patterns/)
 - [354. 俄罗斯套娃信封问题](https://leetcode-cn.com/problems/russian-doll-envelopes/)__
-- [355. 设计推特](https://leetcode-cn.com/problems/design-twitter/)
 - [358. K 距离间隔重排字符串](https://leetcode-cn.com/problems/rearrange-string-k-distance-apart/)
 - [366. 寻找二叉树的叶子节点](https://leetcode-cn.com/problems/find-leaves-of-binary-tree/)
 - [369. 给单链表加一](https://leetcode-cn.com/problems/plus-one-linked-list/)
@@ -80,7 +89,6 @@
 - [435. 无重叠区间](https://leetcode-cn.com/problems/non-overlapping-intervals/)
 - [438. 找到字符串中所有字母异位词](https://leetcode-cn.com/problems/find-all-anagrams-in-a-string/)
 - [450. 删除二叉搜索树中的节点](https://leetcode-cn.com/problems/delete-node-in-a-bst/)
-- [460. LFU 缓存](https://leetcode-cn.com/problems/lfu-cache/)
 - [494. 目标和](https://leetcode-cn.com/problems/target-sum/)
 - [496. 下一个更大元素 I](https://leetcode-cn.com/problems/next-greater-element-i/)
 - [503. 下一个更大元素 II](https://leetcode-cn.com/problems/next-greater-element-ii/)
@@ -92,7 +100,6 @@
 - [652. 寻找重复的子树](https://leetcode-cn.com/problems/find-duplicate-subtrees/)
 - [700. 二叉搜索树中的搜索](https://leetcode-cn.com/problems/search-in-a-binary-search-tree/)
 - [712. 两个字符串的最小ASCII删除和](https://leetcode-cn.com/problems/minimum-ascii-delete-sum-for-two-strings/)
-- [716. 最大栈](https://leetcode-cn.com/problems/max-stack/)
 - [751. IP 到 CIDR](https://leetcode-cn.com/problems/ip-to-cidr/)
 - [875. 爱吃香蕉的珂珂](https://leetcode-cn.com/problems/koko-eating-bananas/)
 - [876. 链表的中间结点](https://leetcode-cn.com/problems/middle-of-the-linked-list/)
