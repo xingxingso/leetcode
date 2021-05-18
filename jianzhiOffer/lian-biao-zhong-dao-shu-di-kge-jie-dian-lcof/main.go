@@ -26,5 +26,14 @@ type ListNode struct {
 空间复杂度：
 */
 func getKthFromEnd(head *ListNode, k int) *ListNode {
-	return nil
+	slow, fast := head, head
+	for k > 0 && fast != nil {
+		fast = fast.Next
+		k--
+	}
+	for fast != nil {
+		slow = slow.Next
+		fast = fast.Next
+	}
+	return slow
 }
