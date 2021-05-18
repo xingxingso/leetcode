@@ -5,8 +5,11 @@ import (
 )
 
 func TestRandomizedSet(t *testing.T) {
-	s := Constructor()
-	testEx1(&s, t)
+	// s := Constructor()
+	// testEx1(&s, t)
+
+	s2 := Constructor()
+	testEx2(&s2, t)
 }
 
 type RandomizedSetInterface interface {
@@ -48,6 +51,27 @@ func testEx1(s RandomizedSetInterface, t *testing.T) {
 	}
 
 	// 由于 2 是集合中唯一的数字，getRandom 总是返回 2 。
+	if got := s.GetRandom(); got != 2 {
+		t.Errorf("GetRandom() = %v, want %v", got, 2)
+	}
+}
+
+func testEx2(s RandomizedSetInterface, t *testing.T) {
+	if got := s.Insert(0); got != true {
+		t.Errorf("Insert() = %v, want %v", got, true)
+	}
+	if got := s.Insert(1); got != true {
+		t.Errorf("Insert() = %v, want %v", got, true)
+	}
+	if got := s.Remove(0); got != true {
+		t.Errorf("Remove() = %v, want %v", got, true)
+	}
+	if got := s.Insert(2); got != true {
+		t.Errorf("Insert() = %v, want %v", got, true)
+	}
+	if got := s.Remove(1); got != true {
+		t.Errorf("Remove() = %v, want %v", got, true)
+	}
 	if got := s.GetRandom(); got != 2 {
 		t.Errorf("GetRandom() = %v, want %v", got, 2)
 	}
