@@ -11,6 +11,15 @@ func sum(nums []int) int {
 	return ans
 }
 
+func inArray(nums []int, n int) bool {
+	for _, v := range nums {
+		if v == n {
+			return true
+		}
+	}
+	return false
+}
+
 func stringSliceSliceEqual(v1, v2 [][]string) bool {
 	if len(v1) != len(v2) {
 		return false

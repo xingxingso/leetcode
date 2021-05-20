@@ -5,8 +5,8 @@ import (
 )
 
 func TestRandomizedSet(t *testing.T) {
-	// s := Constructor()
-	// testEx1(&s, t)
+	s := Constructor()
+	testEx1(&s, t)
 
 	s2 := Constructor()
 	testEx2(&s2, t)

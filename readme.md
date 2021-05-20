@@ -21,6 +21,7 @@
 - [355. 设计推特](https://leetcode-cn.com/problems/design-twitter/)
 - [380. O(1) 时间插入、删除和获取随机元素](https://leetcode-cn.com/problems/insert-delete-getrandom-o1/)
 - [460. LFU 缓存](https://leetcode-cn.com/problems/lfu-cache/)
+- [710. 黑名单中的随机数](https://leetcode-cn.com/problems/random-pick-with-blacklist/)
 - [716. 最大栈](https://leetcode-cn.com/problems/max-stack/)
 
 #### 其他
