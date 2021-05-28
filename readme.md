@@ -79,6 +79,7 @@
 - [297. 二叉树的序列化与反序列化](https://leetcode-cn.com/problems/serialize-and-deserialize-binary-tree/)
 - [300. 最长递增子序列](https://leetcode-cn.com/problems/longest-increasing-subsequence/)
 - [312. 戳气球](https://leetcode-cn.com/problems/burst-balloons/)
+- [316. 去除重复字母](https://leetcode-cn.com/problems/remove-duplicate-letters/)
 - [322. 零钱兑换](https://leetcode-cn.com/problems/coin-change/)
 - [337. 打家劫舍 III](https://leetcode-cn.com/problems/house-robber-iii/)
 - [351. 安卓系统手势解锁](https://leetcode-cn.com/problems/android-unlock-patterns/)
