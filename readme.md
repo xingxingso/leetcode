@@ -6,9 +6,9 @@
 
 ### 会员
 
-- [1118.一月有多少天](https://leetcode-cn.com/problems/number-of-days-in-a-month/)
-
+- [170. 两数之和 III - 数据结构设计](https://leetcode-cn.com/problems/two-sum-iii-data-structure-design/)
 - [651. 4键键盘](https://leetcode-cn.com/problems/4-keys-keyboard/)
+- [1118.一月有多少天](https://leetcode-cn.com/problems/number-of-days-in-a-month/)
 
 ### leetcode
 
@@ -32,6 +32,7 @@
 - [15. 三数之和](https://leetcode-cn.com/problems/3sum/)
 - [20. 有效的括号](https://leetcode-cn.com/problems/valid-parentheses/)
 - [25. K 个一组翻转链表](https://leetcode-cn.com/problems/reverse-nodes-in-k-group/)
+- [26. 删除有序数组中的重复项](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/)
 - [28. 实现 strStr()](https://leetcode-cn.com/problems/implement-strstr/)
 - [33. 搜索旋转排序数组](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/)
 - [42. 接雨水](https://leetcode-cn.com/problems/trapping-rain-water/)
@@ -76,6 +77,7 @@
 - [253. 会议室 II](https://leetcode-cn.com/problems/meeting-rooms-ii/)
 - [255. 验证前序遍历序列二叉搜索树](https://leetcode-cn.com/problems/verify-preorder-sequence-in-binary-search-tree/)
 - [259. 较小的三数之和](https://leetcode-cn.com/problems/3sum-smaller/)
+- [283. 移动零](https://leetcode-cn.com/problems/move-zeroes/)
 - [297. 二叉树的序列化与反序列化](https://leetcode-cn.com/problems/serialize-and-deserialize-binary-tree/)
 - [300. 最长递增子序列](https://leetcode-cn.com/problems/longest-increasing-subsequence/)
 - [312. 戳气球](https://leetcode-cn.com/problems/burst-balloons/)

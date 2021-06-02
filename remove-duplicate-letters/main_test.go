@@ -31,6 +31,10 @@ func Test_removeDuplicateLetters(t *testing.T) {
 			if got := removeDuplicateLetters(tt.args.s); got != tt.want {
 				t.Errorf("removeDuplicateLetters() = %v, want %v", got, tt.want)
 			}
+
+			if got := removeDuplicateLettersO1(tt.args.s); got != tt.want {
+				t.Errorf("removeDuplicateLettersO1() = %v, want %v", got, tt.want)
+			}
 		})
 	}
 }

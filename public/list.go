@@ -2,7 +2,8 @@ package public
 
 import "fmt"
 
-/**
+/*
+ListNode
 Definition for singly-linked list.
 */
 type ListNode struct {
