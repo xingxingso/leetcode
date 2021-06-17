@@ -1,12 +1,13 @@
-package permutations
+package combinations
 
 import (
 	"testing"
 )
 
-func Test_permute(t *testing.T) {
+func Test_combine(t *testing.T) {
 	type args struct {
-		nums []int
+		n int
+		k int
 	}
 	tests := []struct {
 		name string
@@ -14,51 +15,42 @@ func Test_permute(t *testing.T) {
 		want [][]int
 	}{
 		{
-			name: "equal0",
+			name: "ex1",
 			args: args{
-				nums: []int{1},
+				n: 4,
+				k: 2,
 			},
-			want: [][]int{
-				{1},
-			},
+			want: [][]int{{2, 4}, {3, 4}, {2, 3}, {1, 2}, {1, 3}, {1, 4}},
 		},
 		{
-			name: "equal1",
+			name: "ex2",
 			args: args{
-				nums: []int{1, 2},
+				n: 3,
+				k: 2,
 			},
-			want: [][]int{
-				{1, 2},
-				{2, 1},
-			},
+			want: [][]int{{1, 2}, {1, 3}, {2, 3}},
 		},
 		{
-			name: "equal2",
+			name: "ex3",
 			args: args{
-				nums: []int{1, 2, 3},
+				n: 2,
+				k: 2,
 			},
-			want: [][]int{
-				{1, 2, 3},
-				{1, 3, 2},
-				{2, 1, 3},
-				{2, 3, 1},
-				{3, 1, 2},
-				{3, 2, 1},
+			want: [][]int{{1, 2}},
+		},
+		{
+			name: "ex4",
+			args: args{
+				n: 2,
+				k: 1,
 			},
+			want: [][]int{{1}, {2}},
 		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := permuteO1(tt.args.nums); !intSliceSliceEqual(got, tt.want) {
-				t.Errorf("permute() = %v, want %v", got, tt.want)
-			}
-
-			if got := permuteP1(tt.args.nums); !intSliceSliceEqual(got, tt.want) {
-				t.Errorf("permute() = %v, want %v", got, tt.want)
-			}
-
-			if got := permute(tt.args.nums); !intSliceSliceEqual(tt.want, got) {
-				t.Errorf("permute() = %v, want %v", got, tt.want)
+			if got := combine(tt.args.n, tt.args.k); !intSliceSliceEqual(tt.want, got) {
+				t.Errorf("combine() = %v, want %v", got, tt.want)
 			}
 		})
 	}

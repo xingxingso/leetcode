@@ -1,4 +1,5 @@
 /*
+Package permutations
 https://leetcode-cn.com/problems/permutations/
 
 46. 全排列
@@ -7,6 +8,49 @@ https://leetcode-cn.com/problems/permutations/
 
 */
 package permutations
+
+// --- 自己
+
+/*
+方法一: 回溯
+
+时间复杂度：
+空间复杂度：
+*/
+func permute(nums []int) [][]int {
+	ans := make([][]int, 0)
+	item := make([]int, 0)
+	var backTrack func()
+	backTrack = func() {
+		if len(item) == len(nums) {
+			temp := make([]int, len(item))
+			copy(temp, item)
+			ans = append(ans, temp)
+			return
+		}
+
+		for i := 0; i < len(nums); i++ {
+			if contains(item, nums[i]) {
+				continue
+			}
+			item = append(item, nums[i])
+			backTrack()
+			item = item[:len(item)-1]
+		}
+		return
+	}
+	backTrack()
+	return ans
+}
+
+func contains(s []int, target int) bool {
+	for i := 0; i < len(s); i++ {
+		if s[i] == target {
+			return true
+		}
+	}
+	return false
+}
 
 // --- 官方
 

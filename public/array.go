@@ -39,6 +39,7 @@ loop:
 	return true
 }
 
+// 二维数组是否相同， 不考虑元素顺序及子数组顺序 [[1,2]] == [[2,1]]
 func intSliceSliceEqual(v1, v2 [][]int) bool {
 	if len(v1) != len(v2) {
 		return false
