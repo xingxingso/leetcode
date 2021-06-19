@@ -35,6 +35,7 @@
 - [26. 删除有序数组中的重复项](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/)
 - [28. 实现 strStr()](https://leetcode-cn.com/problems/implement-strstr/)
 - [33. 搜索旋转排序数组](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/)
+- [37. 解数独](https://leetcode-cn.com/problems/sudoku-solver/)
 - [42. 接雨水](https://leetcode-cn.com/problems/trapping-rain-water/)
 - [45. 跳跃游戏 II](https://leetcode-cn.com/problems/jump-game-ii/)
 - [46. 全排列](https://leetcode-cn.com/problems/permutations/)
