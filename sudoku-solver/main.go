@@ -20,7 +20,9 @@ https://leetcode-cn.com/problems/sudoku-solver/
 */
 package sudoku_solver
 
-import "fmt"
+import (
+	"fmt"
+)
 
 // --- 自己
 
@@ -31,9 +33,14 @@ import "fmt"
 空间复杂度：
 */
 func solveSudoku(board [][]byte) {
+	isFind := false
 	var backTrack func(i, j int)
 	backTrack = func(i, j int) {
+		if isFind {
+			return
+		}
 		if i == 9 && j == 0 {
+			isFind = true
 			return
 		}
 
@@ -45,22 +52,62 @@ func solveSudoku(board [][]byte) {
 			backTrack(i, j+1)
 			return
 		}
-
-		for k := 1; k <= 9; k++ {
-			fmt.Println(i, j)
-			board[i][j] = byte(k)
+		var k byte
+		for k = '1'; k <= '9'; k++ {
+			if isFind {
+				return
+			}
+			board[i][j] = k
 			if isValid(board, i, j) {
-				if j == 8 {
-					i++
-					j = -1
+				p, q := i, j
+				if q == 8 {
+					p++
+					q = -1
 				}
-				backTrack(i, j+1)
+				backTrack(p, q+1)
+			}
+			if !isFind {
+				board[i][j] = '.'
 			}
 		}
 	}
+	// printBoard(board)
 	backTrack(0, 0)
+	// fmt.Println("after")
+	// printBoard(board)
 }
 
-func isValid(board [][]byte, i, j int) bool {
+func isValid(board [][]byte, p, q int) bool {
+	// 每行 每列
+	for i := 0; i < 9; i++ {
+		if q != i && board[p][i] == board[p][q] {
+			return false
+		}
+		if p != i && board[i][q] == board[p][q] {
+			return false
+		}
+	}
+	// 每块
+	w, h := p/3, q/3
+	for i := w * 3; i < 3*w+3; i++ {
+		for j := h * 3; j < 3*h+3; j++ {
+			if i == p && j == q {
+				continue
+			}
+			if board[i][j] == board[p][q] {
+				return false
+			}
+		}
+	}
+
 	return true
+}
+
+func printBoard(board [][]byte) {
+	for i := 0; i < 9; i++ {
+		for j := 0; j < 9; j++ {
+			fmt.Printf("%c", board[i][j])
+		}
+		fmt.Println()
+	}
 }
