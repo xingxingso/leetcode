@@ -1,4 +1,5 @@
 /*
+Package minimum_depth_of_binary_tree
 https://leetcode-cn.com/problems/minimum-depth-of-binary-tree/
 
 111. 二叉树的最小深度
@@ -10,7 +11,7 @@ https://leetcode-cn.com/problems/minimum-depth-of-binary-tree/
 	叶子节点是指没有子节点的节点。
 
 提示：
-	树中节点数的范围在 [0, 105] 内
+	树中节点数的范围在 [0, 10^5] 内
 	-1000 <= Node.val <= 1000
 
 */
@@ -18,9 +19,6 @@ package minimum_depth_of_binary_tree
 
 import "math"
 
-/**
-Definition for a binary tree node.
-*/
 type TreeNode struct {
 	Val   int
 	Left  *TreeNode
@@ -33,7 +31,7 @@ type TreeNode struct {
 方法一: 深度优先遍历
 
 时间复杂度：O(n)
-空间复杂度：O(1)
+空间复杂度：O(H)
 */
 func minDepth(root *TreeNode) int {
 	if root == nil {

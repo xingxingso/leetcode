@@ -1,3 +1,4 @@
+
 [TOC]
 
 # readme
@@ -102,6 +103,7 @@
 - [503. 下一个更大元素 II](https://leetcode-cn.com/problems/next-greater-element-ii/)
 - [536. 从字符串生成二叉树](https://leetcode-cn.com/problems/construct-binary-tree-from-string/)
 - [543. 二叉树的直径](https://leetcode-cn.com/problems/diameter-of-binary-tree/)
+- [560. 和为K的子数组](https://leetcode-cn.com/problems/subarray-sum-equals-k/)
 - [567. 字符串的排列](https://leetcode-cn.com/problems/permutation-in-string/)
 - [583. 两个字符串的删除操作](https://leetcode-cn.com/problems/delete-operation-for-two-strings/)
 - [634. 寻找数组的错位排列](https://leetcode-cn.com/problems/find-the-derangement-of-an-array/)
@@ -109,6 +111,8 @@
 - [700. 二叉搜索树中的搜索](https://leetcode-cn.com/problems/search-in-a-binary-search-tree/)
 - [712. 两个字符串的最小ASCII删除和](https://leetcode-cn.com/problems/minimum-ascii-delete-sum-for-two-strings/)
 - [751. IP 到 CIDR](https://leetcode-cn.com/problems/ip-to-cidr/)
+- [752. 打开转盘锁](https://leetcode-cn.com/problems/open-the-lock/)
+- [773. 滑动谜题](https://leetcode-cn.com/problems/sliding-puzzle/)
 - [875. 爱吃香蕉的珂珂](https://leetcode-cn.com/problems/koko-eating-bananas/)
 - [876. 链表的中间结点](https://leetcode-cn.com/problems/middle-of-the-linked-list/)
 - [877. 石子游戏](https://leetcode-cn.com/problems/stone-game/)

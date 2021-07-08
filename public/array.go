@@ -20,6 +20,13 @@ func inArray(nums []int, n int) bool {
 	return false
 }
 
+func copy2(dst, src [][]int) {
+	for key, value := range src {
+		dst[key] = make([]int, len(value))
+		copy(dst[key], value)
+	}
+}
+
 func stringSliceSliceEqual(v1, v2 [][]string) bool {
 	if len(v1) != len(v2) {
 		return false
