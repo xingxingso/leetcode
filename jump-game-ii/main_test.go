@@ -12,9 +12,16 @@ func Test_jump(t *testing.T) {
 		want int
 	}{
 		{
-			name: "equal0",
+			name: "ex1",
 			args: args{
 				nums: []int{2, 3, 1, 1, 4},
+			},
+			want: 2,
+		},
+		{
+			name: "ex2",
+			args: args{
+				nums: []int{10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 1, 0},
 			},
 			want: 2,
 		},
