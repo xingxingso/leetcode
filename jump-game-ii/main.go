@@ -1,4 +1,5 @@
 /*
+Package jump_game_ii
 https://leetcode-cn.com/problems/jump-game-ii/
 
 45. 跳跃游戏 II
@@ -50,8 +51,8 @@ func jump(nums []int) int {
 /*
 方法一: 贪心
 
-时间复杂度：
-空间复杂度：
+时间复杂度：O(n)，其中 n 是数组长度。
+空间复杂度：O(1)。
 */
 func jumpO1(nums []int) int {
 	steps, end, maxPosition := 0, 0, 0

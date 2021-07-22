@@ -26,7 +26,7 @@ func Test_jump(t *testing.T) {
 			}
 
 			if got := jumpO1(tt.args.nums); got != tt.want {
-				t.Errorf("jump() = %v, want %v", got, tt.want)
+				t.Errorf("jumpO1() = %v, want %v", got, tt.want)
 			}
 		})
 	}
