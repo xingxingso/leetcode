@@ -5,7 +5,7 @@ import (
 	"sort"
 )
 
-// 小顶堆类
+//IntHeap 小顶堆类
 type IntHeap []int
 
 func (h IntHeap) Len() int            { return len(h) }
@@ -20,7 +20,7 @@ func (h *IntHeap) Pop() interface{} {
 	return x
 }
 
-// 获取堆顶元素 不弹出
+//Peek 获取堆顶元素 不弹出
 func (h *IntHeap) Peek() interface{} { return (*h)[0] }
 
 // 使用案例
