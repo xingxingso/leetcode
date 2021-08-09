@@ -31,10 +31,10 @@ package number_of_1_bits
 func hammingWeightS1(num uint32) int {
 	res := 0
 	for i := 32; i > 0; i, num = i-1, num>>1 {
-		if num&1 == 1 {
-			res++
-		}
-		//num = num >> 1
+		//if num&1 == 1 {
+		//	res++
+		//}
+		res += int(num & 1)
 	}
 
 	return res
