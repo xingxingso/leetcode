@@ -89,6 +89,7 @@
 - [234. 回文链表](https://leetcode-cn.com/problems/palindrome-linked-list/)
 - [236. 二叉树的最近公共祖先](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/)
 - [239. 滑动窗口最大值](https://leetcode-cn.com/problems/sliding-window-maximum/)
+- [241. 为运算表达式设计优先级](https://leetcode-cn.com/problems/different-ways-to-add-parentheses/)
 - [243. 最短单词距离](https://leetcode-cn.com/problems/shortest-word-distance/)
 - [253. 会议室 II](https://leetcode-cn.com/problems/meeting-rooms-ii/)
 - [255. 验证前序遍历序列二叉搜索树](https://leetcode-cn.com/problems/verify-preorder-sequence-in-binary-search-tree/)

@@ -23,7 +23,7 @@ func TestSolutionS1(t *testing.T) {
 
 	for i := 0; i < 10000; i++ {
 		n := s.Pick(1)
-		if n >= len(nums) || n < 0 || nums[n] != 0 {
+		if n >= len(nums) || n < 0 || nums[n] != 1 {
 			t.Errorf("Pick=%v", n)
 			break
 		}

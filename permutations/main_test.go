@@ -1,6 +1,7 @@
 package permutations
 
 import (
+	"sort"
 	"testing"
 )
 
@@ -90,15 +91,19 @@ func sliceSameValue(s1, s2 []int) bool {
 	if len(s1) != len(s2) {
 		return false
 	}
-loop:
-	for _, v1 := range s1 {
-		for _, v2 := range s2 {
-			if v1 == v2 {
-				continue loop
-			}
+	t1, t2 := make([]int, len(s1)), make([]int, len(s2))
+	copy(t1, s1)
+	copy(t2, s2)
+	sort.Slice(t1, func(i, j int) bool {
+		return t1[i] < t1[j]
+	})
+	sort.Slice(t2, func(i, j int) bool {
+		return t2[i] < t2[j]
+	})
+	for i := 0; i < len(t1); i++ {
+		if t1[i] != t2[i] {
+			return false
 		}
-		return false
 	}
-
 	return true
 }
