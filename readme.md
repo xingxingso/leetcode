@@ -23,6 +23,7 @@
 - [141. 环形链表](https://leetcode-cn.com/problems/linked-list-cycle/)
 - [144. 二叉树的前序遍历](https://leetcode-cn.com/problems/binary-tree-preorder-traversal/)
 - [145. 二叉树的后序遍历](https://leetcode-cn.com/problems/binary-tree-postorder-traversal/)
+- [150. 逆波兰表达式求值](https://leetcode-cn.com/problems/evaluate-reverse-polish-notation/)
 - [189. 旋转数组](https://leetcode-cn.com/problems/rotate-array/)
 - [206. 反转链表](https://leetcode-cn.com/problems/reverse-linked-list/)
 - [887. 鸡蛋掉落](https://leetcode-cn.com/problems/super-egg-drop/)
