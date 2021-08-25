@@ -2,18 +2,14 @@ package public
 
 import "fmt"
 
-/**
-Definition for a binary tree node.
-*/
+// TreeNode Definition for a binary tree node.
 type TreeNode struct {
 	Val   int
 	Left  *TreeNode
 	Right *TreeNode
 }
 
-/**
- * Definition for a Node.
- */
+// Node Definition for a Node.
 type Node struct {
 	Val      int
 	Children []*Node
@@ -53,6 +49,7 @@ func Bfs(root *TreeNode) []int {
 	return res
 }
 
+// CreateTreeByArray
 // 通过数组生成二叉树，0 为 nil, 类似 leetcode 中数组转化为 二叉树
 // [1,2,3,0,4,0,5,0,6] 为二叉树
 //                  1

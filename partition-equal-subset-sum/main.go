@@ -1,4 +1,5 @@
 /*
+Package partition_equal_subset_sum
 https://leetcode-cn.com/problems/partition-equal-subset-sum/
 
 416. 分割等和子集
