@@ -1,4 +1,5 @@
 /*
+Package trapping_rain_water
 https://leetcode-cn.com/problems/trapping-rain-water/
 
 42. 接雨水
@@ -8,8 +9,8 @@ https://leetcode-cn.com/problems/trapping-rain-water/
 提示：
 
 	n == height.length
-	0 <= n <= 3 * 104
-	0 <= height[i] <= 105
+	0 <= n <= 3 * 10^4
+	0 <= height[i] <= 10^5
 
 */
 package trapping_rain_water
