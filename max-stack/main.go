@@ -1,4 +1,5 @@
 /*
+Package max_stack
 https://leetcode-cn.com/problems/max-stack/
 
 716. 最大栈
