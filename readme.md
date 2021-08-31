@@ -42,12 +42,15 @@
 - [460. LFU 缓存](https://leetcode-cn.com/problems/lfu-cache/)
 - [710. 黑名单中的随机数](https://leetcode-cn.com/problems/random-pick-with-blacklist/)
 - [716. 最大栈](https://leetcode-cn.com/problems/max-stack/)
+- [855. 考场就座](https://leetcode-cn.com/problems/exam-room/)
 
 #### 其他
 
+- [2. 两数相加](https://leetcode-cn.com/problems/add-two-numbers/)
 - [4. 寻找两个正序数组的中位数](https://leetcode-cn.com/problems/median-of-two-sorted-arrays/)
 - [5. 最长回文子串](https://leetcode-cn.com/problems/longest-palindromic-substring/)
 - [10. 正则表达式匹配](https://leetcode-cn.com/problems/regular-expression-matching/)
+- [11. 盛最多水的容器](https://leetcode-cn.com/problems/container-with-most-water/)
 - [15. 三数之和](https://leetcode-cn.com/problems/3sum/)
 - [22. 括号生成](https://leetcode-cn.com/problems/generate-parentheses/)
 - [25. K 个一组翻转链表](https://leetcode-cn.com/problems/reverse-nodes-in-k-group/)
@@ -132,7 +135,6 @@
 - [752. 打开转盘锁](https://leetcode-cn.com/problems/open-the-lock/)
 - [773. 滑动谜题](https://leetcode-cn.com/problems/sliding-puzzle/)
 - [793. 阶乘函数后 K 个零](https://leetcode-cn.com/problems/preimage-size-of-factorial-zeroes-function/)
-- [855. 考场就座](https://leetcode-cn.com/problems/exam-room/)
 - [875. 爱吃香蕉的珂珂](https://leetcode-cn.com/problems/koko-eating-bananas/)
 - [876. 链表的中间结点](https://leetcode-cn.com/problems/middle-of-the-linked-list/)
 - [877. 石子游戏](https://leetcode-cn.com/problems/stone-game/)
