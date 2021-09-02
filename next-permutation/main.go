@@ -1,4 +1,5 @@
 /*
+Package next_permutation
 https://leetcode-cn.com/problems/next-permutation/
 
 31. 下一个排列
@@ -14,6 +15,32 @@ https://leetcode-cn.com/problems/next-permutation/
 */
 package next_permutation
 
+// --- 自己
+
+/*
+方法一:
+
+时间复杂度：
+空间复杂度：
+*/
+func nextPermutation(nums []int) {
+	// 找到最大逆序
+	p := len(nums) - 2
+	for ; p >= 0 && nums[p] >= nums[p+1]; p-- {
+	}
+
+	if p >= 0 {
+		q := len(nums) - 1
+		for ; q > p && nums[q] <= nums[p]; q-- {
+		}
+
+		nums[p], nums[q] = nums[q], nums[p]
+	}
+
+	reverse(nums[p+1:])
+	return
+}
+
 // --- 官方
 
 /*
@@ -22,7 +49,7 @@ package next_permutation
 时间复杂度：O(N)，其中 N 为给定序列的长度。我们至多只需要扫描两次序列，以及进行一次反转操作。
 空间复杂度：O(1)，只需要常数的空间存放若干变量。
 */
-func nextPermutation(nums []int) {
+func nextPermutationO1(nums []int) {
 	n := len(nums)
 	i := n - 2
 	for i >= 0 && nums[i] >= nums[i+1] {
