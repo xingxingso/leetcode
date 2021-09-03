@@ -61,6 +61,7 @@
 - [28. 实现 strStr()](https://leetcode-cn.com/problems/implement-strstr/)
 - [31. 下一个排列](https://leetcode-cn.com/problems/next-permutation/)
 - [33. 搜索旋转排序数组](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/)
+- [34. 在排序数组中查找元素的第一个和最后一个位置](https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
 - [37. 解数独](https://leetcode-cn.com/problems/sudoku-solver/)
 - [42. 接雨水](https://leetcode-cn.com/problems/trapping-rain-water/)
 - [45. 跳跃游戏 II](https://leetcode-cn.com/problems/jump-game-ii/)
