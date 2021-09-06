@@ -12,28 +12,28 @@ func Test_isBalanced(t *testing.T) {
 		want bool
 	}{
 		{
-			name: "equal",
+			name: "ex1",
 			args: args{
 				root: CreateTreeByArray([]int{3, 9, 20, 0, 0, 15, 7}),
 			},
 			want: true,
 		},
 		{
-			name: "equal",
+			name: "ex2",
 			args: args{
 				root: CreateTreeByArray([]int{1, 2, 2, 3, 3, 0, 0, 4, 4}),
 			},
 			want: false,
 		},
 		{
-			name: "equal",
+			name: "ex3",
 			args: args{
 				root: CreateTreeByArray([]int{}),
 			},
 			want: true,
 		},
 		{
-			name: "equal",
+			name: "ex4",
 			args: args{
 				root: CreateTreeByArray([]int{1, 2, 2, 3, 0, 0, 3, 4, 0, 0, 4}),
 			},

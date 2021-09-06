@@ -1,4 +1,5 @@
 /*
+Package balanced_binary_tree
 https://leetcode-cn.com/problems/balanced-binary-tree/
 
 110. 平衡二叉树
@@ -14,7 +15,8 @@ https://leetcode-cn.com/problems/balanced-binary-tree/
 */
 package balanced_binary_tree
 
-/**
+/*
+TreeNode
 Definition for a binary tree node.
 */
 type TreeNode struct {
