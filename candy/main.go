@@ -73,13 +73,13 @@ func candy(ratings []int) int {
 func candyO1(ratings []int) int {
 	ans := len(ratings)
 	pick := make([]int, len(ratings))
-	for i := 0; i < len(ratings)-1; i++ {
-		if ratings[i] < ratings[i+1] {
-			pick[i+1] = pick[i] + 1
+	for i := 1; i < len(ratings); i++ {
+		if ratings[i] > ratings[i-1] {
+			pick[i] = pick[i-1] + 1
 		}
 	}
 	for i := len(ratings) - 1; i > 0; i-- {
-		if ratings[i-1] > ratings[i] {
+		if ratings[i] < ratings[i-1] {
 			pick[i-1] = max(pick[i]+1, pick[i-1])
 		}
 	}
