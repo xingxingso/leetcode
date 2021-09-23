@@ -69,6 +69,7 @@
 - [53. 最大子序和](https://leetcode-cn.com/problems/maximum-subarray/)
 - [55. 跳跃游戏](https://leetcode-cn.com/problems/jump-game/)
 - [56. 合并区间](https://leetcode-cn.com/problems/merge-intervals/)
+- [69. x 的平方根](https://leetcode-cn.com/problems/sqrtx/)
 - [72. 编辑距离](https://leetcode-cn.com/problems/edit-distance/)
 - [76. 最小覆盖子串](https://leetcode-cn.com/problems/minimum-window-substring/)
 - [78. 子集](https://leetcode-cn.com/problems/subsets/)
