@@ -12,21 +12,21 @@ func Test_canPartition(t *testing.T) {
 		want bool
 	}{
 		{
-			name: "equal0",
+			name: "ex0",
 			args: args{
 				nums: []int{1, 5, 11, 5},
 			},
 			want: true,
 		},
 		{
-			name: "equal1",
+			name: "ex1",
 			args: args{
 				nums: []int{1, 2, 3, 5},
 			},
 			want: false,
 		},
 		{
-			name: "equal2",
+			name: "ex2",
 			args: args{
 				nums: []int{1, 2, 3, 4, 5, 6, 7},
 			},
