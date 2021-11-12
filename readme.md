@@ -131,6 +131,7 @@
 - [494. 目标和](https://leetcode-cn.com/problems/target-sum/)
 - [496. 下一个更大元素 I](https://leetcode-cn.com/problems/next-greater-element-i/)
 - [503. 下一个更大元素 II](https://leetcode-cn.com/problems/next-greater-element-ii/)
+- [524. 通过删除字母匹配到字典里最长单词](https://leetcode-cn.com/problems/longest-word-in-dictionary-through-deleting/)
 - [536. 从字符串生成二叉树](https://leetcode-cn.com/problems/construct-binary-tree-from-string/)
 - [543. 二叉树的直径](https://leetcode-cn.com/problems/diameter-of-binary-tree/)
 - [560. 和为K的子数组](https://leetcode-cn.com/problems/subarray-sum-equals-k/)
