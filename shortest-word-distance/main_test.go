@@ -14,7 +14,7 @@ func Test_shortestDistance(t *testing.T) {
 		want int
 	}{
 		{
-			name: "equal",
+			name: "ex1",
 			args: args{
 				words: []string{"practice", "makes", "perfect", "coding", "makes"},
 				word1: "coding",
@@ -23,7 +23,7 @@ func Test_shortestDistance(t *testing.T) {
 			want: 3,
 		},
 		{
-			name: "equal",
+			name: "ex2",
 			args: args{
 				words: []string{"practice", "makes", "perfect", "coding", "makes"},
 				word1: "makes",
@@ -32,7 +32,7 @@ func Test_shortestDistance(t *testing.T) {
 			want: 1,
 		},
 		{
-			name: "equal",
+			name: "ex3",
 			args: args{
 				words: []string{"practice", "makes"},
 				word1: "makes",

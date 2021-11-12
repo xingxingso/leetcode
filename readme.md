@@ -11,6 +11,11 @@
 - [651. 4键键盘](https://leetcode-cn.com/problems/4-keys-keyboard/)
 - [1118.一月有多少天](https://leetcode-cn.com/problems/number-of-days-in-a-month/)
 
+
+> todo:
+
+- [340. 至多包含 K 个不同字符的最长子串](https://leetcode-cn.com/problems/longest-substring-with-at-most-k-distinct-characters/)
+
 ### leetcode
 
 #### 经典
@@ -73,6 +78,7 @@
 - [72. 编辑距离](https://leetcode-cn.com/problems/edit-distance/)
 - [76. 最小覆盖子串](https://leetcode-cn.com/problems/minimum-window-substring/)
 - [78. 子集](https://leetcode-cn.com/problems/subsets/)
+- [81. 搜索旋转排序数组 II](https://leetcode-cn.com/problems/search-in-rotated-sorted-array-ii/)
 - [88. 合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/)
 - [92. 反转链表 II](https://leetcode-cn.com/problems/reverse-linked-list-ii/)
 - [96. 不同的二叉搜索树](https://leetcode-cn.com/problems/unique-binary-search-trees/)
@@ -88,6 +94,7 @@
 - [124. 二叉树中的最大路径和](https://leetcode-cn.com/problems/binary-tree-maximum-path-sum/)
 - [135. 分发糖果](https://leetcode-cn.com/problems/candy/)
 - [142. 环形链表 II](https://leetcode-cn.com/problems/linked-list-cycle-ii/)
+- [154. 寻找旋转排序数组中的最小值 II](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array-ii/)
 - [159. 至多包含两个不同字符的最长子串](https://leetcode-cn.com/problems/longest-substring-with-at-most-two-distinct-characters/)
 - [161. 相隔为 1 的编辑距离](https://leetcode-cn.com/problems/one-edit-distance/)
 - [167. 两数之和 II - 输入有序数组](https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/)
@@ -133,6 +140,7 @@
 - [503. 下一个更大元素 II](https://leetcode-cn.com/problems/next-greater-element-ii/)
 - [524. 通过删除字母匹配到字典里最长单词](https://leetcode-cn.com/problems/longest-word-in-dictionary-through-deleting/)
 - [536. 从字符串生成二叉树](https://leetcode-cn.com/problems/construct-binary-tree-from-string/)
+- [540. 有序数组中的单一元素](https://leetcode-cn.com/problems/single-element-in-a-sorted-array/)
 - [543. 二叉树的直径](https://leetcode-cn.com/problems/diameter-of-binary-tree/)
 - [560. 和为K的子数组](https://leetcode-cn.com/problems/subarray-sum-equals-k/)
 - [567. 字符串的排列](https://leetcode-cn.com/problems/permutation-in-string/)

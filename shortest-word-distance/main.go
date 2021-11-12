@@ -1,4 +1,5 @@
 /*
+Package shortest_word_distance
 https://leetcode-cn.com/problems/shortest-word-distance/
 
 243. 最短单词距离
