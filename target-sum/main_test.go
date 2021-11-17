@@ -13,7 +13,7 @@ func Test_findTargetSumWays(t *testing.T) {
 		want int
 	}{
 		{
-			name: "equal0",
+			name: "ex0",
 			args: args{
 				nums: []int{1, 1, 1, 1, 1},
 				S:    3,
@@ -21,7 +21,7 @@ func Test_findTargetSumWays(t *testing.T) {
 			want: 5,
 		},
 		{
-			name: "equal1",
+			name: "ex1",
 			args: args{
 				nums: []int{1000},
 				S:    -1000,
@@ -29,7 +29,7 @@ func Test_findTargetSumWays(t *testing.T) {
 			want: 1,
 		},
 		{
-			name: "equal2",
+			name: "ex2",
 			args: args{
 				nums: []int{1, 2, 7, 9, 981},
 				S:    1000000000,
@@ -37,7 +37,7 @@ func Test_findTargetSumWays(t *testing.T) {
 			want: 0,
 		},
 		{
-			name: "equal3",
+			name: "ex3",
 			args: args{
 				nums: []int{1, 1, 1, 1, 1},
 				S:    -10000000,
@@ -45,7 +45,7 @@ func Test_findTargetSumWays(t *testing.T) {
 			want: 0,
 		},
 		{
-			name: "equal4",
+			name: "ex4",
 			args: args{
 				nums: []int{0, 0, 0, 0, 0, 0, 0, 0, 1},
 				S:    1,
