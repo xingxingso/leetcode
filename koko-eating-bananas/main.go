@@ -1,4 +1,5 @@
 /*
+Package koko_eating_bananas
 https://leetcode-cn.com/problems/koko-eating-bananas/
 
 875. 爱吃香蕉的珂珂

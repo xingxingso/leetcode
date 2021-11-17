@@ -2,16 +2,25 @@ package public
 
 import (
 	"container/heap"
+	"fmt"
 	"sort"
 )
 
-//IntHeap 小顶堆类
+// modify /usr/local/Cellar/go/1.16.4/libexec/src/container/heap/example_intheap_test.go
+
+// An IntHeap is a min-heap of ints.
 type IntHeap []int
 
-func (h IntHeap) Len() int            { return len(h) }
-func (h IntHeap) Less(i, j int) bool  { return h[i] < h[j] }
-func (h IntHeap) Swap(i, j int)       { h[i], h[j] = h[j], h[i] }
-func (h *IntHeap) Push(x interface{}) { *h = append(*h, x.(int)) }
+func (h IntHeap) Len() int           { return len(h) }
+func (h IntHeap) Less(i, j int) bool { return h[i] < h[j] }
+func (h IntHeap) Swap(i, j int)      { h[i], h[j] = h[j], h[i] }
+
+func (h *IntHeap) Push(x interface{}) {
+	// Push and Pop use pointer receivers because they modify the slice's length,
+	// not just its contents.
+	*h = append(*h, x.(int))
+}
+
 func (h *IntHeap) Pop() interface{} {
 	old := *h
 	n := len(old)
@@ -20,8 +29,24 @@ func (h *IntHeap) Pop() interface{} {
 	return x
 }
 
-//Peek 获取堆顶元素 不弹出
+// Peek 获取堆顶元素 不弹出
 func (h *IntHeap) Peek() interface{} { return (*h)[0] }
+
+// Example_intHeap
+// This example inserts several ints into an IntHeap, checks the minimum,
+// and removes them in order of priority.
+func Example_intHeap() {
+	h := &IntHeap{2, 1, 5}
+	heap.Init(h)
+	heap.Push(h, 3)
+	fmt.Printf("minimum: %d\n", (*h)[0])
+	for h.Len() > 0 {
+		fmt.Printf("%d ", heap.Pop(h))
+	}
+	// Output:
+	// minimum: 1
+	// 1 2 3 5
+}
 
 // 使用案例
 func minMeetingRoomsO1(intervals [][]int) int {

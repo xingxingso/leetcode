@@ -123,6 +123,7 @@
 - [316. 去除重复字母](https://leetcode-cn.com/problems/remove-duplicate-letters/)
 - [322. 零钱兑换](https://leetcode-cn.com/problems/coin-change/)
 - [337. 打家劫舍 III](https://leetcode-cn.com/problems/house-robber-iii/)
+- [347. 前 K 个高频元素](https://leetcode-cn.com/problems/top-k-frequent-elements/)
 - [351. 安卓系统手势解锁](https://leetcode-cn.com/problems/android-unlock-patterns/)
 - [354. 俄罗斯套娃信封问题](https://leetcode-cn.com/problems/russian-doll-envelopes/)__
 - [358. K 距离间隔重排字符串](https://leetcode-cn.com/problems/rearrange-string-k-distance-apart/)
@@ -135,6 +136,7 @@
 - [435. 无重叠区间](https://leetcode-cn.com/problems/non-overlapping-intervals/)
 - [438. 找到字符串中所有字母异位词](https://leetcode-cn.com/problems/find-all-anagrams-in-a-string/)
 - [450. 删除二叉搜索树中的节点](https://leetcode-cn.com/problems/delete-node-in-a-bst/)
+- [451. 根据字符出现频率排序](https://leetcode-cn.com/problems/sort-characters-by-frequency/)
 - [455. 分发饼干](https://leetcode-cn.com/problems/assign-cookies/)
 - [494. 目标和](https://leetcode-cn.com/problems/target-sum/)
 - [496. 下一个更大元素 I](https://leetcode-cn.com/problems/next-greater-element-i/)

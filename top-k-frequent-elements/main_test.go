@@ -49,6 +49,10 @@ func Test_topKFrequent(t *testing.T) {
 			if got := topKFrequentS2(tt.args.nums, tt.args.k); !sliceSameValue(got, tt.want) {
 				t.Errorf("topKFrequentS2() = %v, want %v", got, tt.want)
 			}
+
+			if got := topKFrequentO1(tt.args.nums, tt.args.k); !sliceSameValue(got, tt.want) {
+				t.Errorf("topKFrequentO1() = %v, want %v", got, tt.want)
+			}
 		})
 	}
 }
