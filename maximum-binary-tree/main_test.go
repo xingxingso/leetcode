@@ -15,14 +15,14 @@ func Test_constructMaximumBinaryTree(t *testing.T) {
 		want *TreeNode
 	}{
 		{
-			name: "equal0",
+			name: "ex0",
 			args: args{
 				nums: []int{3, 2, 1, 6, 4, 5},
 			},
 			want: CreateTreeByArray([]int{6, 3, 5, 0, 2, 4, 0, 0, 1}),
 		},
 		{
-			name: "equal1",
+			name: "ex1",
 			args: args{
 				nums: []int{3, 2, 1},
 			},

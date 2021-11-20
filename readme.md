@@ -157,6 +157,7 @@
 - [659. 分割数组为连续子序列](https://leetcode-cn.com/problems/split-array-into-consecutive-subsequences/)
 - [665. 非递减数列](https://leetcode-cn.com/problems/non-decreasing-array/)
 - [680. 验证回文字符串 Ⅱ](https://leetcode-cn.com/problems/valid-palindrome-ii/)
+- [695. 岛屿的最大面积](https://leetcode-cn.com/problems/max-area-of-island/)
 - [700. 二叉搜索树中的搜索](https://leetcode-cn.com/problems/search-in-a-binary-search-tree/)
 - [712. 两个字符串的最小ASCII删除和](https://leetcode-cn.com/problems/minimum-ascii-delete-sum-for-two-strings/)
 - [751. IP 到 CIDR](https://leetcode-cn.com/problems/ip-to-cidr/)
