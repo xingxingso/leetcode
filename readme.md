@@ -146,6 +146,7 @@
 - [536. 从字符串生成二叉树](https://leetcode-cn.com/problems/construct-binary-tree-from-string/)
 - [540. 有序数组中的单一元素](https://leetcode-cn.com/problems/single-element-in-a-sorted-array/)
 - [543. 二叉树的直径](https://leetcode-cn.com/problems/diameter-of-binary-tree/)
+- [547. 省份数量](https://leetcode-cn.com/problems/number-of-provinces/)
 - [560. 和为K的子数组](https://leetcode-cn.com/problems/subarray-sum-equals-k/)
 - [567. 字符串的排列](https://leetcode-cn.com/problems/permutation-in-string/)
 - [583. 两个字符串的删除操作](https://leetcode-cn.com/problems/delete-operation-for-two-strings/)
