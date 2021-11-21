@@ -17,28 +17,28 @@ func getTest() []struct {
 		want bool
 	}{
 		{
-			name: "equal0",
+			name: "ex0",
 			args: args{
 				head: getListNodeBySlice([]int{1, 2}),
 			},
 			want: false,
 		},
 		{
-			name: "equal1",
+			name: "ex1",
 			args: args{
 				head: getListNodeBySlice([]int{1, 2, 2, 1}),
 			},
 			want: true,
 		},
 		{
-			name: "equal2",
+			name: "ex2",
 			args: args{
 				head: getListNodeBySlice([]int{1, 2, 1}),
 			},
 			want: true,
 		},
 		{
-			name: "equal3",
+			name: "ex3",
 			args: args{
 				head: getListNodeBySlice([]int{1, 3, 2, 4, 3, 2, 1}),
 			},
