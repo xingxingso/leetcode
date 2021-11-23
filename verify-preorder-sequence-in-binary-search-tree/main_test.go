@@ -12,35 +12,35 @@ func Test_verifyPreorder(t *testing.T) {
 		want bool
 	}{
 		{
-			name: "equal",
+			name: "ex1",
 			args: args{
 				preorder: []int{5, 2, 6, 1, 3},
 			},
 			want: false,
 		},
 		{
-			name: "equal",
+			name: "ex2",
 			args: args{
 				preorder: []int{5, 2, 1, 3, 6},
 			},
 			want: true,
 		},
 		{
-			name: "equal",
+			name: "ex3",
 			args: args{
 				preorder: []int{5, 2, 1, 4, 3},
 			},
 			want: true,
 		},
 		{
-			name: "equal",
+			name: "ex4",
 			args: args{
 				preorder: []int{8, 5, 3, 6, 7},
 			},
 			want: true,
 		},
 		{
-			name: "equal",
+			name: "ex5",
 			args: args{
 				preorder: []int{50, 25, 13, 18, 38, 30, 75, 60, 55, 70, 90},
 			},

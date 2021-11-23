@@ -1,4 +1,5 @@
 /*
+Package verify_preorder_sequence_in_binary_search_tree
 https://leetcode-cn.com/problems/verify-preorder-sequence-in-binary-search-tree/
 
 255. 验证前序遍历序列二叉搜索树
