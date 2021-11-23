@@ -175,6 +175,7 @@
 - [885. 螺旋矩阵 III](https://leetcode-cn.com/problems/spiral-matrix-iii/)
 - [886. 可能的二分法](https://leetcode-cn.com/problems/possible-bipartition/)
 - [897. 递增顺序查找树](https://leetcode-cn.com/problems/increasing-order-search-tree/)
+- [934. 最短的桥](https://leetcode-cn.com/problems/shortest-bridge/)
 - [969. 煎饼排序](https://leetcode-cn.com/problems/pancake-sorting/)
 - [1059. 从始点到终点的所有路径](https://leetcode-cn.com/problems/all-paths-from-source-lead-to-destination/)
 - [1099. 小于 K 的两数之和](https://leetcode-cn.com/problems/two-sum-less-than-k/)
