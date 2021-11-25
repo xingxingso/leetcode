@@ -15,21 +15,21 @@ func Test_plusOne(t *testing.T) {
 		want *ListNode
 	}{
 		{
-			name: "equal",
+			name: "ex1",
 			args: args{
 				head: getListNodeBySlice([]int{1, 2, 3}),
 			},
 			want: getListNodeBySlice([]int{1, 2, 4}),
 		},
 		{
-			name: "equal",
+			name: "ex2",
 			args: args{
 				head: getListNodeBySlice([]int{9, 9, 9}),
 			},
 			want: getListNodeBySlice([]int{1, 0, 0, 0}),
 		},
 		{
-			name: "equal",
+			name: "ex3",
 			args: args{
 				head: getListNodeBySlice([]int{0}),
 			},
