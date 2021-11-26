@@ -20,8 +20,8 @@ import "sort"
 /*
 方法一:
 
-时间复杂度：
-空间复杂度：
+时间复杂度：O(n×n!)，其中 n 为序列的长度。
+空间复杂度：O(n)。
 */
 func permuteUniqueO1(nums []int) [][]int {
 	sort.Ints(nums)
