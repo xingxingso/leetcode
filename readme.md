@@ -125,6 +125,7 @@
 - [283. 移动零](https://leetcode-cn.com/problems/move-zeroes/)
 - [297. 二叉树的序列化与反序列化](https://leetcode-cn.com/problems/serialize-and-deserialize-binary-tree/)
 - [300. 最长递增子序列](https://leetcode-cn.com/problems/longest-increasing-subsequence/)
+- [310. 最小高度树](https://leetcode-cn.com/problems/minimum-height-trees/)
 - [312. 戳气球](https://leetcode-cn.com/problems/burst-balloons/)
 - [316. 去除重复字母](https://leetcode-cn.com/problems/remove-duplicate-letters/)
 - [322. 零钱兑换](https://leetcode-cn.com/problems/coin-change/)

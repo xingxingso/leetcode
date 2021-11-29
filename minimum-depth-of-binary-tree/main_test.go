@@ -12,14 +12,14 @@ func Test_minDepth(t *testing.T) {
 		want int
 	}{
 		{
-			name: "equal",
+			name: "ex1",
 			args: args{
 				root: CreateTreeByArray([]int{3, 9, 20, 0, 0, 15, 7}),
 			},
 			want: 2,
 		},
 		{
-			name: "equal",
+			name: "ex2",
 			args: args{
 				root: CreateTreeByArray([]int{2, 0, 3, 0, 4, 0, 5, 0, 6}),
 			},
