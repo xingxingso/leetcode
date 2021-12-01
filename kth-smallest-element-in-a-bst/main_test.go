@@ -13,7 +13,7 @@ func Test_kthSmallest(t *testing.T) {
 		want int
 	}{
 		{
-			name: "equal0",
+			name: "ex0",
 			args: args{
 				root: CreateTreeByArray([]int{3, 1, 4, 0, 2}),
 				k:    1,
@@ -21,7 +21,7 @@ func Test_kthSmallest(t *testing.T) {
 			want: 1,
 		},
 		{
-			name: "equal1",
+			name: "ex1",
 			args: args{
 				root: CreateTreeByArray([]int{5, 3, 6, 2, 4, 0, 0, 1}),
 				k:    3,

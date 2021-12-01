@@ -33,6 +33,7 @@
 - [189. 旋转数组](https://leetcode-cn.com/problems/rotate-array/)
 - [206. 反转链表](https://leetcode-cn.com/problems/reverse-linked-list/)
 - [887. 鸡蛋掉落](https://leetcode-cn.com/problems/super-egg-drop/)
+- [912. 排序数组](https://leetcode-cn.com/problems/sort-an-array/)
 - [1143. 最长公共子序列](https://leetcode-cn.com/problems/longest-common-subsequence/)
 
 #### 结构设计类
@@ -181,6 +182,7 @@
 - [897. 递增顺序查找树](https://leetcode-cn.com/problems/increasing-order-search-tree/)
 - [934. 最短的桥](https://leetcode-cn.com/problems/shortest-bridge/)
 - [969. 煎饼排序](https://leetcode-cn.com/problems/pancake-sorting/)
+- [1046. 最后一块石头的重量](https://leetcode-cn.com/problems/last-stone-weight/)
 - [1059. 从始点到终点的所有路径](https://leetcode-cn.com/problems/all-paths-from-source-lead-to-destination/)
 - [1099. 小于 K 的两数之和](https://leetcode-cn.com/problems/two-sum-less-than-k/)
 - [1109. 航班预订统计](https://leetcode-cn.com/problems/corporate-flight-bookings/)
