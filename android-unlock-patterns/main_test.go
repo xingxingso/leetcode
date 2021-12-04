@@ -13,7 +13,7 @@ func Test_numberOfPatterns(t *testing.T) {
 		want int
 	}{
 		{
-			name: "equal",
+			name: "ex1",
 			args: args{
 				m: 1,
 				n: 1,
@@ -21,7 +21,7 @@ func Test_numberOfPatterns(t *testing.T) {
 			want: 9,
 		},
 		{
-			name: "equal",
+			name: "ex2",
 			args: args{
 				m: 1,
 				n: 2,
@@ -29,7 +29,7 @@ func Test_numberOfPatterns(t *testing.T) {
 			want: 65,
 		},
 		{
-			name: "equal",
+			name: "ex3",
 			args: args{
 				m: 4,
 				n: 7,
