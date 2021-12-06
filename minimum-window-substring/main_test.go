@@ -13,7 +13,7 @@ func Test_minWindow(t *testing.T) {
 		want string
 	}{
 		{
-			name: "equal0",
+			name: "ex0",
 			args: args{
 				s: "ADOBECODEBANC",
 				t: "ABC",
@@ -21,7 +21,7 @@ func Test_minWindow(t *testing.T) {
 			want: "BANC",
 		},
 		{
-			name: "equal1",
+			name: "ex1",
 			args: args{
 				s: "a",
 				t: "a",
@@ -29,7 +29,7 @@ func Test_minWindow(t *testing.T) {
 			want: "a",
 		},
 		{
-			name: "equal3",
+			name: "ex3",
 			args: args{
 				s: "ADOBAECODEBANC",
 				t: "AA",
@@ -37,7 +37,7 @@ func Test_minWindow(t *testing.T) {
 			want: "ADOBA",
 		},
 		{
-			name: "equal4",
+			name: "ex4",
 			args: args{
 				s: "ADBOBACODEBANC",
 				t: "ABC",
@@ -45,7 +45,7 @@ func Test_minWindow(t *testing.T) {
 			want: "BAC",
 		},
 		{
-			name: "equal5",
+			name: "ex5",
 			args: args{
 				s: "A",
 				t: "ABC",
@@ -53,7 +53,7 @@ func Test_minWindow(t *testing.T) {
 			want: "",
 		},
 		{
-			name: "equal6",
+			name: "ex6",
 			args: args{
 				s: "ABAACBAB",
 				t: "ABC",
