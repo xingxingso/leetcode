@@ -15,21 +15,21 @@ func Test_threeSum(t *testing.T) {
 		want [][]int
 	}{
 		{
-			name: "equal",
+			name: "ex1",
 			args: args{
 				nums: []int{-1, 0, 1, 2, -1, -4},
 			},
 			want: [][]int{{-1, -1, 2}, {-1, 0, 1}},
 		},
 		{
-			name: "equal",
+			name: "ex2",
 			args: args{
 				nums: []int{},
 			},
 			want: [][]int{},
 		},
 		{
-			name: "equal",
+			name: "ex3",
 			args: args{
 				nums: []int{0},
 			},
