@@ -13,7 +13,7 @@ func Test_checkInclusion(t *testing.T) {
 		want bool
 	}{
 		{
-			name: "equal0",
+			name: "ex0",
 			args: args{
 				s1: "ab",
 				s2: "eidbaooo",
@@ -21,7 +21,7 @@ func Test_checkInclusion(t *testing.T) {
 			want: true,
 		},
 		{
-			name: "equal1",
+			name: "ex1",
 			args: args{
 				s1: "ab",
 				s2: "eidboaooo",
@@ -29,7 +29,7 @@ func Test_checkInclusion(t *testing.T) {
 			want: false,
 		},
 		{
-			name: "equal2",
+			name: "ex2",
 			args: args{
 				s1: "ab",
 				s2: "ba",
@@ -37,7 +37,7 @@ func Test_checkInclusion(t *testing.T) {
 			want: true,
 		},
 		{
-			name: "equal3",
+			name: "ex3",
 			args: args{
 				s1: "adc",
 				s2: "dcda",

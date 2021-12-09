@@ -12,28 +12,28 @@ func Test_countNodes(t *testing.T) {
 		want int
 	}{
 		{
-			name: "equal0",
+			name: "ex0",
 			args: args{
 				root: CreateTreeByArray([]int{1, 2, 3, 4, 5, 6}),
 			},
 			want: 6,
 		},
 		{
-			name: "equal1",
+			name: "ex1",
 			args: args{
 				root: CreateTreeByArray([]int{}),
 			},
 			want: 0,
 		},
 		{
-			name: "equal2",
+			name: "ex2",
 			args: args{
 				root: CreateTreeByArray([]int{1}),
 			},
 			want: 1,
 		},
 		{
-			name: "equal3",
+			name: "ex3",
 			args: args{
 				root: CreateTreeByArray([]int{1, 2, 3, 4, 5}),
 			},
