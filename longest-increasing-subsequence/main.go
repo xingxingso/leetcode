@@ -1,4 +1,5 @@
 /*
+Package longest_increasing_subsequence
 https://leetcode-cn.com/problems/longest-increasing-subsequence/
 
 300. 最长递增子序列
@@ -8,7 +9,7 @@ https://leetcode-cn.com/problems/longest-increasing-subsequence/
 
 提示：
 	1 <= nums.length <= 2500
-	-104 <= nums[i] <= 104
+	-10^4 <= nums[i] <= 10^4
 
 进阶：
 	你可以设计时间复杂度为 O(n^2) 的解决方案吗？
@@ -18,10 +19,10 @@ https://leetcode-cn.com/problems/longest-increasing-subsequence/
 package longest_increasing_subsequence
 
 // --- 自己
-// 参考别人题解
 
 /*
 方法一: 动态规划
+	参考别人题解
 
 时间复杂度：O(n^2)，其中 n 为数组 nums 的长度。动态规划的状态数为 n，计算状态 dp[i] 时，需要 O(n) 的时间遍历 dp[0…i−1] 的所有状态，
 	所以总时间复杂度为 O(n^2)。
@@ -60,7 +61,6 @@ func max(x, y int) int {
 
 时间复杂度：O(nlogn)。数组 nums 的长度为 n，我们依次用数组中的元素去更新 d 数组，而更新 d 数组时需要进行 O(logn) 的二分搜索，
 	所以总时间复杂度为 O(nlogn)。
-
 空间复杂度：O(n)，需要额外使用长度为 n 的 d 数组。
 */
 func lengthOfLISS2(nums []int) int {

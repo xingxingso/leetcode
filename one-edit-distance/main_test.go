@@ -13,7 +13,7 @@ func Test_isOneEditDistance(t *testing.T) {
 		want bool
 	}{
 		{
-			name: "equal",
+			name: "ex1",
 			args: args{
 				s: "ab",
 				t: "acb",
@@ -21,7 +21,7 @@ func Test_isOneEditDistance(t *testing.T) {
 			want: true,
 		},
 		{
-			name: "equal",
+			name: "ex2",
 			args: args{
 				s: "cab",
 				t: "ad",
@@ -29,7 +29,7 @@ func Test_isOneEditDistance(t *testing.T) {
 			want: false,
 		},
 		{
-			name: "equal",
+			name: "ex3",
 			args: args{
 				s: "1203",
 				t: "1213",

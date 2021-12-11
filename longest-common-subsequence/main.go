@@ -1,4 +1,5 @@
 /*
+Package longest_common_subsequence
 https://leetcode-cn.com/problems/longest-common-subsequence/
 
 1143. 最长公共子序列
@@ -22,10 +23,10 @@ import (
 )
 
 // --- 他人
-// https://mp.weixin.qq.com/s?__biz=MzAxODQxMDM0Mw==&mid=2247487860&idx=1&sn=f5759ae4f22f966db8ed5a85821edd34&chksm=9bd7ef7caca0666a628fe838dee6d5da44b05eadf01fd7e87fcef813430c8e6dc3eb3c23e15f&scene=21#wechat_redirect
 
 /*
 方法一: 动态规划
+	https://mp.weixin.qq.com/s?__biz=MzAxODQxMDM0Mw==&mid=2247487860&idx=1&sn=f5759ae4f22f966db8ed5a85821edd34&chksm=9bd7ef7caca0666a628fe838dee6d5da44b05eadf01fd7e87fcef813430c8e6dc3eb3c23e15f&scene=21#wechat_redirect
 	自顶向下
 
 时间复杂度：

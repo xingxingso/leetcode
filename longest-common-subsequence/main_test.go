@@ -13,7 +13,7 @@ func Test_longestCommonSubsequence(t *testing.T) {
 		want int
 	}{
 		{
-			name: "equal0",
+			name: "ex0",
 			args: args{
 				text1: "abcde",
 				text2: "ace",
@@ -21,7 +21,7 @@ func Test_longestCommonSubsequence(t *testing.T) {
 			want: 3,
 		},
 		{
-			name: "equal1",
+			name: "ex1",
 			args: args{
 				text1: "abc",
 				text2: "abc",
@@ -29,7 +29,7 @@ func Test_longestCommonSubsequence(t *testing.T) {
 			want: 3,
 		},
 		{
-			name: "equal2",
+			name: "ex2",
 			args: args{
 				text1: "abc",
 				text2: "def",
@@ -37,7 +37,7 @@ func Test_longestCommonSubsequence(t *testing.T) {
 			want: 0,
 		},
 		{
-			name: "equal3",
+			name: "ex3",
 			args: args{
 				text1: "ezupkr",
 				text2: "ubmrapg",
@@ -45,7 +45,7 @@ func Test_longestCommonSubsequence(t *testing.T) {
 			want: 2,
 		},
 		{
-			name: "equal4",
+			name: "ex4",
 			args: args{
 				text1: "bsbininm",
 				text2: "jmjkbkjkv",
@@ -53,7 +53,7 @@ func Test_longestCommonSubsequence(t *testing.T) {
 			want: 1,
 		},
 		{
-			name: "equal5",
+			name: "ex5",
 			args: args{
 				text1: "mhunuzqrkzsnidwbun",
 				text2: "szulspmhwpazoxijwbq",
