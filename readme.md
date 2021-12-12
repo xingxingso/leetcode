@@ -170,6 +170,7 @@
 - [633. 平方数之和](https://leetcode-cn.com/problems/sum-of-square-numbers/)
 - [634. 寻找数组的错位排列](https://leetcode-cn.com/problems/find-the-derangement-of-an-array/)
 - [645. 错误的集合](https://leetcode-cn.com/problems/set-mismatch/)
+- [650. 只有两个键的键盘](https://leetcode-cn.com/problems/2-keys-keyboard/)
 - [652. 寻找重复的子树](https://leetcode-cn.com/problems/find-duplicate-subtrees/)
 - [659. 分割数组为连续子序列](https://leetcode-cn.com/problems/split-array-into-consecutive-subsequences/)
 - [665. 非递减数列](https://leetcode-cn.com/problems/non-decreasing-array/)

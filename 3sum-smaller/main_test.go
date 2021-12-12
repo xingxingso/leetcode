@@ -13,7 +13,7 @@ func Test_threeSumSmaller(t *testing.T) {
 		want int
 	}{
 		{
-			name: "equal",
+			name: "ex1",
 			args: args{
 				nums:   []int{-2, 0, 1, 3},
 				target: 2,
