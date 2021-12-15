@@ -1,4 +1,5 @@
 /*
+Package best_time_to_buy_and_sell_stock
 https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/
 
 121. 买卖股票的最佳时机
@@ -8,8 +9,8 @@ https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/
 返回你可以从这笔交易中获取的最大利润。如果你不能获取任何利润，返回 0 。
 
 提示：
-	1 <= prices.length <= 105
-	0 <= prices[i] <= 104
+	1 <= prices.length <= 10^5
+	0 <= prices[i] <= 10^4
 
 */
 package best_time_to_buy_and_sell_stock

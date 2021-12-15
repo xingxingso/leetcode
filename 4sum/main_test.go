@@ -16,7 +16,7 @@ func Test_fourSum(t *testing.T) {
 		want [][]int
 	}{
 		{
-			name: "equal0",
+			name: "ex1",
 			args: args{
 				nums:   []int{1, 0, -1, 0, -2, 2},
 				target: 0,
@@ -24,7 +24,7 @@ func Test_fourSum(t *testing.T) {
 			want: [][]int{{-2, -1, 1, 2}, {-2, 0, 0, 2}, {-1, 0, 0, 1}},
 		},
 		{
-			name: "equal1",
+			name: "ex2",
 			args: args{
 				nums:   []int{},
 				target: 0,

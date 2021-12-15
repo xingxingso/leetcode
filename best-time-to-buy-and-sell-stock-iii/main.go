@@ -1,4 +1,5 @@
 /*
+Package best_time_to_buy_and_sell_stock_iii
 https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii/
 
 123. 买卖股票的最佳时机 III
@@ -10,8 +11,8 @@ https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii/
 	你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）。
 
 提示：
-	1 <= prices.length <= 105
-	0 <= prices[i] <= 105
+	1 <= prices.length <= 10^5
+	0 <= prices[i] <= 10^5
 
 */
 package best_time_to_buy_and_sell_stock_iii

@@ -12,28 +12,28 @@ func Test_maxProfit(t *testing.T) {
 		want int
 	}{
 		{
-			name: "equal0",
+			name: "ex0",
 			args: args{
 				prices: []int{3, 3, 5, 0, 0, 3, 1, 4},
 			},
 			want: 6,
 		},
 		{
-			name: "equal1",
+			name: "ex1",
 			args: args{
 				prices: []int{1, 2, 3, 4, 5},
 			},
 			want: 4,
 		},
 		{
-			name: "equal2",
+			name: "ex2",
 			args: args{
 				prices: []int{7, 6, 4, 3, 1},
 			},
 			want: 0,
 		},
 		{
-			name: "equal3",
+			name: "ex3",
 			args: args{
 				prices: []int{1},
 			},
