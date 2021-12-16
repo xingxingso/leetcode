@@ -138,6 +138,7 @@
 - [316. 去除重复字母](https://leetcode-cn.com/problems/remove-duplicate-letters/)
 - [322. 零钱兑换](https://leetcode-cn.com/problems/coin-change/)
 - [337. 打家劫舍 III](https://leetcode-cn.com/problems/house-robber-iii/)
+- [343. 整数拆分](https://leetcode-cn.com/problems/integer-break/)
 - [347. 前 K 个高频元素](https://leetcode-cn.com/problems/top-k-frequent-elements/)
 - [351. 安卓系统手势解锁](https://leetcode-cn.com/problems/android-unlock-patterns/)
 - [354. 俄罗斯套娃信封问题](https://leetcode-cn.com/problems/russian-doll-envelopes/)__
@@ -171,6 +172,7 @@
 - [633. 平方数之和](https://leetcode-cn.com/problems/sum-of-square-numbers/)
 - [634. 寻找数组的错位排列](https://leetcode-cn.com/problems/find-the-derangement-of-an-array/)
 - [645. 错误的集合](https://leetcode-cn.com/problems/set-mismatch/)
+- [646. 最长数对链](https://leetcode-cn.com/problems/maximum-length-of-pair-chain/)
 - [650. 只有两个键的键盘](https://leetcode-cn.com/problems/2-keys-keyboard/)
 - [652. 寻找重复的子树](https://leetcode-cn.com/problems/find-duplicate-subtrees/)
 - [659. 分割数组为连续子序列](https://leetcode-cn.com/problems/split-array-into-consecutive-subsequences/)

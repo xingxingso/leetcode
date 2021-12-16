@@ -1,4 +1,5 @@
 /*
+Package maximum_depth_of_n_ary_tree
 https://leetcode-cn.com/problems/maximum-depth-of-n-ary-tree/
 
 559. N 叉树的最大深度

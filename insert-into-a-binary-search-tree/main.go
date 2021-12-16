@@ -1,4 +1,5 @@
 /*
+Package insert_into_a_binary_search_tree
 https://leetcode-cn.com/problems/insert-into-a-binary-search-tree/
 
 701. 二叉搜索树中的插入操作

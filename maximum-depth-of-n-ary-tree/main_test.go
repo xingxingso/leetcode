@@ -12,7 +12,7 @@ func Test_maxDepth(t *testing.T) {
 		want int
 	}{
 		{
-			name: "equal",
+			name: "ex1",
 			args: args{
 				root: createNAryTree(),
 			},

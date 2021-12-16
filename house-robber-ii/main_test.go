@@ -12,28 +12,28 @@ func Test_rob(t *testing.T) {
 		want int
 	}{
 		{
-			name: "equal0",
+			name: "ex0",
 			args: args{
 				nums: []int{2, 3, 2},
 			},
 			want: 3,
 		},
 		{
-			name: "equal1",
+			name: "ex1",
 			args: args{
 				nums: []int{1, 2, 3, 1},
 			},
 			want: 4,
 		},
 		{
-			name: "equal2",
+			name: "ex2",
 			args: args{
 				nums: []int{1},
 			},
 			want: 1,
 		},
 		{
-			name: "equal3",
+			name: "ex3",
 			args: args{
 				nums: []int{2, 1, 1, 2},
 			},

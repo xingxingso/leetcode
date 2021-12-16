@@ -13,7 +13,7 @@ func Test_minDistance(t *testing.T) {
 		want int
 	}{
 		{
-			name: "equal0",
+			name: "ex0",
 			args: args{
 				word1: "sea",
 				word2: "eat",

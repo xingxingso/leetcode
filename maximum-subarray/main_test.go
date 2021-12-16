@@ -12,28 +12,28 @@ func Test_maxSubArray(t *testing.T) {
 		want int
 	}{
 		{
-			name: "equal0",
+			name: "ex0",
 			args: args{
 				nums: []int{-2, 1, -3, 4, -1, 2, 1, -5, 4},
 			},
 			want: 6,
 		},
 		{
-			name: "equal1",
+			name: "ex1",
 			args: args{
 				nums: []int{1},
 			},
 			want: 1,
 		},
 		{
-			name: "equal2",
+			name: "ex2",
 			args: args{
 				nums: []int{0},
 			},
 			want: 0,
 		},
 		{
-			name: "equal3",
+			name: "ex3",
 			args: args{
 				nums: []int{-100000},
 			},
