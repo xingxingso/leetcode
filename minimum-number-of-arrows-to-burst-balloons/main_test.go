@@ -12,35 +12,35 @@ func Test_findMinArrowShots(t *testing.T) {
 		want int
 	}{
 		{
-			name: "equal0",
+			name: "ex0",
 			args: args{
 				points: [][]int{{10, 16}, {2, 8}, {1, 6}, {7, 12}},
 			},
 			want: 2,
 		},
 		{
-			name: "equal1",
+			name: "ex1",
 			args: args{
 				points: [][]int{{1, 2}, {3, 4}, {5, 6}, {7, 8}},
 			},
 			want: 4,
 		},
 		{
-			name: "equal2",
+			name: "ex2",
 			args: args{
 				points: [][]int{{1, 2}, {2, 3}, {3, 4}, {4, 5}},
 			},
 			want: 2,
 		},
 		{
-			name: "equal3",
+			name: "ex3",
 			args: args{
 				points: [][]int{{1, 2}},
 			},
 			want: 1,
 		},
 		{
-			name: "equal4",
+			name: "ex4",
 			args: args{
 				points: [][]int{{2, 3}, {2, 3}},
 			},
@@ -51,6 +51,10 @@ func Test_findMinArrowShots(t *testing.T) {
 		t.Run(tt.name, func(t *testing.T) {
 			if got := findMinArrowShots(tt.args.points); got != tt.want {
 				t.Errorf("findMinArrowShots() = %v, want %v", got, tt.want)
+			}
+
+			if got := findMinArrowShotsS2(tt.args.points); got != tt.want {
+				t.Errorf("findMinArrowShotsS2() = %v, want %v", got, tt.want)
 			}
 		})
 	}
