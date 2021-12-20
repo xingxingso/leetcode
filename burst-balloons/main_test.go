@@ -15,28 +15,28 @@ type test struct {
 func getTests() []test {
 	tests := []test{
 		{
-			name: "equal0",
+			name: "ex0",
 			args: args{
 				nums: []int{3, 1, 5, 8},
 			},
 			want: 167,
 		},
 		{
-			name: "equal1",
+			name: "ex1",
 			args: args{
 				nums: []int{1, 5},
 			},
 			want: 10,
 		},
 		{
-			name: "equal2",
+			name: "ex2",
 			args: args{
 				nums: []int{7, 9, 8, 0, 7, 1, 3, 5, 5, 2, 3},
 			},
 			want: 1654,
 		},
 		{
-			name: "equal3",
+			name: "ex3",
 			args: args{
 				nums: []int{1, 2, 1},
 			},
