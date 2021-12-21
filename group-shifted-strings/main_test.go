@@ -15,7 +15,7 @@ func Test_groupStrings(t *testing.T) {
 		want [][]string
 	}{
 		{
-			name: "equal",
+			name: "ex1",
 			args: args{
 				strings: []string{"abc", "bcd", "acef", "xyz", "az", "ba", "a", "z"},
 			},

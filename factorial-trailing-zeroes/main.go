@@ -28,10 +28,3 @@ func trailingZeroes(n int) int {
 
 	return res
 }
-
-func min(x, y int) int {
-	if x < y {
-		return x
-	}
-	return y
-}
