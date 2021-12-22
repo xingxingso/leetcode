@@ -50,3 +50,29 @@ func (q *QueueInt) Peek() int {
 
 	return q.head.Next.Val
 }
+
+type simpleQueue struct {
+	data []int
+}
+
+func (q *simpleQueue) Push(val int) {
+	q.data = append(q.data, val)
+}
+
+func (q *simpleQueue) Pop() int {
+	n := q.data[0]
+	q.data = q.data[1:]
+	return n
+}
+
+func (q *simpleQueue) IsEmpty() bool {
+	return len(q.data) == 0
+}
+
+func (q *simpleQueue) size() int {
+	return len(q.data)
+}
+
+func (q *simpleQueue) Peek() int {
+	return q.data[0]
+}

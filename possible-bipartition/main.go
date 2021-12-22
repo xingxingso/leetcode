@@ -1,4 +1,5 @@
 /*
+Package possible_bipartition
 https://leetcode-cn.com/problems/possible-bipartition/
 
 886. 可能的二分法

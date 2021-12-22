@@ -13,7 +13,7 @@ func Test_possibleBipartition(t *testing.T) {
 		want bool
 	}{
 		{
-			name: "equal0",
+			name: "ex0",
 			args: args{
 				N:        4,
 				dislikes: [][]int{{1, 2}, {1, 3}, {2, 4}},
@@ -21,7 +21,7 @@ func Test_possibleBipartition(t *testing.T) {
 			want: true,
 		},
 		{
-			name: "equal1",
+			name: "ex1",
 			args: args{
 				N:        3,
 				dislikes: [][]int{{1, 2}, {1, 3}, {2, 3}},
@@ -29,7 +29,7 @@ func Test_possibleBipartition(t *testing.T) {
 			want: false,
 		},
 		{
-			name: "equal2",
+			name: "ex2",
 			args: args{
 				N:        5,
 				dislikes: [][]int{{1, 2}, {2, 3}, {3, 4}, {4, 5}, {1, 5}},

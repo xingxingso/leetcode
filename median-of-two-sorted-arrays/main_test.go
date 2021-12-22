@@ -13,7 +13,7 @@ func Test_findMedianSortedArrays(t *testing.T) {
 		want float64
 	}{
 		{
-			name: "equal",
+			name: "ex1",
 			args: args{
 				nums1: []int{1, 3},
 				nums2: []int{2},
@@ -21,7 +21,7 @@ func Test_findMedianSortedArrays(t *testing.T) {
 			want: 2.00000,
 		},
 		{
-			name: "equal",
+			name: "ex2",
 			args: args{
 				nums1: []int{1, 2},
 				nums2: []int{3, 4},
@@ -29,7 +29,7 @@ func Test_findMedianSortedArrays(t *testing.T) {
 			want: 2.50000,
 		},
 		{
-			name: "equal",
+			name: "ex3",
 			args: args{
 				nums1: []int{0, 0},
 				nums2: []int{0, 0},
@@ -37,7 +37,7 @@ func Test_findMedianSortedArrays(t *testing.T) {
 			want: 0.00000,
 		},
 		{
-			name: "equal",
+			name: "ex4",
 			args: args{
 				nums1: []int{},
 				nums2: []int{1},
@@ -45,7 +45,7 @@ func Test_findMedianSortedArrays(t *testing.T) {
 			want: 1.00000,
 		},
 		{
-			name: "equal",
+			name: "ex5",
 			args: args{
 				nums1: []int{2},
 				nums2: []int{},

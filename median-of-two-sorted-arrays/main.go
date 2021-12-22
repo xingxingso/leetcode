@@ -19,6 +19,18 @@ package median_of_two_sorted_arrays
 
 import "math"
 
+// --- 自己
+
+/*
+方法一：
+
+时间复杂度：
+空间复杂度：
+*/
+// func findMedianSortedArraysS1(nums1 []int, nums2 []int) float64 {
+// 	return 0
+// }
+
 // --- 官方
 
 /*

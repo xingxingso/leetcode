@@ -41,6 +41,7 @@
 #### 结构设计类
 
 - [146. LRU 缓存机制](https://leetcode-cn.com/problems/lru-cache/)
+- [225. 用队列实现栈](https://leetcode-cn.com/problems/implement-stack-using-queues/)
 - [295. 数据流的中位数](https://leetcode-cn.com/problems/find-median-from-data-stream/)
 - [341. 扁平化嵌套列表迭代器](https://leetcode-cn.com/problems/flatten-nested-list-iterator/)
 - [346. 数据流中的移动平均值](https://leetcode-cn.com/problems/moving-average-from-data-stream/)
@@ -138,6 +139,7 @@
 - [312. 戳气球](https://leetcode-cn.com/problems/burst-balloons/)
 - [316. 去除重复字母](https://leetcode-cn.com/problems/remove-duplicate-letters/)
 - [322. 零钱兑换](https://leetcode-cn.com/problems/coin-change/)
+- [326. 3 的幂](https://leetcode-cn.com/problems/power-of-three/)
 - [337. 打家劫舍 III](https://leetcode-cn.com/problems/house-robber-iii/)
 - [343. 整数拆分](https://leetcode-cn.com/problems/integer-break/)
 - [347. 前 K 个高频元素](https://leetcode-cn.com/problems/top-k-frequent-elements/)
