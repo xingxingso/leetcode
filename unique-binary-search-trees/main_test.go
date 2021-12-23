@@ -12,21 +12,21 @@ func Test_numTrees(t *testing.T) {
 		want int
 	}{
 		{
-			name: "equal0",
+			name: "ex0",
 			args: args{
 				n: 3,
 			},
 			want: 5,
 		},
 		{
-			name: "equal1",
+			name: "ex1",
 			args: args{
 				n: 5,
 			},
 			want: 42,
 		},
 		{
-			name: "equal2",
+			name: "ex2",
 			args: args{
 				n: 6,
 			},
