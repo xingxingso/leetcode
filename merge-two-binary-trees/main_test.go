@@ -16,7 +16,7 @@ func Test_mergeTrees(t *testing.T) {
 		want *TreeNode
 	}{
 		{
-			name: "equal0",
+			name: "ex1",
 			args: args{
 				root1: CreateTreeByArray([]int{1, 3, 2, 5}),
 				root2: CreateTreeByArray([]int{2, 1, 3, 0, 4, 0, 7}),

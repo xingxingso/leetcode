@@ -4,48 +4,42 @@ import (
 	"testing"
 )
 
-func Test_reverseList(t *testing.T) {
-	type args struct {
-		head *ListNode
-	}
-	tests := []struct {
+type args struct {
+	head *ListNode
+}
+
+func getTests() []struct {
+	name string
+	args args
+	want *ListNode
+} {
+	return []struct {
 		name string
 		args args
 		want *ListNode
 	}{
 		{
-			name: "equal0",
+			name: "ex1",
 			args: args{
 				head: getListNodeBySlice([]int{1, 2, 3, 4, 5}),
 			},
 			want: getListNodeBySlice([]int{5, 4, 3, 2, 1}),
 		},
 	}
-	for _, tt := range tests {
+}
+
+func Test_reverseList(t *testing.T) {
+	for _, tt := range getTests() {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := reverseList(tt.args.head); !isListNodeValEqual(got, tt.want) {
+			if got := reverseList(tt.args.head); !IsListNodeValEqual(got, tt.want) {
 				t.Errorf("reverseList() = %v, want %v", got, tt.want)
 			}
 		})
 	}
 
-	tests2 := []struct {
-		name string
-		args args
-		want *ListNode
-	}{
-		{
-			name: "equal",
-			args: args{
-				head: getListNodeBySlice([]int{1, 2, 3, 4, 5}),
-			},
-			want: getListNodeBySlice([]int{5, 4, 3, 2, 1}),
-		},
-	}
-
-	for _, tt := range tests2 {
+	for _, tt := range getTests() {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := reverseListO1(tt.args.head); !isListNodeValEqual(got, tt.want) {
+			if got := reverseListO1(tt.args.head); !IsListNodeValEqual(got, tt.want) {
 				t.Errorf("reverseList() = %v, want %v", got, tt.want)
 			}
 		})
@@ -64,7 +58,7 @@ func getListNodeBySlice(s []int) *ListNode {
 	return tmp.Next
 }
 
-func isListNodeValEqual(node1, node2 *ListNode) bool {
+func IsListNodeValEqual(node1, node2 *ListNode) bool {
 	for node1 != nil {
 		if node2 == nil || node1.Val != node2.Val {
 			return false

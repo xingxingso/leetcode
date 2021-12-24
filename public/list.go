@@ -16,19 +16,20 @@ type DoubleList struct {
 	Pre, Next *DoubleList
 }
 
-func getListNodeBySlice(s []int) *ListNode {
-	head := &ListNode{Val: 0}
-	tmp := head
+// GetListNodeBySlice 通过 slice 构建 list
+func GetListNodeBySlice(s []int) *ListNode {
+	dummy := &ListNode{}
+	head := dummy
 
 	for _, v := range s {
-		node := &ListNode{Val: v}
-		head.Next = node
-		head = node
+		head.Next = &ListNode{Val: v}
+		head = head.Next
 	}
-	return tmp.Next
+	return dummy.Next
 }
 
-func isListNodeValEqual(node1, node2 *ListNode) bool {
+// IsListNodeValEqual 判断两个链表是否一致
+func IsListNodeValEqual(node1, node2 *ListNode) bool {
 	for node1 != nil {
 		if node2 == nil || node1.Val != node2.Val {
 			return false
