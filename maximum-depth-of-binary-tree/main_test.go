@@ -12,7 +12,7 @@ func Test_maxDepth(t *testing.T) {
 		want int
 	}{
 		{
-			name: "equal0",
+			name: "ex1",
 			args: args{
 				root: CreateTreeByArray([]int{3, 9, 20, 0, 0, 15, 7}),
 			},

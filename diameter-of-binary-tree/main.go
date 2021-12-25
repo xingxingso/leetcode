@@ -1,4 +1,5 @@
 /*
+Package diameter_of_binary_tree
 https://leetcode-cn.com/problems/diameter-of-binary-tree/
 
 543. 二叉树的直径

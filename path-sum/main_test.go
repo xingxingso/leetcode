@@ -15,7 +15,7 @@ func Test_hasPathSum(t *testing.T) {
 		want bool
 	}{
 		{
-			name: "equal",
+			name: "ex1",
 			args: args{
 				root:      CreateTreeByArray([]int{5, 4, 8, 11, 0, 13, 4, 7, 2, 0, 0, 0, 1}),
 				targetSum: 22,
@@ -23,7 +23,7 @@ func Test_hasPathSum(t *testing.T) {
 			want: true,
 		},
 		{
-			name: "equal",
+			name: "ex2",
 			args: args{
 				root:      CreateTreeByArray([]int{1, 2, 3}),
 				targetSum: 5,
@@ -31,7 +31,7 @@ func Test_hasPathSum(t *testing.T) {
 			want: false,
 		},
 		{
-			name: "equal",
+			name: "ex3",
 			args: args{
 				root:      CreateTreeByArray([]int{1, 2}),
 				targetSum: 0,

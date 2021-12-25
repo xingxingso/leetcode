@@ -1,9 +1,6 @@
-package path_sum_ii
+package path_sum_iii
 
-import (
-	"reflect"
-	"testing"
-)
+import "testing"
 
 func Test_pathSum(t *testing.T) {
 	type args struct {
@@ -13,37 +10,49 @@ func Test_pathSum(t *testing.T) {
 	tests := []struct {
 		name string
 		args args
-		want [][]int
+		want int
 	}{
 		{
 			name: "ex1",
 			args: args{
-				root:      CreateTreeByArray([]int{5, 4, 8, 11, 0, 13, 4, 7, 2, 0, 0, 5, 1}),
-				targetSum: 22,
+				root:      CreateTreeByArray([]int{10, 5, -3, 3, 2, 0, 11, 3, -2, 0, 1}),
+				targetSum: 8,
 			},
-			want: [][]int{{5, 4, 11, 2}, {5, 8, 4, 5}},
+			want: 3,
 		},
 		{
 			name: "ex2",
 			args: args{
-				root:      CreateTreeByArray([]int{}),
-				targetSum: 0,
+				root:      CreateTreeByArray([]int{5, 4, 8, 11, 0, 13, 4, 7, 2, 0, 0, 5, 1}),
+				targetSum: 22,
 			},
-			want: [][]int{},
+			want: 3,
 		},
 		{
 			name: "ex3",
 			args: args{
-				root:      CreateTreeByArray([]int{0}),
-				targetSum: 0,
+				root:      CreateTreeByArray([]int{}),
+				targetSum: 1,
 			},
-			want: [][]int{{0}},
+			want: 0,
+		},
+		{
+			name: "ex4",
+			args: args{
+				root:      CreateTreeByArray([]int{1, 2}),
+				targetSum: 1,
+			},
+			want: 1,
 		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := pathSum(tt.args.root, tt.args.targetSum); !reflect.DeepEqual(got, tt.want) {
+			if got := pathSum(tt.args.root, tt.args.targetSum); got != tt.want {
 				t.Errorf("pathSum() = %v, want %v", got, tt.want)
+			}
+
+			if got := pathSumO1(tt.args.root, tt.args.targetSum); got != tt.want {
+				t.Errorf("pathSumO1() = %v, want %v", got, tt.want)
 			}
 		})
 	}
