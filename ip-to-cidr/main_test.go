@@ -16,7 +16,7 @@ func Test_ipToCIDR(t *testing.T) {
 		want []string
 	}{
 		{
-			name: "equal0",
+			name: "ex1",
 			args: args{
 				ip: "255.0.0.7",
 				n:  10,
@@ -24,7 +24,7 @@ func Test_ipToCIDR(t *testing.T) {
 			want: []string{"255.0.0.7/32", "255.0.0.8/29", "255.0.0.16/32"},
 		},
 		{
-			name: "equal1",
+			name: "ex2",
 			args: args{
 				ip: "0.0.0.0",
 				n:  1,
