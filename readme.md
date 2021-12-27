@@ -67,6 +67,7 @@
 - [21. 合并两个有序链表](https://leetcode-cn.com/problems/merge-two-sorted-lists/)
 - [22. 括号生成](https://leetcode-cn.com/problems/generate-parentheses/)
 - [23. 合并K个升序链表](https://leetcode-cn.com/problems/merge-k-sorted-lists/)
+- [24. 两两交换链表中的节点](https://leetcode-cn.com/problems/swap-nodes-in-pairs/)
 - [25. K 个一组翻转链表](https://leetcode-cn.com/problems/reverse-nodes-in-k-group/)
 - [26. 删除有序数组中的重复项](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/)
 - [28. 实现 strStr()](https://leetcode-cn.com/problems/implement-strstr/)
