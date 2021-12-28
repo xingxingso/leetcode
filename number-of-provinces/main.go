@@ -24,6 +24,8 @@ https://leetcode-cn.com/problems/number-of-provinces/
 */
 package number_of_provinces
 
+// 此题和 number-of-islands 一样
+
 // --- 自己
 
 /*

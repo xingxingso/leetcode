@@ -15,14 +15,14 @@ func Test_levelOrder(t *testing.T) {
 		want [][]int
 	}{
 		{
-			name: "equal0",
+			name: "ex1",
 			args: args{
 				root: CreateTreeByArray([]int{}),
 			},
 			want: [][]int{},
 		},
 		{
-			name: "equal1",
+			name: "ex2",
 			args: args{
 				root: CreateTreeByArray([]int{3, 9, 20, 0, 0, 15, 7}),
 			},

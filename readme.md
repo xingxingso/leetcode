@@ -18,6 +18,10 @@
 
 ### leetcode
 
+> todo:
+
+- [1044. 最长重复子串](https://leetcode-cn.com/problems/longest-duplicate-substring/)
+
 #### 经典
 
 - [20. 有效的括号](https://leetcode-cn.com/problems/valid-parentheses/)
@@ -57,6 +61,7 @@
 #### 其他
 
 - [2. 两数相加](https://leetcode-cn.com/problems/add-two-numbers/)
+- [3. 无重复字符的最长子串](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/)
 - [4. 寻找两个正序数组的中位数](https://leetcode-cn.com/problems/median-of-two-sorted-arrays/)
 - [5. 最长回文子串](https://leetcode-cn.com/problems/longest-palindromic-substring/)
 - [10. 正则表达式匹配](https://leetcode-cn.com/problems/regular-expression-matching/)
@@ -75,12 +80,14 @@
 - [33. 搜索旋转排序数组](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/)
 - [34. 在排序数组中查找元素的第一个和最后一个位置](https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
 - [37. 解数独](https://leetcode-cn.com/problems/sudoku-solver/)
+- [39. 组合总和](https://leetcode-cn.com/problems/combination-sum/)
 - [42. 接雨水](https://leetcode-cn.com/problems/trapping-rain-water/)
 - [45. 跳跃游戏 II](https://leetcode-cn.com/problems/jump-game-ii/)
 - [46. 全排列](https://leetcode-cn.com/problems/permutations/)
 - [53. 最大子序和](https://leetcode-cn.com/problems/maximum-subarray/)
 - [55. 跳跃游戏](https://leetcode-cn.com/problems/jump-game/)
 - [56. 合并区间](https://leetcode-cn.com/problems/merge-intervals/)
+- [62. 不同路径](https://leetcode-cn.com/problems/unique-paths/)
 - [64. 最小路径和](https://leetcode-cn.com/problems/minimum-path-sum/)
 - [69. x 的平方根](https://leetcode-cn.com/problems/sqrtx/)
 - [72. 编辑距离](https://leetcode-cn.com/problems/edit-distance/)
@@ -121,6 +128,7 @@
 - [191. 位1的个数](https://leetcode-cn.com/problems/number-of-1-bits/)
 - [198. 打家劫舍](https://leetcode-cn.com/problems/house-robber/)
 - [199. 二叉树的右视图](https://leetcode-cn.com/problems/binary-tree-right-side-view/)
+- [200. 岛屿数量](https://leetcode-cn.com/problems/number-of-islands/)
 - [204. 计数质数](https://leetcode-cn.com/problems/count-primes/)
 - [205. 同构字符串](https://leetcode-cn.com/problems/isomorphic-strings/)
 - [213. 打家劫舍 II](https://leetcode-cn.com/problems/house-robber-ii/)
@@ -213,10 +221,12 @@
 - [932. 漂亮数组](https://leetcode-cn.com/problems/beautiful-array/)
 - [934. 最短的桥](https://leetcode-cn.com/problems/shortest-bridge/)
 - [969. 煎饼排序](https://leetcode-cn.com/problems/pancake-sorting/)
+- [1044. 最长重复子串](https://leetcode-cn.com/problems/longest-common-subsequence/)
 - [1046. 最后一块石头的重量](https://leetcode-cn.com/problems/last-stone-weight/)
 - [1059. 从始点到终点的所有路径](https://leetcode-cn.com/problems/all-paths-from-source-lead-to-destination/)
 - [1099. 小于 K 的两数之和](https://leetcode-cn.com/problems/two-sum-less-than-k/)
 - [1109. 航班预订统计](https://leetcode-cn.com/problems/corporate-flight-bookings/)
+- [1110. 删点成林](https://leetcode-cn.com/problems/delete-nodes-and-return-forest/)
 - [1140. 石子游戏 II](https://leetcode-cn.com/problems/stone-game-ii/)
 - [1178. 猜字谜](https://leetcode-cn.com/problems/number-of-valid-words-for-each-puzzle/)
 - [1197. 进击的骑士](https://leetcode-cn.com/problems/minimum-knight-moves/)
@@ -230,4 +240,6 @@
 
 ### 剑指Offer 
 
+- [剑指 Offer 03. 数组中重复的数字](https://leetcode-cn.com/problems/shu-zu-zhong-zhong-fu-de-shu-zi-lcof/)
 - [剑指 Offer 22. 链表中倒数第k个节点](https://leetcode-cn.com/problems/lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof/)
+

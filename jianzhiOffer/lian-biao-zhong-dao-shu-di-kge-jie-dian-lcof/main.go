@@ -1,4 +1,5 @@
 /*
+Package lian_biao_zhong_dao_shu_di_kge_jie_dian_lcof
 https://leetcode-cn.com/problems/lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof/
 
 剑指 Offer 22. 链表中倒数第k个节点
@@ -9,9 +10,7 @@ https://leetcode-cn.com/problems/lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof/
 */
 package lian_biao_zhong_dao_shu_di_kge_jie_dian_lcof
 
-/**
-Definition for singly-linked list.
-*/
+// ListNode Definition for singly-linked list.
 type ListNode struct {
 	Val  int
 	Next *ListNode

@@ -16,9 +16,7 @@ https://leetcode-cn.com/problems/binary-tree-inorder-traversal/
 */
 package binary_tree_inorder_traversal
 
-/**
-Definition for a binary tree node.
-*/
+// TreeNode Definition for a binary tree node.
 type TreeNode struct {
 	Val   int
 	Left  *TreeNode

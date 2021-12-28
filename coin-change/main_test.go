@@ -13,7 +13,7 @@ func Test_coinChange(t *testing.T) {
 		want int
 	}{
 		{
-			name: "ex0",
+			name: "ex1",
 			args: args{
 				coins:  []int{1, 2, 5},
 				amount: 11,
@@ -21,7 +21,7 @@ func Test_coinChange(t *testing.T) {
 			want: 3,
 		},
 		{
-			name: "ex1",
+			name: "ex2",
 			args: args{
 				coins:  []int{2},
 				amount: 3,
@@ -29,7 +29,7 @@ func Test_coinChange(t *testing.T) {
 			want: -1,
 		},
 		{
-			name: "ex2",
+			name: "ex3",
 			args: args{
 				coins:  []int{1},
 				amount: 0,
@@ -37,7 +37,7 @@ func Test_coinChange(t *testing.T) {
 			want: 0,
 		},
 		{
-			name: "ex3",
+			name: "ex4",
 			args: args{
 				coins:  []int{1},
 				amount: 1,
@@ -45,7 +45,7 @@ func Test_coinChange(t *testing.T) {
 			want: 1,
 		},
 		{
-			name: "ex4",
+			name: "ex5",
 			args: args{
 				coins:  []int{1},
 				amount: 2,
@@ -53,7 +53,7 @@ func Test_coinChange(t *testing.T) {
 			want: 2,
 		},
 		{
-			name: "ex5",
+			name: "ex6",
 			args: args{
 				coins:  []int{1, 3, 5},
 				amount: 0,

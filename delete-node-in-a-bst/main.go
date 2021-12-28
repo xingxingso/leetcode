@@ -16,9 +16,7 @@ package delete_node_in_a_bst
 
 import "fmt"
 
-/**
-Definition for a binary tree node.
-*/
+// TreeNode Definition for a binary tree node.
 type TreeNode struct {
 	Val   int
 	Left  *TreeNode

@@ -31,6 +31,10 @@ func Test_isSymmetric(t *testing.T) {
 			if got := isSymmetric(tt.args.root); got != tt.want {
 				t.Errorf("isSymmetric() = %v, want %v", got, tt.want)
 			}
+
+			if got := isSymmetricS2(tt.args.root); got != tt.want {
+				t.Errorf("isSymmetricS2() = %v, want %v", got, tt.want)
+			}
 		})
 	}
 }

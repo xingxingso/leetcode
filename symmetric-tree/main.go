@@ -12,9 +12,7 @@ https://leetcode-cn.com/problems/symmetric-tree/
 */
 package symmetric_tree
 
-/**
-Definition for a binary tree node.
-*/
+// TreeNode Definition for a binary tree node.
 type TreeNode struct {
 	Val   int
 	Left  *TreeNode
@@ -60,4 +58,32 @@ func isSymmetric(root *TreeNode) bool {
 	}
 
 	return true
+}
+
+/*
+方法二: 递归
+
+时间复杂度：
+空间复杂度：
+*/
+func isSymmetricS2(root *TreeNode) bool {
+	if root == nil {
+		return true
+	}
+
+	var dfs func(l, r *TreeNode) bool
+	dfs = func(l, r *TreeNode) bool {
+		if l == nil && r == nil {
+			return true
+		}
+		//if l == nil && r != nil || l != nil && r == nil {
+		if l == nil || r == nil {
+			return false
+		}
+		if l.Val != r.Val {
+			return false
+		}
+		return dfs(l.Left, r.Right) && dfs(l.Right, r.Left)
+	}
+	return dfs(root.Left, root.Right)
 }

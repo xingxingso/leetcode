@@ -43,13 +43,13 @@ func trapO1(height []int) int {
 }
 
 /*
-方法二: 动态编程
+方法二: 动态规划
 
 时间复杂度： 时间复杂度：O(n)。
 	存储最大高度数组，需要两次遍历，每次 O(n)。
 	最终使用存储的数据更新 ans ，O(n)。
-空间复杂度：O(n)O(n) 额外空间。
-	和方法 1 相比使用了额外的 O(n) 空间用来放置 left_max 和 right_max 数组。
+空间复杂度：O(n) 额外空间。
+	使用了额外的 O(n) 空间用来放置 left_max 和 right_max 数组。
 */
 func trapO2(height []int) int {
 	if len(height) == 0 {

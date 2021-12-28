@@ -1,4 +1,5 @@
 /*
+Package longest_substring_without_repeating_characters
 https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/
 
 3. 无重复字符的最长子串
@@ -6,7 +7,7 @@ https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/
 给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。
 
 提示：
-	0 <= s.length <= 5 * 104
+	0 <= s.length <= 5 * 10^4
 	s 由英文字母、数字、符号和空格组成
 
 */
@@ -47,4 +48,30 @@ func max(x, y int) int {
 		return x
 	}
 	return y
+}
+
+/*
+方法一:	滑动窗口
+	和 lengthOfLongestSubstring 相比这里记录的是字符的下标，不需要遍历 map
+
+时间复杂度：
+空间复杂度：
+*/
+func lengthOfLongestSubstringS2(s string) int {
+	if len(s) == 0 {
+		return 0
+	}
+	ans := 0
+	window := make(map[byte]int)
+	for left, right := 0, 0; right < len(s); right++ {
+		if idx, ok := window[s[right]]; ok && idx >= left {
+			left = idx + 1 // idx >= left 说明 在窗口中, 此时窗口左边界直接移动到 idx + 1
+			// ans := max(ans, right-left+1) // 这种情况下 长度不可能大于原窗口
+		} else {
+			ans = max(ans, right-left+1)
+		}
+		window[s[right]] = right // 更新最后出现的位置
+	}
+
+	return ans
 }
