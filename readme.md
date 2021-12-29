@@ -52,6 +52,7 @@
 - [355. 设计推特](https://leetcode-cn.com/problems/design-twitter/)
 - [380. O(1) 时间插入、删除和获取随机元素](https://leetcode-cn.com/problems/insert-delete-getrandom-o1/)
 - [382. 链表随机节点](https://leetcode-cn.com/problems/linked-list-random-node/)
+- [384. 打乱数组](https://leetcode-cn.com/problems/shuffle-an-array/)
 - [398. 随机数索引](https://leetcode-cn.com/problems/random-pick-index/)
 - [460. LFU 缓存](https://leetcode-cn.com/problems/lfu-cache/)
 - [710. 黑名单中的随机数](https://leetcode-cn.com/problems/random-pick-with-blacklist/)
