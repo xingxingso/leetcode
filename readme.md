@@ -34,6 +34,7 @@
 - [141. 环形链表](https://leetcode-cn.com/problems/linked-list-cycle/)
 - [144. 二叉树的前序遍历](https://leetcode-cn.com/problems/binary-tree-preorder-traversal/)
 - [145. 二叉树的后序遍历](https://leetcode-cn.com/problems/binary-tree-postorder-traversal/)
+- [146. LRU 缓存](https://leetcode-cn.com/problems/lru-cache/)
 - [150. 逆波兰表达式求值](https://leetcode-cn.com/problems/evaluate-reverse-polish-notation/)
 - [189. 旋转数组](https://leetcode-cn.com/problems/rotate-array/)
 - [206. 反转链表](https://leetcode-cn.com/problems/reverse-linked-list/)
@@ -44,7 +45,6 @@
 
 #### 结构设计类
 
-- [146. LRU 缓存机制](https://leetcode-cn.com/problems/lru-cache/)
 - [225. 用队列实现栈](https://leetcode-cn.com/problems/implement-stack-using-queues/)
 - [295. 数据流的中位数](https://leetcode-cn.com/problems/find-median-from-data-stream/)
 - [341. 扁平化嵌套列表迭代器](https://leetcode-cn.com/problems/flatten-nested-list-iterator/)
@@ -222,6 +222,7 @@
 - [932. 漂亮数组](https://leetcode-cn.com/problems/beautiful-array/)
 - [934. 最短的桥](https://leetcode-cn.com/problems/shortest-bridge/)
 - [969. 煎饼排序](https://leetcode-cn.com/problems/pancake-sorting/)
+- [1000. 合并石头的最低成本](https://leetcode-cn.com/problems/minimum-cost-to-merge-stones/)
 - [1044. 最长重复子串](https://leetcode-cn.com/problems/longest-common-subsequence/)
 - [1046. 最后一块石头的重量](https://leetcode-cn.com/problems/last-stone-weight/)
 - [1059. 从始点到终点的所有路径](https://leetcode-cn.com/problems/all-paths-from-source-lead-to-destination/)

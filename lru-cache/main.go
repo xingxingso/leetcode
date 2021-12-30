@@ -2,37 +2,37 @@
 Package lru_cache
 https://leetcode-cn.com/problems/lru-cache/
 
-146. LRU 缓存机制
+146. LRU 缓存
 
-运用你所掌握的数据结构，设计和实现一个  LRU (最近最少使用) 缓存机制 。
-实现 LRUCache 类：
-	- LRUCache(int capacity) 以正整数作为容量 capacity 初始化 LRU 缓存
+请你设计并实现一个满足  LRU (最近最少使用) 缓存 约束的数据结构。
+
+实现 LRUCacheO1 类：
+	- LRUCacheO1(int capacity) 以 正整数 作为容量 capacity 初始化 LRU 缓存
 	- int get(int key) 如果关键字 key 存在于缓存中，则返回关键字的值，否则返回 -1 。
-	- void put(int key, int value) 如果关键字已经存在，则变更其数据值；如果关键字不存在，则插入该组「关键字-值」。
-      当缓存容量达到上限时，它应该在写入新数据之前删除最久未使用的数据值，从而为新的数据值留出空间。
+	- void put(int key, int value) 如果关键字 key 已经存在，则变更其数据值 value ；
+	如果不存在，则向缓存中插入该组 key-value 。
+	如果插入操作导致关键字数量超过 capacity ，则应该 逐出 最久未使用的关键字。
 
-进阶：
-	你是否可以在 O(1) 时间复杂度内完成这两种操作？
+函数 get 和 put 必须以 O(1) 的平均时间复杂度运行。
 
 提示：
-
-	- 1 <= capacity <= 3000
-	- 0 <= key <= 3000
-	- 0 <= value <= 10^4
-	- 最多调用 3 * 10^4 次 get 和 put
+	1 <= capacity <= 3000
+	0 <= key <= 10000
+	0 <= value <= 10^5
+	最多调用 2 * 10^5 次 get 和 put
 
 */
 package lru_cache
 
 import "fmt"
 
-//type LRUCache struct{}
-//func Constructor(capacity int) LRUCache       {}
-//func (this *LRUCache) Get(key int) int        {}
-//func (this *LRUCache) Put(key int, value int) {}
+//type LRUCacheO1 struct{}
+//func Constructor(capacity int) LRUCacheO1       {}
+//func (this *LRUCacheO1) Get(key int) int        {}
+//func (this *LRUCacheO1) Put(key int, value int) {}
 
 /**
- * Your LRUCache object will be instantiated and called as such:
+ * Your LRUCacheO1 object will be instantiated and called as such:
  * obj := Constructor(capacity);
  * param_1 := obj.Get(key);
  * obj.Put(key,value);
@@ -49,25 +49,25 @@ import "fmt"
 
 type LRUCacheS1 struct {
 	cap, len   int
-	cache      map[int]*DoubleList
-	head, tail *DoubleList
+	cache      map[int]*doubleListS1
+	head, tail *doubleListS1
 }
 
-type DoubleList struct {
+type doubleListS1 struct {
 	key, val  int
-	pre, next *DoubleList
+	pre, next *doubleListS1
 }
 
 func ConstructorS1(capacity int) LRUCacheS1 {
-	head := &DoubleList{}
-	tail := &DoubleList{}
+	head := &doubleListS1{}
+	tail := &doubleListS1{}
 	head.next = tail
 	tail.pre = head
 
 	return LRUCacheS1{
 		cap:   capacity,
 		len:   0,
-		cache: make(map[int]*DoubleList, 0),
+		cache: make(map[int]*doubleListS1, 0),
 		head:  head,
 		tail:  tail,
 	}
@@ -87,7 +87,7 @@ func (this *LRUCacheS1) Put(key int, value int) {
 		this.moveToHead(node)
 		return
 	}
-	node := &DoubleList{
+	node := &doubleListS1{
 		key: key,
 		val: value,
 	}
@@ -97,17 +97,17 @@ func (this *LRUCacheS1) Put(key int, value int) {
 	this.removeTail()
 }
 
-func (this *LRUCacheS1) moveToHead(node *DoubleList) {
+func (this *LRUCacheS1) moveToHead(node *doubleListS1) {
 	this.removeNode(node)
 	this.addToHead(node)
 }
 
-func (this *LRUCacheS1) removeNode(node *DoubleList) {
+func (this *LRUCacheS1) removeNode(node *doubleListS1) {
 	node.pre.next = node.next
 	node.next.pre = node.pre
 }
 
-func (this *LRUCacheS1) addToHead(node *DoubleList) {
+func (this *LRUCacheS1) addToHead(node *doubleListS1) {
 	node.pre = this.head
 	node.next = this.head.next
 	//this.head.next.pre = node
@@ -120,7 +120,7 @@ func (this *LRUCacheS1) removeTail() {
 		return
 	}
 	node := this.tail.pre
-	// remove from list
+	// remove from doubleListS2
 	//this.tail.pre = node.pre
 	//node.pre.next = this.tail
 	this.removeNode(node)
@@ -129,12 +129,81 @@ func (this *LRUCacheS1) removeTail() {
 	this.len--
 }
 
-func printList(node *DoubleList) {
-	for node != nil {
-		fmt.Printf("%d,", node.val)
-		node = node.next
+/*
+方法一: 哈希表 + 双向链表
+
+时间复杂度：
+空间复杂度：
+*/
+
+type LRUCache struct {
+	cap, len int
+	h        map[int]*doubleListS2
+	head     *doubleListS2 // 靠近头节点更新
+	tail     *doubleListS2
+}
+
+type doubleListS2 struct {
+	key, val  int
+	pre, next *doubleListS2
+}
+
+func Constructor(capacity int) LRUCache {
+	head, tail := doubleListS2{}, doubleListS2{}
+	head.next = &tail
+	tail.pre = &head
+
+	return LRUCache{
+		cap:  capacity,
+		len:  0,
+		h:    make(map[int]*doubleListS2),
+		head: &head,
+		tail: &tail,
 	}
-	fmt.Println()
+}
+func (l *LRUCache) Get(key int) int {
+	if node, ok := l.h[key]; ok {
+		l.cutNode(node)
+		l.moveToHead(node)
+		return node.val
+	}
+
+	return -1
+}
+
+func (l *LRUCache) Put(key int, value int) {
+	node, ok := l.h[key]
+	if ok {
+		node.val = value
+		l.cutNode(node)
+		l.moveToHead(node)
+		return
+	}
+
+	// 溢出问题
+	if l.len >= l.cap {
+		cutNode := l.tail.pre
+		delete(l.h, cutNode.key)
+		l.cutNode(cutNode)
+		l.len--
+	}
+
+	newNode := &doubleListS2{key: key, val: value}
+	l.h[key] = newNode
+	l.moveToHead(newNode)
+	l.len++
+}
+
+func (l *LRUCache) cutNode(node *doubleListS2) {
+	node.pre.next = node.next
+	node.next.pre = node.pre
+}
+
+func (l *LRUCache) moveToHead(node *doubleListS2) {
+	node.next = l.head.next
+	l.head.next.pre = node
+	l.head.next = node
+	node.pre = l.head
 }
 
 // --- 官方
@@ -145,7 +214,8 @@ func printList(node *DoubleList) {
 时间复杂度：对于 put 和 get 都是 O(1)。
 空间复杂度：O(capacity)，因为哈希表和双向链表最多存储 capacity+1 个元素。
 */
-type LRUCache struct {
+
+type LRUCacheO1 struct {
 	size       int
 	capacity   int
 	cache      map[int]*DLinkedNode
@@ -164,8 +234,8 @@ func initDLinkedNode(key, value int) *DLinkedNode {
 	}
 }
 
-func Constructor(capacity int) LRUCache {
-	l := LRUCache{
+func ConstructorO1(capacity int) LRUCacheO1 {
+	l := LRUCacheO1{
 		capacity: capacity,
 		cache:    map[int]*DLinkedNode{},
 		head:     initDLinkedNode(0, 0),
@@ -176,7 +246,7 @@ func Constructor(capacity int) LRUCache {
 	return l
 }
 
-func (this *LRUCache) Get(key int) int {
+func (this *LRUCacheO1) Get(key int) int {
 	node, ok := this.cache[key]
 	if !ok {
 		return -1
@@ -185,7 +255,7 @@ func (this *LRUCache) Get(key int) int {
 	return node.value
 }
 
-func (this *LRUCache) Put(key int, value int) {
+func (this *LRUCacheO1) Put(key int, value int) {
 	node, ok := this.cache[key]
 	if ok {
 		node.value = value
@@ -204,25 +274,33 @@ func (this *LRUCache) Put(key int, value int) {
 	}
 }
 
-func (this *LRUCache) moveToHead(node *DLinkedNode) {
+func (this *LRUCacheO1) moveToHead(node *DLinkedNode) {
 	this.removeNode(node)
 	this.addToHead(node)
 }
 
-func (this *LRUCache) addToHead(node *DLinkedNode) {
+func (this *LRUCacheO1) addToHead(node *DLinkedNode) {
 	node.next = this.head.next
 	node.pre = this.head
 	this.head.next = node
 	node.next.pre = node
 }
 
-func (this *LRUCache) removeTail() *DLinkedNode {
+func (this *LRUCacheO1) removeTail() *DLinkedNode {
 	node := this.tail.pre
 	this.removeNode(node)
 	return node
 }
 
-func (this *LRUCache) removeNode(node *DLinkedNode) {
+func (this *LRUCacheO1) removeNode(node *DLinkedNode) {
 	node.pre.next = node.next
 	node.next.pre = node.pre
+}
+
+func printList(node *doubleListS1) {
+	for node != nil {
+		fmt.Printf("%d,", node.val)
+		node = node.next
+	}
+	fmt.Println()
 }

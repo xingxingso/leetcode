@@ -13,7 +13,7 @@ func Test_minimumDeleteSum(t *testing.T) {
 		want int
 	}{
 		{
-			name: "equal0",
+			name: "ex1",
 			args: args{
 				s1: "sea",
 				s2: "eat",
@@ -21,7 +21,7 @@ func Test_minimumDeleteSum(t *testing.T) {
 			want: 231,
 		},
 		{
-			name: "equal1",
+			name: "ex2",
 			args: args{
 				s1: "delete",
 				s2: "leet",

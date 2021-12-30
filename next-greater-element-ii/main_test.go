@@ -28,6 +28,20 @@ func Test_nextGreaterElements(t *testing.T) {
 			},
 			want: []int{-1, 5, 5, 5, 5},
 		},
+		{
+			name: "ex3",
+			args: args{
+				nums: []int{9, 2, 6, 3, 5, 8, 1, 7},
+			},
+			want: []int{-1, 6, 8, 5, 8, 9, 7, 9},
+		},
+		{
+			name: "ex4",
+			args: args{
+				nums: []int{2, 6, 9, 3},
+			},
+			want: []int{6, 9, -1, 6},
+		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
