@@ -21,7 +21,7 @@ func getTests() []struct {
 		want *ListNode
 	}{
 		{
-			name: "ex0",
+			name: "ex1",
 			args: args{
 				head: getListNodeBySlice([]int{1, 2, 3, 4, 5}),
 				k:    2,
@@ -29,7 +29,7 @@ func getTests() []struct {
 			want: getListNodeBySlice([]int{2, 1, 4, 3, 5}),
 		},
 		{
-			name: "ex1",
+			name: "ex2",
 			args: args{
 				head: getListNodeBySlice([]int{1, 2, 3, 4, 5}),
 				k:    3,
@@ -37,7 +37,7 @@ func getTests() []struct {
 			want: getListNodeBySlice([]int{3, 2, 1, 4, 5}),
 		},
 		{
-			name: "ex2",
+			name: "ex3",
 			args: args{
 				head: getListNodeBySlice([]int{1, 2}),
 				k:    2,

@@ -13,7 +13,7 @@ func Test_isMatch(t *testing.T) {
 		want bool
 	}{
 		{
-			name: "equal0",
+			name: "ex1",
 			args: args{
 				s: "aa",
 				p: "a",
@@ -21,7 +21,7 @@ func Test_isMatch(t *testing.T) {
 			want: false,
 		},
 		{
-			name: "equal1",
+			name: "ex2",
 			args: args{
 				s: "aa",
 				p: "a*",
@@ -29,7 +29,7 @@ func Test_isMatch(t *testing.T) {
 			want: true,
 		},
 		{
-			name: "equal2",
+			name: "ex3",
 			args: args{
 				s: "ab",
 				p: ".*",
@@ -37,7 +37,7 @@ func Test_isMatch(t *testing.T) {
 			want: true,
 		},
 		{
-			name: "equal3",
+			name: "ex4",
 			args: args{
 				s: "aab",
 				p: "c*a*b",
@@ -45,18 +45,30 @@ func Test_isMatch(t *testing.T) {
 			want: true,
 		},
 		{
-			name: "equal4",
+			name: "ex5",
 			args: args{
 				s: "mississippi",
 				p: "mis*is*p*.",
 			},
 			want: false,
 		},
+		{
+			name: "ex6",
+			args: args{
+				s: "a",
+				p: "ab*c*",
+			},
+			want: true,
+		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			if got := isMatch(tt.args.s, tt.args.p); got != tt.want {
 				t.Errorf("isMatch() = %v, want %v", got, tt.want)
+			}
+
+			if got := isMatchP1(tt.args.s, tt.args.p); got != tt.want {
+				t.Errorf("isMatchP1() = %v, want %v", got, tt.want)
 			}
 		})
 	}
