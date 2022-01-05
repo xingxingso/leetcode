@@ -154,3 +154,71 @@ func Test_intSliceSliceEqual2(t *testing.T) {
 		})
 	}
 }
+
+func TestSearchBiggerMinIndex(t *testing.T) {
+	type args struct {
+		nums   []int
+		target int
+	}
+	tests := []struct {
+		name string
+		args args
+		want int
+	}{
+		{
+			name: "ex1",
+			args: args{
+				nums:   []int{},
+				target: 1,
+			},
+			want: -1,
+		},
+		{
+			name: "ex2",
+			args: args{
+				nums:   []int{1},
+				target: 2,
+			},
+			want: -1,
+		},
+		{
+			name: "ex3",
+			args: args{
+				nums:   []int{1},
+				target: 0,
+			},
+			want: 0,
+		},
+		{
+			name: "ex4",
+			args: args{
+				nums:   []int{1, 4, 8, 16, 18},
+				target: 1,
+			},
+			want: 0,
+		},
+		{
+			name: "ex5",
+			args: args{
+				nums:   []int{1, 4, 8, 16, 18},
+				target: 18,
+			},
+			want: 4,
+		},
+		{
+			name: "ex6",
+			args: args{
+				nums:   []int{1, 4, 4, 5, 6},
+				target: 4,
+			},
+			want: 1,
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := SearchBiggerMinIndex(tt.args.nums, tt.args.target); got != tt.want {
+				t.Errorf("SearchBiggerMinIndex() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}

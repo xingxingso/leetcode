@@ -131,3 +131,26 @@ func sliceSameValue(s1, s2 []int) bool {
 	}
 	return true
 }
+
+// SearchBiggerMinIndex 寻找升序数组中第一个大于等于目标值的数字的下标
+func SearchBiggerMinIndex(nums []int, target int) int {
+	var searchIndex func(left, right int) int
+	searchIndex = func(left, right int) int {
+		for left <= right {
+			mid := left + (right-left)/2
+			if target > nums[mid] {
+				left = mid + 1
+			} else if target < nums[mid] {
+				right = mid - 1
+			} else {
+				right = mid - 1
+			}
+		}
+		if left >= len(nums) {
+			return -1
+		}
+		return left
+	}
+
+	return searchIndex(0, len(nums)-1)
+}

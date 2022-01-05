@@ -12,21 +12,21 @@ func Test_rob(t *testing.T) {
 		want int
 	}{
 		{
-			name: "equal0",
+			name: "ex1",
 			args: args{
 				root: CreateTreeByArray([]int{3, 2, 3, 0, 3, 0, 1}),
 			},
 			want: 7,
 		},
 		{
-			name: "equal1",
+			name: "ex2",
 			args: args{
 				root: CreateTreeByArray([]int{3, 4, 5, 1, 3, 0, 1}),
 			},
 			want: 9,
 		},
 		{
-			name: "equal2",
+			name: "ex3",
 			args: args{
 				root: CreateTreeByArray([]int{2, 1, 3, 0, 4}),
 			},

@@ -1,4 +1,5 @@
 /*
+Package random_pick_with_blacklist
 https://leetcode-cn.com/problems/random-pick-with-blacklist/
 
 710. 黑名单中的随机数
@@ -40,6 +41,7 @@ import "math/rand"
 时间复杂度：
 空间复杂度：
 */
+
 type Solution struct {
 	mapping map[int]int
 	size    int

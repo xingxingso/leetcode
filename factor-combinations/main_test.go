@@ -15,28 +15,28 @@ func Test_getFactors(t *testing.T) {
 		want [][]int
 	}{
 		{
-			name: "equal",
+			name: "ex1",
 			args: args{
 				n: 1,
 			},
 			want: [][]int{},
 		},
 		{
-			name: "equal",
+			name: "ex2",
 			args: args{
 				n: 37,
 			},
 			want: [][]int{},
 		},
 		{
-			name: "equal",
+			name: "ex3",
 			args: args{
 				n: 12,
 			},
 			want: [][]int{{2, 6}, {2, 2, 3}, {3, 4}},
 		},
 		{
-			name: "equal",
+			name: "ex4",
 			args: args{
 				n: 32,
 			},

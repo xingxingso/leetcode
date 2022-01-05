@@ -1,4 +1,5 @@
 /*
+Package factor_combinations
 https://leetcode-cn.com/problems/factor-combinations/
 
 254. 因子的组合
