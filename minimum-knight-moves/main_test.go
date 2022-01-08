@@ -13,7 +13,7 @@ func Test_minKnightMoves(t *testing.T) {
 		want int
 	}{
 		{
-			name: "equal0",
+			name: "ex1",
 			args: args{
 				x: 2,
 				y: 1,
@@ -21,7 +21,7 @@ func Test_minKnightMoves(t *testing.T) {
 			want: 1,
 		},
 		{
-			name: "equal1",
+			name: "ex2",
 			args: args{
 				x: 5,
 				y: 5,
@@ -29,7 +29,7 @@ func Test_minKnightMoves(t *testing.T) {
 			want: 4,
 		},
 		{
-			name: "equal1",
+			name: "ex3",
 			args: args{
 				x: 6,
 				y: 5,
@@ -37,7 +37,7 @@ func Test_minKnightMoves(t *testing.T) {
 			want: 5,
 		},
 		{
-			name: "equal2",
+			name: "ex4",
 			args: args{
 				x: 30,
 				y: 15,
@@ -45,7 +45,7 @@ func Test_minKnightMoves(t *testing.T) {
 			want: 15,
 		},
 		{
-			name: "equal2",
+			name: "ex5",
 			args: args{
 				x: 87,
 				y: 79,
