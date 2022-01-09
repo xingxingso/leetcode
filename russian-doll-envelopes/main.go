@@ -1,4 +1,5 @@
 /*
+Package russian_doll_envelopes
 https://leetcode-cn.com/problems/russian-doll-envelopes/
 
 354. 俄罗斯套娃信封问题
@@ -12,7 +13,7 @@ https://leetcode-cn.com/problems/russian-doll-envelopes/
 提示：
 	1 <= envelopes.length <= 5000
 	envelopes[i].length == 2
-	1 <= wi, hi <= 104
+	1 <= wi, hi <= 10^4
 
 */
 package russian_doll_envelopes

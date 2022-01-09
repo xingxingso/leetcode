@@ -12,14 +12,14 @@ func Test_maxEnvelopes(t *testing.T) {
 		want int
 	}{
 		{
-			name: "equal0",
+			name: "ex1",
 			args: args{
 				envelopes: [][]int{{5, 4}, {6, 4}, {6, 7}, {2, 3}},
 			},
 			want: 3,
 		},
 		{
-			name: "equal1",
+			name: "ex2",
 			args: args{
 				envelopes: [][]int{{1, 1}, {1, 1}, {1, 1}},
 			},
