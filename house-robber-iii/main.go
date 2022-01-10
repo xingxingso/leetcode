@@ -1,4 +1,5 @@
 /*
+Package house_robber_iii
 https://leetcode-cn.com/problems/house-robber-iii/
 
 337. 打家劫舍 III
@@ -10,9 +11,7 @@ https://leetcode-cn.com/problems/house-robber-iii/
 */
 package house_robber_iii
 
-/**
-Definition for a binary tree node.
-*/
+// TreeNode Definition for a binary tree node.
 type TreeNode struct {
 	Val   int
 	Left  *TreeNode

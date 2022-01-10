@@ -44,7 +44,7 @@ func IsListNodeValEqual(node1, node2 *ListNode) bool {
 
 func printList(node *ListNode) {
 	for node != nil {
-		fmt.Printf("%d,", node.Val)
+		fmt.Printf("%d->", node.Val)
 		node = node.Next
 	}
 	fmt.Println()
