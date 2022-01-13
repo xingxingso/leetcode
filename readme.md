@@ -64,6 +64,7 @@
 
 #### 其他
 
+- [1. 两数之和](https://leetcode-cn.com/problems/two-sum/)
 - [2. 两数相加](https://leetcode-cn.com/problems/add-two-numbers/)
 - [3. 无重复字符的最长子串](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/)
 - [4. 寻找两个正序数组的中位数](https://leetcode-cn.com/problems/median-of-two-sorted-arrays/)
@@ -169,9 +170,11 @@
 - [310. 最小高度树](https://leetcode-cn.com/problems/minimum-height-trees/)
 - [312. 戳气球](https://leetcode-cn.com/problems/burst-balloons/)
 - [316. 去除重复字母](https://leetcode-cn.com/problems/remove-duplicate-letters/)
+- [318. 最大单词长度乘积](https://leetcode-cn.com/problems/maximum-product-of-word-lengths/)
 - [322. 零钱兑换](https://leetcode-cn.com/problems/coin-change/)
 - [326. 3 的幂](https://leetcode-cn.com/problems/power-of-three/)
 - [337. 打家劫舍 III](https://leetcode-cn.com/problems/house-robber-iii/)
+- [338. 比特位计数](https://leetcode-cn.com/problems/counting-bits/)
 - [342. 4的幂](https://leetcode-cn.com/problems/power-of-four/)
 - [343. 整数拆分](https://leetcode-cn.com/problems/integer-break/)
 - [347. 前 K 个高频元素](https://leetcode-cn.com/problems/top-k-frequent-elements/)
