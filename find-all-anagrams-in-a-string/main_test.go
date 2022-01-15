@@ -16,7 +16,7 @@ func Test_findAnagrams(t *testing.T) {
 		want []int
 	}{
 		{
-			name: "equal0",
+			name: "ex1",
 			args: args{
 				s: "cbaebabacd",
 				p: "abc",
@@ -24,7 +24,7 @@ func Test_findAnagrams(t *testing.T) {
 			want: []int{0, 6},
 		},
 		{
-			name: "equal1",
+			name: "ex2",
 			args: args{
 				s: "abab",
 				p: "ab",
@@ -32,7 +32,7 @@ func Test_findAnagrams(t *testing.T) {
 			want: []int{0, 1, 2},
 		},
 		{
-			name: "equal2",
+			name: "ex3",
 			args: args{
 				s: "",
 				p: "",
@@ -40,7 +40,7 @@ func Test_findAnagrams(t *testing.T) {
 			want: []int{},
 		},
 		{
-			name: "equal3",
+			name: "ex4",
 			args: args{
 				s: "",
 				p: "a",
@@ -48,7 +48,7 @@ func Test_findAnagrams(t *testing.T) {
 			want: []int{},
 		},
 		{
-			name: "equal4",
+			name: "ex5",
 			args: args{
 				s: "a",
 				p: "",
@@ -56,7 +56,7 @@ func Test_findAnagrams(t *testing.T) {
 			want: []int{},
 		},
 		{
-			name: "equal5",
+			name: "ex6",
 			args: args{
 				s: "a",
 				p: "a",
@@ -64,7 +64,7 @@ func Test_findAnagrams(t *testing.T) {
 			want: []int{0},
 		},
 		{
-			name: "equal6",
+			name: "ex7",
 			args: args{
 				s: "zaabcabadaaaefafa",
 				p: "aa",

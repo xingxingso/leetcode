@@ -111,6 +111,7 @@ loop:
 	return true
 }
 
+// 是否元素相同
 func sliceSameValue(s1, s2 []int) bool {
 	if len(s1) != len(s2) {
 		return false
