@@ -1,4 +1,5 @@
 /*
+Package same_tree
 https://leetcode-cn.com/problems/same-tree/
 
 100. 相同的树
@@ -9,9 +10,7 @@ https://leetcode-cn.com/problems/same-tree/
 */
 package same_tree
 
-/**
-Definition for a binary tree node.
-*/
+// TreeNode Definition for a binary tree node.
 type TreeNode struct {
 	Val   int
 	Left  *TreeNode

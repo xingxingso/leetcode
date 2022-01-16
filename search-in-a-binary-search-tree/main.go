@@ -1,4 +1,5 @@
 /*
+Package search_in_a_binary_search_tree
 https://leetcode-cn.com/problems/search-in-a-binary-search-tree/
 
 700. 二叉搜索树中的搜索
@@ -8,9 +9,7 @@ https://leetcode-cn.com/problems/search-in-a-binary-search-tree/
 */
 package search_in_a_binary_search_tree
 
-/**
-Definition for a binary tree node.
-*/
+// TreeNode Definition for a binary tree node.
 type TreeNode struct {
 	Val   int
 	Left  *TreeNode

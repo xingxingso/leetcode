@@ -16,7 +16,7 @@ func Test_searchBST(t *testing.T) {
 		want *TreeNode
 	}{
 		{
-			name: "equal",
+			name: "ex1",
 			args: args{
 				root: CreateTreeByArray([]int{4, 2, 7, 1, 3}),
 				val:  2,
@@ -24,7 +24,7 @@ func Test_searchBST(t *testing.T) {
 			want: CreateTreeByArray([]int{2, 1, 3}),
 		},
 		{
-			name: "equal",
+			name: "ex2",
 			args: args{
 				root: CreateTreeByArray([]int{4, 2, 7, 1, 3}),
 				val:  5,

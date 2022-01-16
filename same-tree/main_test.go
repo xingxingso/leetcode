@@ -13,7 +13,7 @@ func Test_isSameTree(t *testing.T) {
 		want bool
 	}{
 		{
-			name: "equal",
+			name: "ex1",
 			args: args{
 				p: CreateTreeByArray([]int{1, 2, 3}),
 				q: CreateTreeByArray([]int{1, 2, 3}),
@@ -21,7 +21,7 @@ func Test_isSameTree(t *testing.T) {
 			want: true,
 		},
 		{
-			name: "equal",
+			name: "ex2",
 			args: args{
 				p: CreateTreeByArray([]int{1, 2}),
 				q: CreateTreeByArray([]int{1, 0, 2}),
