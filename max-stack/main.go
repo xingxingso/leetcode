@@ -43,11 +43,12 @@ package max_stack
 时间复杂度：
 空间复杂度：
 */
+
 type MaxStack struct {
 	data []int
 }
 
-/** initialize your data structure here. */
+// Constructor initialize your data structure here.
 func Constructor() MaxStack {
 	return MaxStack{}
 }
@@ -115,12 +116,13 @@ func (this *MaxStack) PopMax() int {
 	时间复杂度为 O(n)。因此总的时间复杂度为 O(n)。
 空间复杂度：O(n)。
 */
+
 type MaxStackO1 struct {
 	stack    []int
 	maxStack []int
 }
 
-/** initialize your data structure here. */
+// ConstructorO1 initialize your data structure here.
 func ConstructorO1() MaxStack {
 	return MaxStack{}
 }

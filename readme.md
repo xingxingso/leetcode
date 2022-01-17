@@ -238,6 +238,7 @@
 - [751. IP 到 CIDR](https://leetcode-cn.com/problems/ip-to-cidr/)
 - [752. 打开转盘锁](https://leetcode-cn.com/problems/open-the-lock/)
 - [763. 划分字母区间](https://leetcode-cn.com/problems/partition-labels/)
+- [769. 最多能完成排序的块](https://leetcode-cn.com/problems/max-chunks-to-make-sorted/)
 - [773. 滑动谜题](https://leetcode-cn.com/problems/sliding-puzzle/)
 - [793. 阶乘函数后 K 个零](https://leetcode-cn.com/problems/preimage-size-of-factorial-zeroes-function/)
 - [875. 爱吃香蕉的珂珂](https://leetcode-cn.com/problems/koko-eating-bananas/)
