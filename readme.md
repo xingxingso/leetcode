@@ -47,6 +47,7 @@
 #### 结构设计类
 
 - [225. 用队列实现栈](https://leetcode-cn.com/problems/implement-stack-using-queues/)
+- [232. 用栈实现队列](https://leetcode-cn.com/problems/implement-queue-using-stacks/)
 - [295. 数据流的中位数](https://leetcode-cn.com/problems/find-median-from-data-stream/)
 - [341. 扁平化嵌套列表迭代器](https://leetcode-cn.com/problems/flatten-nested-list-iterator/)
 - [346. 数据流中的移动平均值](https://leetcode-cn.com/problems/moving-average-from-data-stream/)
