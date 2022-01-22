@@ -1,4 +1,5 @@
 /*
+Package rearrange_string_k_distance_apart
 https://leetcode-cn.com/problems/rearrange-string-k-distance-apart/
 
 358. K 距离间隔重排字符串

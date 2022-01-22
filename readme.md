@@ -180,6 +180,7 @@
 - [318. 最大单词长度乘积](https://leetcode-cn.com/problems/maximum-product-of-word-lengths/)
 - [322. 零钱兑换](https://leetcode-cn.com/problems/coin-change/)
 - [326. 3 的幂](https://leetcode-cn.com/problems/power-of-three/)
+- [332. 重新安排行程](https://leetcode-cn.com/problems/reconstruct-itinerary/)
 - [337. 打家劫舍 III](https://leetcode-cn.com/problems/house-robber-iii/)
 - [338. 比特位计数](https://leetcode-cn.com/problems/counting-bits/)
 - [342. 4的幂](https://leetcode-cn.com/problems/power-of-four/)

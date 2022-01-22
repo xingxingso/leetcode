@@ -16,7 +16,7 @@ func Test_rearrangeString(t *testing.T) {
 		want string
 	}{
 		{
-			name: "equal",
+			name: "ex1",
 			args: args{
 				s: "aabbcc",
 				k: 3,
@@ -24,7 +24,7 @@ func Test_rearrangeString(t *testing.T) {
 			want: "abcabc",
 		},
 		{
-			name: "equal",
+			name: "ex2",
 			args: args{
 				s: "aaabc",
 				k: 3,
@@ -32,7 +32,7 @@ func Test_rearrangeString(t *testing.T) {
 			want: "",
 		},
 		{
-			name: "equal",
+			name: "ex3",
 			args: args{
 				s: "aaadbbcc",
 				k: 2,
@@ -42,7 +42,7 @@ func Test_rearrangeString(t *testing.T) {
 			// want: "abacacbd",
 		},
 		{
-			name: "equal",
+			name: "ex4",
 			args: args{
 				s: "aabbccddee",
 				k: 2,
@@ -51,7 +51,7 @@ func Test_rearrangeString(t *testing.T) {
 			// want: "abcdecedab",
 		},
 		{
-			name: "equal",
+			name: "ex5",
 			args: args{
 				s: "aabbccddee",
 				k: 4,
@@ -60,7 +60,7 @@ func Test_rearrangeString(t *testing.T) {
 			want: "abcdeabcde",
 		},
 		{
-			name: "equal",
+			name: "ex6",
 			args: args{
 				s: "aabbccddee",
 				k: 5,
@@ -68,7 +68,7 @@ func Test_rearrangeString(t *testing.T) {
 			want: "abcdeabcde",
 		},
 		{
-			name: "equal",
+			name: "ex7",
 			args: args{
 				s: "a",
 				k: 0,
@@ -76,7 +76,7 @@ func Test_rearrangeString(t *testing.T) {
 			want: "a",
 		},
 		{
-			name: "equal",
+			name: "ex8",
 			args: args{
 				s: "a",
 				k: 2,
@@ -84,7 +84,7 @@ func Test_rearrangeString(t *testing.T) {
 			want: "a",
 		},
 		{
-			name: "equal",
+			name: "ex9",
 			args: args{
 				s: "aa",
 				k: 2,
