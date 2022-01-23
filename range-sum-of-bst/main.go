@@ -1,4 +1,5 @@
 /*
+Package range_sum_of_bst
 https://leetcode-cn.com/problems/range-sum-of-bst/
 
 938. 二叉搜索树的范围和
@@ -14,9 +15,7 @@ https://leetcode-cn.com/problems/range-sum-of-bst/
 */
 package range_sum_of_bst
 
-/**
-Definition for a binary tree node.
-*/
+// TreeNode Definition for a binary tree node.
 type TreeNode struct {
 	Val   int
 	Left  *TreeNode

@@ -14,7 +14,7 @@ func Test_rangeSumBST(t *testing.T) {
 		want int
 	}{
 		{
-			name: "equal0",
+			name: "ex1",
 			args: args{
 				root: CreateTreeByArray([]int{10, 5, 15, 3, 7, 0, 18}),
 				low:  7,
@@ -23,7 +23,7 @@ func Test_rangeSumBST(t *testing.T) {
 			want: 32,
 		},
 		{
-			name: "equal1",
+			name: "ex2",
 			args: args{
 				root: CreateTreeByArray([]int{10, 5, 15, 3, 7, 13, 18, 1, 0, 6}),
 				low:  6,
