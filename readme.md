@@ -51,6 +51,7 @@
 - [232. 用栈实现队列](https://leetcode-cn.com/problems/implement-queue-using-stacks/)
 - [295. 数据流的中位数](https://leetcode-cn.com/problems/find-median-from-data-stream/)
 - [303. 区域和检索 - 数组不可变](https://leetcode-cn.com/problems/range-sum-query-immutable/)
+- [304. 二维区域和检索 - 矩阵不可变](https://leetcode-cn.com/problems/range-sum-query-2d-immutable/)
 - [341. 扁平化嵌套列表迭代器](https://leetcode-cn.com/problems/flatten-nested-list-iterator/)
 - [346. 数据流中的移动平均值](https://leetcode-cn.com/problems/moving-average-from-data-stream/)
 - [355. 设计推特](https://leetcode-cn.com/problems/design-twitter/)
