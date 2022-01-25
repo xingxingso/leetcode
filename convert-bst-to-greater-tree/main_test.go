@@ -20,28 +20,28 @@ func getTests() []struct {
 		want *TreeNode
 	}{
 		{
-			name: "equal0",
+			name: "ex1",
 			args: args{
 				root: CreateTreeByArray([]int{4, 1, 6, 0, 2, 5, 7, -1, -1, -1, 3, -1, -1, -1, 8}),
 			},
 			want: CreateTreeByArray([]int{30, 36, 21, 36, 35, 26, 15, -1, -1, -1, 33, -1, -1, -1, 8}),
 		},
 		{
-			name: "equal1",
+			name: "ex2",
 			args: args{
 				root: CreateTreeByArray([]int{0, -1, 1}),
 			},
 			want: CreateTreeByArray([]int{1, -1, 1}),
 		},
 		{
-			name: "equal2",
+			name: "ex3",
 			args: args{
 				root: CreateTreeByArray([]int{1, 0, 2}),
 			},
 			want: CreateTreeByArray([]int{3, 3, 2}),
 		},
 		{
-			name: "equal3",
+			name: "ex4",
 			args: args{
 				root: CreateTreeByArray([]int{3, 2, 4, 1}),
 			},
