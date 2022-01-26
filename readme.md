@@ -230,6 +230,7 @@
 - [566. 重塑矩阵](https://leetcode-cn.com/problems/reshape-the-matrix/)
 - [567. 字符串的排列](https://leetcode-cn.com/problems/permutation-in-string/)
 - [583. 两个字符串的删除操作](https://leetcode-cn.com/problems/delete-operation-for-two-strings/)
+- [594. 最长和谐子序列](https://leetcode-cn.com/problems/longest-harmonious-subsequence/)
 - [605. 种花问题](https://leetcode-cn.com/problems/can-place-flowers/)
 - [633. 平方数之和](https://leetcode-cn.com/problems/sum-of-square-numbers/)
 - [634. 寻找数组的错位排列](https://leetcode-cn.com/problems/find-the-derangement-of-an-array/)

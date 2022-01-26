@@ -12,28 +12,28 @@ func Test_lengthOfLIS(t *testing.T) {
 		want int
 	}{
 		{
-			name: "ex0",
+			name: "ex1",
 			args: args{
 				nums: []int{10, 9, 2, 5, 3, 7, 101, 18},
 			},
 			want: 4,
 		},
 		{
-			name: "ex1",
+			name: "ex2",
 			args: args{
 				nums: []int{0, 1, 0, 3, 2, 3},
 			},
 			want: 4,
 		},
 		{
-			name: "ex2",
+			name: "ex3",
 			args: args{
 				nums: []int{7, 7, 7, 7, 7, 7, 7},
 			},
 			want: 1,
 		},
 		{
-			name: "ex3",
+			name: "ex4",
 			args: args{
 				nums: []int{1, 3, 6, 7, 9, 4, 10, 5, 6},
 			},
