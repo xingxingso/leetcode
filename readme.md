@@ -256,6 +256,7 @@
 - [769. 最多能完成排序的块](https://leetcode-cn.com/problems/max-chunks-to-make-sorted/)
 - [773. 滑动谜题](https://leetcode-cn.com/problems/sliding-puzzle/)
 - [793. 阶乘函数后 K 个零](https://leetcode-cn.com/problems/preimage-size-of-factorial-zeroes-function/)
+- [870. 优势洗牌](https://leetcode-cn.com/problems/advantage-shuffle/)
 - [875. 爱吃香蕉的珂珂](https://leetcode-cn.com/problems/koko-eating-bananas/)
 - [876. 链表的中间结点](https://leetcode-cn.com/problems/mimerge-k-sorted-listsddle-of-the-linked-list/)
 - [877. 石子游戏](https://leetcode-cn.com/problems/stone-game/)

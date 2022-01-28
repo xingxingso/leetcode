@@ -15,7 +15,7 @@ func Test_leadsToDestination(t *testing.T) {
 		want bool
 	}{
 		{
-			name: "equal0",
+			name: "ex1",
 			args: args{
 				n:           3,
 				edges:       [][]int{{0, 1}, {0, 2}},
@@ -25,7 +25,7 @@ func Test_leadsToDestination(t *testing.T) {
 			want: false,
 		},
 		{
-			name: "equal1",
+			name: "ex2",
 			args: args{
 				n:           4,
 				edges:       [][]int{{0, 1}, {0, 3}, {1, 2}, {2, 1}},
@@ -35,7 +35,7 @@ func Test_leadsToDestination(t *testing.T) {
 			want: false,
 		},
 		{
-			name: "equal2",
+			name: "ex3",
 			args: args{
 				n:           4,
 				edges:       [][]int{{0, 1}, {0, 2}, {1, 3}, {2, 3}},
@@ -45,7 +45,7 @@ func Test_leadsToDestination(t *testing.T) {
 			want: true,
 		},
 		{
-			name: "equal3",
+			name: "ex4",
 			args: args{
 				n:           3,
 				edges:       [][]int{{0, 1}, {1, 1}, {1, 2}},
@@ -55,7 +55,7 @@ func Test_leadsToDestination(t *testing.T) {
 			want: false,
 		},
 		{
-			name: "equal4",
+			name: "ex5",
 			args: args{
 				n:           2,
 				edges:       [][]int{{0, 1}, {1, 1}},
