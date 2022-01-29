@@ -177,6 +177,7 @@
 - [287. 寻找重复数](https://leetcode-cn.com/problems/find-the-duplicate-number/)
 - [297. 二叉树的序列化与反序列化](https://leetcode-cn.com/problems/serialize-and-deserialize-binary-tree/)
 - [300. 最长递增子序列](https://leetcode-cn.com/problems/longest-increasing-subsequence/)
+- [307. 区域和检索 - 数组可修改](https://leetcode-cn.com/problems/range-sum-query-mutable/)
 - [309. 最佳买卖股票时机含冷冻期](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/)
 - [310. 最小高度树](https://leetcode-cn.com/problems/minimum-height-trees/)
 - [312. 戳气球](https://leetcode-cn.com/problems/burst-balloons/)
