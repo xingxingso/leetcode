@@ -12,13 +12,6 @@ func Test_countNodes(t *testing.T) {
 		want int
 	}{
 		{
-			name: "ex0",
-			args: args{
-				root: CreateTreeByArray([]int{1, 2, 3, 4, 5, 6}),
-			},
-			want: 6,
-		},
-		{
 			name: "ex1",
 			args: args{
 				root: CreateTreeByArray([]int{}),
@@ -38,6 +31,13 @@ func Test_countNodes(t *testing.T) {
 				root: CreateTreeByArray([]int{1, 2, 3, 4, 5}),
 			},
 			want: 5,
+		},
+		{
+			name: "ex4",
+			args: args{
+				root: CreateTreeByArray([]int{1, 2, 3, 4, 5, 6}),
+			},
+			want: 6,
 		},
 	}
 	for _, tt := range tests {
