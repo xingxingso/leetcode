@@ -1,4 +1,5 @@
 /*
+Package implement_strstr
 https://leetcode-cn.com/problems/implement-strstr/
 
 28. 实现 strStr()

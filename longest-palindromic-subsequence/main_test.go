@@ -12,21 +12,21 @@ func Test_longestPalindromeSubseq(t *testing.T) {
 		want int
 	}{
 		{
-			name: "equal0",
+			name: "ex1",
 			args: args{
 				s: "bbbab",
 			},
 			want: 4, // bbbb
 		},
 		{
-			name: "equal1",
+			name: "ex2",
 			args: args{
 				s: "cbbd",
 			},
 			want: 2, // bb
 		},
 		{
-			name: "equal2",
+			name: "ex3",
 			args: args{
 				s: "a",
 			},

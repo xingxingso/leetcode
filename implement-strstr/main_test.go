@@ -13,7 +13,7 @@ func Test_strStr(t *testing.T) {
 		want int
 	}{
 		{
-			name: "equal0",
+			name: "ex1",
 			args: args{
 				haystack: "hello",
 				needle:   "ll",
@@ -21,7 +21,7 @@ func Test_strStr(t *testing.T) {
 			want: 2,
 		},
 		{
-			name: "equal1",
+			name: "ex2",
 			args: args{
 				haystack: "aaaaa",
 				needle:   "bba",
@@ -29,7 +29,7 @@ func Test_strStr(t *testing.T) {
 			want: -1,
 		},
 		{
-			name: "equal2",
+			name: "ex3",
 			args: args{
 				haystack: "",
 				needle:   "",
