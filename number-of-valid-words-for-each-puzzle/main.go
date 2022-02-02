@@ -1,4 +1,5 @@
 /*
+Package number_of_valid_words_for_each_puzzle
 https://leetcode-cn.com/problems/number-of-valid-words-for-each-puzzle/
 
 1178. 猜字谜

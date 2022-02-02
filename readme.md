@@ -15,6 +15,7 @@
 > todo:
 
 - [340. 至多包含 K 个不同字符的最长子串](https://leetcode-cn.com/problems/longest-substring-with-at-most-k-distinct-characters/)
+- [772.基本计算器III](https://leetcode-cn.com/problems/basic-calculator-iii/)
 
 ### leetcode
 
@@ -110,6 +111,7 @@
 - [78. 子集](https://leetcode-cn.com/problems/subsets/)
 - [79. 单词搜索](https://leetcode-cn.com/problems/word-search/)
 - [81. 搜索旋转排序数组 II](https://leetcode-cn.com/problems/search-in-rotated-sorted-array-ii/)
+- [83. 删除排序链表中的重复元素](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/)
 - [88. 合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/)
 - [91. 解码方法](https://leetcode-cn.com/problems/decode-ways/)
 - [92. 反转链表 II](https://leetcode-cn.com/problems/reverse-linked-list-ii/)
@@ -187,6 +189,7 @@
 - [318. 最大单词长度乘积](https://leetcode-cn.com/problems/maximum-product-of-word-lengths/)
 - [322. 零钱兑换](https://leetcode-cn.com/problems/coin-change/)
 - [326. 3 的幂](https://leetcode-cn.com/problems/power-of-three/)
+- [328. 奇偶链表](https://leetcode-cn.com/problems/odd-even-linked-list/)
 - [332. 重新安排行程](https://leetcode-cn.com/problems/reconstruct-itinerary/)
 - [337. 打家劫舍 III](https://leetcode-cn.com/problems/house-robber-iii/)
 - [338. 比特位计数](https://leetcode-cn.com/problems/counting-bits/)

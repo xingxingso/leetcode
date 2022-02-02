@@ -16,7 +16,7 @@ func Test_findNumOfValidWords(t *testing.T) {
 		want []int
 	}{
 		{
-			name: "equal0",
+			name: "ex1",
 			args: args{
 				words:   []string{"aaaa", "asas", "able", "ability", "actt", "actor", "access"},
 				puzzles: []string{"aboveyz", "abrodyz", "abslute", "absoryz", "actresz", "gaswxyz"},
@@ -24,7 +24,7 @@ func Test_findNumOfValidWords(t *testing.T) {
 			want: []int{1, 1, 3, 2, 4, 0},
 		},
 		{
-			name: "equal1",
+			name: "ex2",
 			args: args{
 				words:   []string{"faced", "cabbage", "baggage", "beefed", "based"},
 				puzzles: []string{"abcdefg"},
