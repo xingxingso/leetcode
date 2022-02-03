@@ -137,6 +137,7 @@
 - [139. 单词拆分](https://leetcode-cn.com/problems/word-break/)
 - [142. 环形链表 II](https://leetcode-cn.com/problems/linked-list-cycle-ii/)
 - [143. 重排链表](https://leetcode-cn.com/problems/reorder-list/)
+- [148. 排序链表](https://leetcode-cn.com/problems/sort-list/)
 - [149. 直线上最多的点数](https://leetcode-cn.com/problems/max-points-on-a-line/)
 - [154. 寻找旋转排序数组中的最小值 II](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array-ii/)
 - [159. 至多包含两个不同字符的最长子串](https://leetcode-cn.com/problems/longest-substring-with-at-most-two-distinct-characters/)
