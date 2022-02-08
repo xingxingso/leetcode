@@ -12,28 +12,28 @@ func Test_diameterOfBinaryTree(t *testing.T) {
 		want int
 	}{
 		{
-			name: "equal0",
+			name: "ex1",
 			args: args{
 				root: CreateTreeByArray([]int{1, 2, 3, 4, 5}),
 			},
 			want: 3,
 		},
 		{
-			name: "equal1",
+			name: "ex2",
 			args: args{
 				root: CreateTreeByArray([]int{1, 2, 3, 0, 5}),
 			},
 			want: 3,
 		},
 		{
-			name: "equal2",
+			name: "ex3",
 			args: args{
 				root: CreateTreeByArray([]int{1}),
 			},
 			want: 0,
 		},
 		{
-			name: "equal3",
+			name: "ex4",
 			args: args{
 				root: CreateTreeByArray([]int{1, 2, 3}),
 			},

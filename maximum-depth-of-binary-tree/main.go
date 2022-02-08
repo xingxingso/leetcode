@@ -13,9 +13,7 @@ https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/
 */
 package maximum_depth_of_binary_tree
 
-/**
-Definition for a binary tree node.
-*/
+//TreeNode Definition for a binary tree node.
 type TreeNode struct {
 	Val   int
 	Left  *TreeNode

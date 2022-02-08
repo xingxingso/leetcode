@@ -243,6 +243,7 @@
 - [605. 种花问题](https://leetcode-cn.com/problems/can-place-flowers/)
 - [633. 平方数之和](https://leetcode-cn.com/problems/sum-of-square-numbers/)
 - [634. 寻找数组的错位排列](https://leetcode-cn.com/problems/find-the-derangement-of-an-array/)
+- [637. 二叉树的层平均值](https://leetcode-cn.com/problems/average-of-levels-in-binary-tree/)
 - [645. 错误的集合](https://leetcode-cn.com/problems/set-mismatch/)
 - [646. 最长数对链](https://leetcode-cn.com/problems/maximum-length-of-pair-chain/)
 - [647. 回文子串](https://leetcode-cn.com/problems/palindromic-substrings/)

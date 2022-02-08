@@ -11,9 +11,7 @@ https://leetcode-cn.com/problems/diameter-of-binary-tree/
 */
 package diameter_of_binary_tree
 
-/**
-Definition for a binary tree node.
-*/
+// TreeNode Definition for a binary tree node.
 type TreeNode struct {
 	Val   int
 	Left  *TreeNode
