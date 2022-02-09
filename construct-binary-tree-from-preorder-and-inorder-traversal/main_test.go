@@ -16,7 +16,7 @@ func Test_buildTree(t *testing.T) {
 		want *TreeNode
 	}{
 		{
-			name: "equal0",
+			name: "ex1",
 			args: args{
 				preorder: []int{3, 9, 20, 15, 7},
 				inorder:  []int{9, 3, 15, 20, 7},
@@ -24,7 +24,7 @@ func Test_buildTree(t *testing.T) {
 			want: CreateTreeByArray([]int{3, 9, 20, 0, 0, 15, 7}),
 		},
 		{
-			name: "equal1",
+			name: "ex2",
 			args: args{
 				preorder: []int{},
 				inorder:  []int{},
@@ -32,7 +32,7 @@ func Test_buildTree(t *testing.T) {
 			want: CreateTreeByArray([]int{}),
 		},
 		{
-			name: "equal2",
+			name: "ex3",
 			args: args{
 				preorder: []int{1},
 				inorder:  []int{1},
@@ -40,7 +40,7 @@ func Test_buildTree(t *testing.T) {
 			want: CreateTreeByArray([]int{1}),
 		},
 		{
-			name: "equal3",
+			name: "ex4",
 			args: args{
 				preorder: []int{3, 20, 15},
 				inorder:  []int{3, 15, 20},

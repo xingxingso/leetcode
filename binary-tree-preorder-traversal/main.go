@@ -1,4 +1,5 @@
 /*
+Package binary_tree_preorder_traversal
 https://leetcode-cn.com/problems/binary-tree-preorder-traversal/
 
 144. 二叉树的前序遍历
@@ -15,9 +16,7 @@ https://leetcode-cn.com/problems/binary-tree-preorder-traversal/
 */
 package binary_tree_preorder_traversal
 
-/**
-Definition for a binary tree node.
-*/
+// TreeNode Definition for a binary tree node.
 type TreeNode struct {
 	Val   int
 	Left  *TreeNode

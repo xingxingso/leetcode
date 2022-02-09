@@ -15,35 +15,35 @@ func Test_preorderTraversal(t *testing.T) {
 		want []int
 	}{
 		{
-			name: "equal0",
+			name: "ex1",
 			args: args{
 				root: CreateTreeByArray([]int{1, 0, 2, 3}),
 			},
 			want: []int{1, 2, 3},
 		},
 		{
-			name: "equal1",
+			name: "ex2",
 			args: args{
 				root: CreateTreeByArray([]int{}),
 			},
 			want: []int{},
 		},
 		{
-			name: "equal2",
+			name: "ex3",
 			args: args{
 				root: CreateTreeByArray([]int{1}),
 			},
 			want: []int{1},
 		},
 		{
-			name: "equal3",
+			name: "ex4",
 			args: args{
 				root: CreateTreeByArray([]int{1, 2}),
 			},
 			want: []int{1, 2},
 		},
 		{
-			name: "equal4",
+			name: "ex5",
 			args: args{
 				root: CreateTreeByArray([]int{1, 0, 2}),
 			},

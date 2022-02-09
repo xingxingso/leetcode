@@ -117,6 +117,7 @@
 - [92. 反转链表 II](https://leetcode-cn.com/problems/reverse-linked-list-ii/)
 - [96. 不同的二叉搜索树](https://leetcode-cn.com/problems/unique-binary-search-trees/)
 - [98. 验证二叉搜索树](https://leetcode-cn.com/problems/validate-binary-search-tree/)
+- [99. 恢复二叉搜索树](https://leetcode-cn.com/problems/recover-binary-search-tree/)
 - [100. 相同的树](https://leetcode-cn.com/problems/same-tree/)
 - [101. 对称二叉树](https://leetcode-cn.com/problems/symmetric-tree/)
 - [104. 二叉树的最大深度](https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/)

@@ -1,4 +1,5 @@
 /*
+Package construct_binary_tree_from_preorder_and_inorder_traversal
 https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/
 
 105. 从前序与中序遍历序列构造二叉树
@@ -10,9 +11,7 @@ https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder
 */
 package construct_binary_tree_from_preorder_and_inorder_traversal
 
-/**
-Definition for a binary tree node.
-*/
+// TreeNode Definition for a binary tree node.
 type TreeNode struct {
 	Val   int
 	Left  *TreeNode
