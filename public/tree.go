@@ -50,8 +50,8 @@ func Bfs(root *TreeNode) []int {
 }
 
 // CreateTreeByArray
-// 通过数组生成二叉树，0 为 nil, 类似 leetcode 中数组转化为 二叉树
-// [1,2,3,0,4,0,5,0,6] 为二叉树
+// 通过数组生成二叉树，nilNum 为 nil, 类似 leetcode 中数组转化为 二叉树
+// [1,2,3,nilNum,4,nilNum,5,nilNum,6] 为二叉树
 //                  1
 //          2              3
 //   nil         4      nil   5
@@ -60,15 +60,16 @@ func CreateTreeByArray(nums []int) *TreeNode {
 	if len(nums) <= 0 {
 		return nil
 	}
+	nilNum := -9999
 	queue := make([]*TreeNode, 0)
 	head := &TreeNode{Val: nums[0]}
 	queue = append(queue, head)
 	for i := 1; i < len(nums); {
-		if nums[i] != 0 {
+		if nums[i] != nilNum {
 			queue[0].Left = &TreeNode{Val: nums[i]}
 			queue = append(queue, queue[0].Left)
 		}
-		if i+1 < len(nums) && nums[i+1] != 0 {
+		if i+1 < len(nums) && nums[i+1] != nilNum {
 			queue[0].Right = &TreeNode{Val: nums[i+1]}
 			queue = append(queue, queue[0].Right)
 		}

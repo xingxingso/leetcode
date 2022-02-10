@@ -252,6 +252,7 @@
 - [652. 寻找重复的子树](https://leetcode-cn.com/problems/find-duplicate-subtrees/)
 - [659. 分割数组为连续子序列](https://leetcode-cn.com/problems/split-array-into-consecutive-subsequences/)
 - [665. 非递减数列](https://leetcode-cn.com/problems/non-decreasing-array/)
+- [669. 修剪二叉搜索树](https://leetcode-cn.com/problems/trim-a-binary-search-tree/)
 - [680. 验证回文字符串 Ⅱ](https://leetcode-cn.com/problems/valid-palindrome-ii/)
 - [693. 交替位二进制数](https://leetcode-cn.com/problems/binary-number-with-alternating-bits/)
 - [695. 岛屿的最大面积](https://leetcode-cn.com/problems/max-area-of-island/)
