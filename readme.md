@@ -48,6 +48,7 @@
 #### 结构设计类
 
 - [155. 最小栈](https://leetcode-cn.com/problems/min-stack/)
+- [208. 实现 Trie (前缀树)](https://leetcode-cn.com/problems/implement-trie-prefix-tree/)
 - [225. 用队列实现栈](https://leetcode-cn.com/problems/implement-stack-using-queues/)
 - [232. 用栈实现队列](https://leetcode-cn.com/problems/implement-queue-using-stacks/)
 - [295. 数据流的中位数](https://leetcode-cn.com/problems/find-median-from-data-stream/)
