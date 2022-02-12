@@ -14,9 +14,7 @@ https://leetcode-cn.com/problems/merge-two-binary-trees/
 */
 package merge_two_binary_trees
 
-/**
-Definition for a binary tree node.
-*/
+// TreeNode Definition for a binary tree node.
 type TreeNode struct {
 	Val   int
 	Left  *TreeNode

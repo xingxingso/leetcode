@@ -1,4 +1,5 @@
 /*
+Package invert_binary_tree
 https://leetcode-cn.com/problems/invert-binary-tree/
 
 226. 翻转二叉树
@@ -11,9 +12,7 @@ https://leetcode-cn.com/problems/invert-binary-tree/
 */
 package invert_binary_tree
 
-/**
-Definition for a binary tree node.
-*/
+// TreeNode Definition for a binary tree node.
 type TreeNode struct {
 	Val   int
 	Left  *TreeNode

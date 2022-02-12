@@ -15,14 +15,14 @@ func Test_invertTree(t *testing.T) {
 		want *TreeNode
 	}{
 		{
-			name: "equal0",
+			name: "ex1",
 			args: args{
 				root: CreateTreeByArray([]int{4, 2, 7, 1, 3, 6, 9}),
 			},
 			want: CreateTreeByArray([]int{4, 7, 2, 9, 6, 3, 1}),
 		},
 		{
-			name: "equal1",
+			name: "ex2",
 			args: args{
 				root: CreateTreeByArray([]int{4, 1}),
 			},
