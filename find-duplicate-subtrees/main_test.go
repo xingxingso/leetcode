@@ -15,14 +15,14 @@ func Test_findDuplicateSubtrees(t *testing.T) {
 		want []*TreeNode
 	}{
 		{
-			name: "equal0",
+			name: "ex1",
 			args: args{
 				root: CreateTreeByArray([]int{1, 2, 3, 4, 0, 2, 4, 0, 0, 4}),
 			},
 			want: []*TreeNode{CreateTreeByArray([]int{4}), CreateTreeByArray([]int{2, 4})},
 		},
 		{
-			name: "equal1",
+			name: "ex2",
 			args: args{
 				root: CreateTreeByArray([]int{2, 1, 11, 11, 0, 1}),
 			},

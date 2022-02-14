@@ -1,4 +1,5 @@
 /*
+Package find_duplicate_subtrees
 https://leetcode-cn.com/problems/find-duplicate-subtrees/
 
 652. 寻找重复的子树
@@ -16,9 +17,7 @@ import (
 	"strconv"
 )
 
-/**
-Definition for a binary tree node.
-*/
+//TreeNode Definition for a binary tree node.
 type TreeNode struct {
 	Val   int
 	Left  *TreeNode
