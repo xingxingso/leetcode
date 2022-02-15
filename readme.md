@@ -167,6 +167,7 @@
 - [227. 基本计算器 II](https://leetcode-cn.com/problems/basic-calculator-ii/)
 - [230. 二叉搜索树中第K小的元素](https://leetcode-cn.com/problems/kth-smallest-element-in-a-bst/)
 - [234. 回文链表](https://leetcode-cn.com/problems/palindrome-linked-list/)
+- [235. 二叉搜索树的最近公共祖先](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
 - [236. 二叉树的最近公共祖先](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/)
 - [238. 除自身以外数组的乘积](https://leetcode-cn.com/problems/product-of-array-except-self/)
 - [239. 滑动窗口最大值](https://leetcode-cn.com/problems/sliding-window-maximum/)
