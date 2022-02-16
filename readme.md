@@ -236,6 +236,7 @@
 - [504. 七进制数](https://leetcode-cn.com/problems/base-7/)
 - [513. 找树左下角的值](https://leetcode-cn.com/problems/find-bottom-left-tree-value/)
 - [524. 通过删除字母匹配到字典里最长单词](https://leetcode-cn.com/problems/longest-word-in-dictionary-through-deleting/)
+- [530. 二叉搜索树的最小绝对差](https://leetcode-cn.com/problems/minimum-absolute-difference-in-bst/)
 - [536. 从字符串生成二叉树](https://leetcode-cn.com/problems/construct-binary-tree-from-string/)
 - [540. 有序数组中的单一元素](https://leetcode-cn.com/problems/single-element-in-a-sorted-array/)
 - [542. 01 矩阵](https://leetcode-cn.com/problems/01-matrix/)
