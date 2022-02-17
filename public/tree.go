@@ -124,6 +124,36 @@ func inOrderPrint(root *TreeNode) {
 	// fmt.Println()
 }
 
+func printTree(root *TreeNode) {
+	queue := []*TreeNode{root}
+	level := 0
+	for len(queue) > 0 {
+		fmt.Printf("l:%d", level)
+		size := len(queue)
+		noLeft := true
+		for i := 0; i < len(queue); i++ {
+			node := queue[i]
+			if node == nil {
+				fmt.Print("nil")
+				queue = append(queue, nil)
+				queue = append(queue, nil)
+				continue
+			}
+			queue = append(queue, node.Left)
+			queue = append(queue, node.Right)
+			if node.Left != nil || node.Right != nil {
+				noLeft = false
+			}
+		}
+		queue = queue[size:]
+		level++
+		fmt.Println()
+		if noLeft {
+			break
+		}
+	}
+}
+
 // 多维数组
 func createNAryTree() *Node {
 	return &Node{
