@@ -15,7 +15,7 @@ func Test_sortedArrayToBST(t *testing.T) {
 		want *TreeNode
 	}{
 		{
-			name: "equal0",
+			name: "ex1",
 			args: args{
 				nums: []int{-10, -3, 1, 5, 9},
 			},

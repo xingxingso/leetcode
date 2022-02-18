@@ -124,6 +124,8 @@
 - [101. 对称二叉树](https://leetcode-cn.com/problems/symmetric-tree/)
 - [104. 二叉树的最大深度](https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/)
 - [105. 从前序与中序遍历序列构造二叉树](https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
+- [106. 从中序与后序遍历序列构造二叉树](https://leetcode-cn.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/)
+- [109. 有序链表转换二叉搜索树](https://leetcode-cn.com/problems/convert-sorted-list-to-binary-search-tree/)
 - [110. 平衡二叉树](https://leetcode-cn.com/problems/balanced-binary-tree/)
 - [112. 路径总和](https://leetcode-cn.com/problems/path-sum/)
 - [113. 路径总和 II](https://leetcode-cn.com/problems/path-sum-ii/)

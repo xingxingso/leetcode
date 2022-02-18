@@ -15,14 +15,14 @@ func Test_postorderTraversal(t *testing.T) {
 		want []int
 	}{
 		{
-			name: "equal0",
+			name: "ex1",
 			args: args{
 				root: CreateTreeByArray([]int{1, 0, 2, 3}),
 			},
 			want: []int{3, 2, 1},
 		},
 		{
-			name: "equal1",
+			name: "ex2",
 			args: args{
 				root: CreateTreeByArray([]int{1, 2, 3, 0, 5, 6}),
 			},

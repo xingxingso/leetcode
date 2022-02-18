@@ -1,4 +1,5 @@
 /*
+Package binary_tree_postorder_traversal
 https://leetcode-cn.com/problems/binary-tree-postorder-traversal/
 
 145. 二叉树的后序遍历
@@ -11,9 +12,7 @@ https://leetcode-cn.com/problems/binary-tree-postorder-traversal/
 */
 package binary_tree_postorder_traversal
 
-/**
-Definition for a binary tree node.
-*/
+//TreeNode Definition for a binary tree node.
 type TreeNode struct {
 	Val   int
 	Left  *TreeNode

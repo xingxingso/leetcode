@@ -1,4 +1,5 @@
 /*
+Package construct_binary_tree_from_inorder_and_postorder_traversal
 https://leetcode-cn.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/
 
 106. 从中序与后序遍历序列构造二叉树
@@ -11,9 +12,7 @@ https://leetcode-cn.com/problems/construct-binary-tree-from-inorder-and-postorde
 */
 package construct_binary_tree_from_inorder_and_postorder_traversal
 
-/**
-Definition for a binary tree node.
-*/
+//TreeNode Definition for a binary tree node.
 type TreeNode struct {
 	Val   int
 	Left  *TreeNode

@@ -16,7 +16,7 @@ func Test_buildTree(t *testing.T) {
 		want *TreeNode
 	}{
 		{
-			name: "equal0",
+			name: "ex1",
 			args: args{
 				inorder:   []int{9, 3, 15, 20, 7},
 				postorder: []int{9, 15, 7, 20, 3},
