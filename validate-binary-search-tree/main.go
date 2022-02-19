@@ -1,4 +1,5 @@
 /*
+Package validate_binary_search_tree
 https://leetcode-cn.com/problems/validate-binary-search-tree/
 
 98. 验证二叉搜索树
@@ -14,9 +15,7 @@ package validate_binary_search_tree
 
 import "math"
 
-/**
-Definition for a binary tree node.
-*/
+//TreeNode Definition for a binary tree node.
 type TreeNode struct {
 	Val   int
 	Left  *TreeNode

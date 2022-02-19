@@ -1,4 +1,5 @@
 /*
+Package increasing_order_search_tree
 https://leetcode-cn.com/problems/increasing-order-search-tree/
 
 897. 递增顺序查找树
@@ -12,9 +13,7 @@ https://leetcode-cn.com/problems/increasing-order-search-tree/
 */
 package increasing_order_search_tree
 
-/**
-Definition for a binary tree node.
-*/
+//TreeNode Definition for a binary tree node.
 type TreeNode struct {
 	Val   int
 	Left  *TreeNode

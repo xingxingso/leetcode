@@ -15,7 +15,7 @@ func Test_increasingBST(t *testing.T) {
 		want *TreeNode
 	}{
 		{
-			name: "equal",
+			name: "ex1",
 			args: args{
 				root: CreateTreeByArray([]int{5, 3, 6, 2, 4, 0, 8, 1, 0, 0, 0, 7, 9}),
 			},

@@ -12,35 +12,35 @@ func Test_isValidBST(t *testing.T) {
 		want bool
 	}{
 		{
-			name: "equal0",
+			name: "ex1",
 			args: args{
 				root: CreateTreeByArray([]int{2, 1, 3}),
 			},
 			want: true,
 		},
 		{
-			name: "equal1",
+			name: "ex2",
 			args: args{
 				root: CreateTreeByArray([]int{5, 1, 4, 0, 0, 3, 6}),
 			},
 			want: false,
 		},
 		{
-			name: "equal2",
+			name: "ex3",
 			args: args{
 				root: CreateTreeByArray([]int{4, 1, 5, 0, 2, 3, 6}),
 			},
 			want: false,
 		},
 		{
-			name: "equal3",
+			name: "ex4",
 			args: args{
 				root: CreateTreeByArray([]int{4, 1, 5, 0, 2, 0, 6}),
 			},
 			want: true,
 		},
 		{
-			name: "equal4",
+			name: "ex5",
 			args: args{
 				root: CreateTreeByArray([]int{1, 1}),
 			},
