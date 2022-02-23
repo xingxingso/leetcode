@@ -268,6 +268,7 @@
 - [665. 非递减数列](https://leetcode-cn.com/problems/non-decreasing-array/)
 - [669. 修剪二叉搜索树](https://leetcode-cn.com/problems/trim-a-binary-search-tree/)
 - [680. 验证回文字符串 Ⅱ](https://leetcode-cn.com/problems/valid-palindrome-ii/)
+- [684. 冗余连接](https://leetcode-cn.com/problems/redundant-connection/)
 - [693. 交替位二进制数](https://leetcode-cn.com/problems/binary-number-with-alternating-bits/)
 - [695. 岛屿的最大面积](https://leetcode-cn.com/problems/max-area-of-island/)
 - [696. 计数二进制子串](https://leetcode-cn.com/problems/count-binary-substrings/)
