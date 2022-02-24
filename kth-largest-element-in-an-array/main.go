@@ -18,6 +18,47 @@ import "container/heap"
 
 // --- 自己
 
+/*
+方法一: 快速选择
+
+时间复杂度：
+空间复杂度：
+*/
+func findKthLargestS1(nums []int, k int) int {
+	var partition func(i, j int) int
+	partition = func(i, j int) int {
+		pos, n := i, nums[i]
+		j++
+		for {
+			for i++; i < j && nums[i] > n; i++ { // i <= j 不行
+			}
+			for j--; j >= i && nums[j] < n; j-- { // j > i 不行
+				//for j--; j > pos && nums[j] < n; j-- {
+			}
+			if i >= j {
+				break
+			}
+			nums[i], nums[j] = nums[j], nums[i]
+		}
+		nums[pos], nums[j] = nums[j], nums[pos]
+		return j
+	}
+	k-- // 转为下标
+	l, r := 0, len(nums)-1
+	for l <= r {
+		p := partition(l, r)
+		if p == k {
+			return nums[p]
+		}
+		if p > k {
+			r = p - 1
+		} else {
+			l = p + 1
+		}
+	}
+	return -1
+}
+
 // --- 他人
 //https://mp.weixin.qq.com/s?__biz=MzAxODQxMDM0Mw==&mid=2247488820&idx=1&sn=e6a58b67b0050ae8144bb8ea579cf0d0&scene=21#wechat_redirect
 
@@ -29,7 +70,7 @@ import "container/heap"
 */
 func findKthLargestP1(nums []int, k int) int {
 	h := &IntHeap{}
-	heap.Init(h)
+	//heap.Init(h)
 	for i := 0; i < len(nums); i++ {
 		heap.Push(h, nums[i])
 		if h.Len() > k {

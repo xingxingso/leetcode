@@ -65,11 +65,21 @@ func Test_merge(t *testing.T) {
 	}
 }
 
-func Test_mergeS1(t *testing.T) {
+func Test_mergeS2(t *testing.T) {
 	for _, tt := range getTests() {
 		t.Run(tt.name, func(t *testing.T) {
 			if mergeS2(tt.args.nums1, tt.args.m, tt.args.nums2, tt.args.n); !reflect.DeepEqual(tt.args.nums1, tt.want) {
 				t.Errorf("mergeS2() got %v, want %v", tt.args.nums1, tt.want)
+			}
+		})
+	}
+}
+
+func Test_mergeS3(t *testing.T) {
+	for _, tt := range getTests() {
+		t.Run(tt.name, func(t *testing.T) {
+			if mergeS3(tt.args.nums1, tt.args.m, tt.args.nums2, tt.args.n); !reflect.DeepEqual(tt.args.nums1, tt.want) {
+				t.Errorf("mergeS3() got %v, want %v", tt.args.nums1, tt.want)
 			}
 		})
 	}

@@ -61,14 +61,14 @@ func lengthOfLongestSubstringS2(s string) int {
 	if len(s) == 0 {
 		return 0
 	}
+	left := -1                   // left 不包含
+	window := make(map[byte]int) // 最后一次出现的位置
 	ans := 0
-	window := make(map[byte]int)
-	for left, right := 0, 0; right < len(s); right++ {
-		if idx, ok := window[s[right]]; ok && idx >= left {
-			left = idx + 1 // idx >= left 说明 在窗口中, 此时窗口左边界直接移动到 idx + 1
-			// ans := max(ans, right-left+1) // 这种情况下 长度不可能大于原窗口
-		} else {
-			ans = max(ans, right-left+1)
+	for right := 0; right < len(s); right++ {
+		if pos, ok := window[s[right]]; ok && pos > left {
+			left = window[s[right]] // 这种情况下 长度不可能大于原窗口
+		} else if right-left > ans {
+			ans = right - left
 		}
 		window[s[right]] = right // 更新最后出现的位置
 	}

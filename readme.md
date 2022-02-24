@@ -43,6 +43,7 @@
 - [215. 数组中的第K个最大元素](https://leetcode-cn.com/problems/kth-largest-element-in-an-array/)
 - [226. 翻转二叉树](https://leetcode-cn.com/problems/invert-binary-tree/)
 - [704. 二分查找](https://leetcode-cn.com/problems/binary-search/)
+- [718. 最长重复子数组](https://leetcode-cn.com/problems/maximum-length-of-repeated-subarray/)
 - [887. 鸡蛋掉落](https://leetcode-cn.com/problems/super-egg-drop/)
 - [912. 排序数组](https://leetcode-cn.com/problems/sort-an-array/)
 - [1143. 最长公共子序列](https://leetcode-cn.com/problems/longest-common-subsequence/)
@@ -297,7 +298,6 @@
 - [934. 最短的桥](https://leetcode-cn.com/problems/shortest-bridge/)
 - [969. 煎饼排序](https://leetcode-cn.com/problems/pancake-sorting/)
 - [1000. 合并石头的最低成本](https://leetcode-cn.com/problems/minimum-cost-to-merge-stones/)
-- [1044. 最长重复子串](https://leetcode-cn.com/problems/longest-common-subsequence/)
 - [1046. 最后一块石头的重量](https://leetcode-cn.com/problems/last-stone-weight/)
 - [1059. 从始点到终点的所有路径](https://leetcode-cn.com/problems/all-paths-from-source-lead-to-destination/)
 - [1099. 小于 K 的两数之和](https://leetcode-cn.com/problems/two-sum-less-than-k/)
@@ -318,4 +318,7 @@
 
 - [剑指 Offer 03. 数组中重复的数字](https://leetcode-cn.com/problems/shu-zu-zhong-zhong-fu-de-shu-zi-lcof/)
 - [剑指 Offer 22. 链表中倒数第k个节点](https://leetcode-cn.com/problems/lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof/)
+- [剑指 Offer 40. 最小的k个数](https://leetcode-cn.com/problems/zui-xiao-de-kge-shu-lcof/)
+
+
 

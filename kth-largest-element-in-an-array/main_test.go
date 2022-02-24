@@ -28,16 +28,44 @@ func Test_findKthLargest(t *testing.T) {
 			},
 			want: 4,
 		},
+		{
+			name: "ex3",
+			args: args{
+				nums: []int{1, 3, 5, 2, 2},
+				k:    3,
+			},
+			want: 2,
+		},
+		{
+			name: "ex4",
+			args: args{
+				nums: []int{10, 10, 9, 9, 8, 7, 5, 6, 4, 3, 4, 2},
+				k:    3,
+			},
+			want: 9,
+		},
+		{
+			name: "ex5",
+			args: args{
+				nums: []int{2, 1},
+				k:    1,
+			},
+			want: 2,
+		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := findKthLargestP1(tt.args.nums, tt.args.k); got != tt.want {
-				t.Errorf("findKthLargestP1() = %v, want %v", got, tt.want)
+			if got := findKthLargestS1(tt.args.nums, tt.args.k); got != tt.want {
+				t.Errorf("findKthLargestS1() = %v, want %v", got, tt.want)
 			}
 
-			if got := findKthLargestP2(tt.args.nums, tt.args.k); got != tt.want {
-				t.Errorf("findKthLargestP2() = %v, want %v", got, tt.want)
-			}
+			//if got := findKthLargestP1(tt.args.nums, tt.args.k); got != tt.want {
+			//	t.Errorf("findKthLargestP1() = %v, want %v", got, tt.want)
+			//}
+			//
+			//if got := findKthLargestP2(tt.args.nums, tt.args.k); got != tt.want {
+			//	t.Errorf("findKthLargestP2() = %v, want %v", got, tt.want)
+			//}
 		})
 	}
 }

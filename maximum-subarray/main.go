@@ -41,6 +41,35 @@ func max(x, y int) int {
 	return y
 }
 
+/*
+方法一: 前缀和
+
+时间复杂度：O(n)。
+空间复杂度：O(n)。
+*/
+func maxSubArrayS2(nums []int) int {
+	prefixSum := make([]int, len(nums)+1)
+	for i := 0; i < len(nums); i++ {
+		prefixSum[i+1] = prefixSum[i] + nums[i]
+	}
+	//fmt.Println(prefixSum)
+
+	// 从后向前 找到最大差值
+	biggest := prefixSum[len(prefixSum)-1]
+	ans := prefixSum[len(prefixSum)-1]
+	for i := len(prefixSum) - 2; i >= 0; i-- {
+		sum := biggest - prefixSum[i]
+		if sum > ans {
+			ans = sum
+		}
+		if prefixSum[i] > biggest {
+			biggest = prefixSum[i]
+		}
+	}
+
+	return ans
+}
+
 // --- 官方
 
 /*
