@@ -12,13 +12,6 @@ func Test_maxProfit(t *testing.T) {
 		want int
 	}{
 		{
-			name: "ex0",
-			args: args{
-				prices: []int{7, 1, 5, 3, 6, 4},
-			},
-			want: 7,
-		},
-		{
 			name: "ex1",
 			args: args{
 				prices: []int{1, 2, 3, 4, 5},
@@ -32,6 +25,13 @@ func Test_maxProfit(t *testing.T) {
 			},
 			want: 0,
 		},
+		{
+			name: "ex3",
+			args: args{
+				prices: []int{7, 1, 5, 3, 6, 4},
+			},
+			want: 7,
+		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
@@ -40,15 +40,19 @@ func Test_maxProfit(t *testing.T) {
 			}
 
 			if got := maxProfitS1(tt.args.prices); got != tt.want {
-				t.Errorf("maxProfit() = %v, want %v", got, tt.want)
+				t.Errorf("maxProfitS1() = %v, want %v", got, tt.want)
+			}
+
+			if got := maxProfitS2(tt.args.prices); got != tt.want {
+				t.Errorf("maxProfitS2() = %v, want %v", got, tt.want)
 			}
 
 			if got := maxProfitO1(tt.args.prices); got != tt.want {
-				t.Errorf("maxProfit() = %v, want %v", got, tt.want)
+				t.Errorf("maxProfitO1() = %v, want %v", got, tt.want)
 			}
 
 			if got := maxProfitO2(tt.args.prices); got != tt.want {
-				t.Errorf("maxProfit() = %v, want %v", got, tt.want)
+				t.Errorf("maxProfitO2() = %v, want %v", got, tt.want)
 			}
 		})
 	}

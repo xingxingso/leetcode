@@ -57,13 +57,39 @@ func max(x, y int) int {
 }
 
 /*
+方法一: 动态规划
+
+时间复杂度：
+空间复杂度：
+*/
+func lengthOfLISS2(nums []int) int {
+	dp := make([]int, len(nums))
+	for i := 0; i < len(nums); i++ {
+		dp[i] = 1
+	}
+	ans := 1
+	for i := 0; i < len(nums); i++ {
+		for j := i + 1; j < len(nums); j++ {
+			if nums[j] > nums[i] && dp[i] >= dp[j] {
+				dp[j] = dp[i] + 1
+				if dp[j] > ans {
+					ans = dp[j]
+				}
+			}
+		}
+	}
+	//fmt.Println(dp)
+	return ans
+}
+
+/*
 方法二: 贪心 + 二分查找
 
 时间复杂度：O(nlogn)。数组 nums 的长度为 n，我们依次用数组中的元素去更新 d 数组，而更新 d 数组时需要进行 O(logn) 的二分搜索，
 	所以总时间复杂度为 O(nlogn)。
 空间复杂度：O(n)，需要额外使用长度为 n 的 d 数组。
 */
-func lengthOfLISS2(nums []int) int {
+func lengthOfLISS3(nums []int) int {
 	if len(nums) <= 0 {
 		return 0
 	}

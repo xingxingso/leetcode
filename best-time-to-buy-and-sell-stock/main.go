@@ -20,6 +20,24 @@ import "math"
 // --- 自己
 
 /*
+方法0: 暴力解法
+	// 超出时限
+
+时间复杂度：
+空间复杂度：
+*/
+func maxProfitS0(prices []int) int {
+	ans := 0
+	for i := 0; i < len(prices); i++ {
+		for j := i + 1; j < len(prices); j++ {
+			ans = max(ans, prices[j]-prices[i])
+		}
+	}
+
+	return ans
+}
+
+/*
 方法一: 动态规划
 
 时间复杂度：
@@ -65,20 +83,21 @@ func maxProfitS1(prices []int) int {
 }
 
 /*
-方法0: 暴力解法
-	超出时限
+方法一: 贪心
 
 时间复杂度：
 空间复杂度：
 */
-func maxProfitS0(prices []int) int {
+func maxProfitS2(prices []int) int {
+	buy := prices[0]
 	ans := 0
-	for i := 0; i < len(prices); i++ {
-		for j := i + 1; j < len(prices); j++ {
-			ans = max(ans, prices[j]-prices[i])
+	for i := 1; i < len(prices); i++ {
+		if prices[i] < buy { // 总是试图寻找更低的价格买入
+			buy = prices[i]
+		} else { // 总是试图卖出更高的价格
+			ans = max(ans, prices[i]-buy)
 		}
 	}
-
 	return ans
 }
 
@@ -99,13 +118,13 @@ func max(x, y int) int {
 */
 func maxProfitO1(prices []int) int {
 	minPrice := math.MaxInt64
-	maxProfit := 0
+	profit := 0
 	for i := 0; i < len(prices); i++ {
 		if prices[i] < minPrice { // 股票在跌, 不用买
 			minPrice = prices[i]
-		} else if prices[i]-minPrice > maxProfit {
-			maxProfit = prices[i] - minPrice
+		} else if prices[i]-minPrice > profit {
+			profit = prices[i] - minPrice
 		}
 	}
-	return maxProfit
+	return profit
 }

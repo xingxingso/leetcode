@@ -39,20 +39,24 @@ func Test_maxProfit(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
+			if got := maxProfitS0(tt.args.prices); got != tt.want {
+				t.Errorf("maxProfitS0() = %v, want %v", got, tt.want)
+			}
+
 			if got := maxProfit(tt.args.prices); got != tt.want {
 				t.Errorf("maxProfit() = %v, want %v", got, tt.want)
 			}
 
 			if got := maxProfitS1(tt.args.prices); got != tt.want {
-				t.Errorf("maxProfit() = %v, want %v", got, tt.want)
+				t.Errorf("maxProfitS1() = %v, want %v", got, tt.want)
 			}
 
-			if got := maxProfitS0(tt.args.prices); got != tt.want {
-				t.Errorf("maxProfit() = %v, want %v", got, tt.want)
+			if got := maxProfitS2(tt.args.prices); got != tt.want {
+				t.Errorf("maxProfitS2() = %v, want %v", got, tt.want)
 			}
 
 			if got := maxProfitO1(tt.args.prices); got != tt.want {
-				t.Errorf("maxProfit() = %v, want %v", got, tt.want)
+				t.Errorf("maxProfitO1() = %v, want %v", got, tt.want)
 			}
 		})
 	}

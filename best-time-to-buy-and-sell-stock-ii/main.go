@@ -9,11 +9,15 @@ https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/
 注意：你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）。
 
 提示：
-	1 <= prices.length <= 3 * 10 ^ 4
-	0 <= prices[i] <= 10 ^ 4
+	1 <= prices.length <= 3 * 10^4
+	0 <= prices[i] <= 10^4
 
 */
 package best_time_to_buy_and_sell_stock_ii
+
+import (
+	"math"
+)
 
 // --- 自己
 
@@ -59,6 +63,30 @@ func maxProfitS1(prices []int) int {
 	}
 
 	return free
+}
+
+/*
+方法一: 贪心
+
+时间复杂度：
+空间复杂度：
+*/
+func maxProfitS2(prices []int) int {
+	ans := 0
+	buy := math.MaxInt64
+	for i := 0; i < len(prices); i++ {
+		if prices[i] < buy {
+			buy = prices[i]
+		} else {
+			if i < len(prices)-1 && prices[i+1] < prices[i] || i == len(prices)-1 { // 必须出手了
+				ans += max(0, prices[i]-buy)
+				buy = math.MaxInt64
+			}
+		}
+		//fmt.Println(ans, buy)
+	}
+
+	return ans
 }
 
 func max(x, y int) int {

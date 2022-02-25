@@ -10,8 +10,8 @@ https://leetcode-cn.com/problems/3sum/
 	答案中不可以包含重复的三元组。
 
 提示：
-	- 0 <= nums.length <= 3000
-	- -105 <= nums[i] <= 105
+	0 <= nums.length <= 3000
+	-10^5 <= nums[i] <= 10^5
 
 */
 package _3sum

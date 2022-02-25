@@ -14,7 +14,41 @@ package longest_palindromic_substring
 
 // --- 自己
 
-// 方法一
+/*
+方法一: 动态规划
+
+时间复杂度：
+空间复杂度：
+*/
+func longestPalindromeS1(s string) string {
+	dp := make([][]int, len(s)+1)
+	for i := 0; i < len(dp); i++ {
+		dp[i] = make([]int, len(s)+1)
+	}
+	maxLen := 0
+	end := 0
+	for i := len(s); i > 0; i-- {
+		for j := i; j <= len(s); j++ {
+			if i == j {
+				dp[i][j] = 1
+			} else if s[i-1] == s[j-1] {
+				if dp[i+1][j-1] > 0 { //内部也必须是回文
+					dp[i][j] = dp[i+1][j-1] + 2
+				}
+				if i+1 == j { // 第一次出现的两个相邻的
+					dp[i][j] = 2
+				}
+			}
+			//fmt.Println(dp[i][j], i, j, s[i-1], s[j-1])
+			if dp[i][j] > maxLen {
+				maxLen = dp[i][j]
+				end = j
+			}
+		}
+	}
+	//fmt.Println(dp)
+	return s[end-maxLen : end]
+}
 
 // --- 官方
 

@@ -15,7 +15,7 @@ func Test_permute(t *testing.T) {
 		want [][]int
 	}{
 		{
-			name: "ex0",
+			name: "ex1",
 			args: args{
 				nums: []int{1},
 			},
@@ -24,7 +24,7 @@ func Test_permute(t *testing.T) {
 			},
 		},
 		{
-			name: "ex1",
+			name: "ex2",
 			args: args{
 				nums: []int{1, 2},
 			},
@@ -34,7 +34,7 @@ func Test_permute(t *testing.T) {
 			},
 		},
 		{
-			name: "ex2",
+			name: "ex3",
 			args: args{
 				nums: []int{1, 2, 3},
 			},

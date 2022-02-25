@@ -15,7 +15,7 @@ func Test_reverseWords(t *testing.T) {
 		want args
 	}{
 		{
-			name: "equal",
+			name: "ex1",
 			args: args{
 				s: []byte{'t', 'h', 'e', ' ', 's', 'k', 'y', ' ', 'i', 's', ' ', 'b', 'l', 'u', 'e'},
 			},
@@ -24,7 +24,7 @@ func Test_reverseWords(t *testing.T) {
 			},
 		},
 		{
-			name: "equal",
+			name: "ex2",
 			args: args{
 				s: []byte{},
 			},
@@ -33,7 +33,7 @@ func Test_reverseWords(t *testing.T) {
 			},
 		},
 		{
-			name: "equal",
+			name: "ex3",
 			args: args{
 				s: []byte{'t'},
 			},
@@ -42,7 +42,7 @@ func Test_reverseWords(t *testing.T) {
 			},
 		},
 		{
-			name: "equal",
+			name: "ex4",
 			args: args{
 				s: []byte{' '},
 			},

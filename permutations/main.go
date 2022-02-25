@@ -62,28 +62,27 @@ func contains(s []int, target int) bool {
 	所以这里需要额外的空间且该空间取决于递归的深度，这里可知递归调用深度为 O(n)。
 */
 func permuteO1(nums []int) [][]int {
-	var result [][]int
-	var currentArray []int
-	length := len(nums)
+	var ret [][]int
+	var cur []int
 
-	var backtrack func(position int, currentArray []int)
-	backtrack = func(position int, currentArray []int) {
-		if position == length {
-			result = append(result, append([]int(nil), currentArray...))
+	var backtrack func(pos int)
+	backtrack = func(pos int) {
+		if pos == len(nums) {
+			ret = append(ret, append([]int(nil), cur...))
 			return
 		}
 
-		for i := position; i < length; i++ {
-			currentArray = append(currentArray, nums[i])
-			nums[position], nums[i] = nums[i], nums[position]
-			backtrack(position+1, currentArray)
-			nums[position], nums[i] = nums[i], nums[position]
-			currentArray = currentArray[:len(currentArray)-1]
+		for i := pos; i < len(nums); i++ {
+			cur = append(cur, nums[i])
+			nums[pos], nums[i] = nums[i], nums[pos]
+			backtrack(pos + 1)
+			nums[pos], nums[i] = nums[i], nums[pos]
+			cur = cur[:len(cur)-1]
 		}
 	}
-	backtrack(0, currentArray)
+	backtrack(0)
 
-	return result
+	return ret
 }
 
 // --- 他人
