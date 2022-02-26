@@ -22,6 +22,18 @@ import (
 	"fmt"
 )
 
+// --- 自己
+
+/*
+方法一: 动态规划
+
+时间复杂度：
+空间复杂度：
+*/
+func longestCommonSubsequenceS1(text1 string, text2 string) int {
+	return 0
+}
+
 // --- 他人
 
 /*
@@ -32,7 +44,7 @@ import (
 时间复杂度：
 空间复杂度：
 */
-func longestCommonSubsequence(text1 string, text2 string) int {
+func longestCommonSubsequenceP1(text1 string, text2 string) int {
 	var dp func(i, j int) int
 	memo := make(map[string]int)
 	dp = func(i, j int) int {

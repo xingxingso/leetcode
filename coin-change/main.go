@@ -16,7 +16,9 @@ https://leetcode-cn.com/problems/coin-change/
 */
 package coin_change
 
-import "math"
+import (
+	"math"
+)
 
 // --- 自己
 
@@ -69,6 +71,33 @@ func min(x, y int) int {
 		return x
 	}
 	return y
+}
+
+/*
+方法一: 动态规划
+
+时间复杂度：
+空间复杂度：
+*/
+func coinChangeS2(coins []int, amount int) int {
+	dp := make([]int, amount+1)
+	for i := 1; i <= amount; i++ {
+		dp[i] = amount + 1
+		for j := 0; j < len(coins); j++ {
+			if i == 0 {
+				dp[i] = 0
+				continue
+			}
+			if coins[j] > i {
+				continue
+			}
+			dp[i] = min(dp[i], dp[i-coins[j]]+1)
+		}
+	}
+	if dp[amount] > amount {
+		return -1
+	}
+	return dp[amount]
 }
 
 // --- 官方

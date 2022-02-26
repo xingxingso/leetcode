@@ -47,9 +47,9 @@ func Test_findLength(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			//if got := findLength(tt.args.nums1, tt.args.nums2); got != tt.want {
-			//	t.Errorf("findLength() = %v, want %v", got, tt.want)
-			//}
+			if got := findLength(tt.args.nums1, tt.args.nums2); got != tt.want {
+				t.Errorf("findLength() = %v, want %v", got, tt.want)
+			}
 
 			if got := findLengthO1(tt.args.nums1, tt.args.nums2); got != tt.want {
 				t.Errorf("findLengthO1() = %v, want %v", got, tt.want)

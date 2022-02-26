@@ -13,7 +13,7 @@ func Test_superEggDrop(t *testing.T) {
 		want int
 	}{
 		{
-			name: "equal0",
+			name: "ex1",
 			args: args{
 				k: 1,
 				n: 2,
@@ -21,7 +21,7 @@ func Test_superEggDrop(t *testing.T) {
 			want: 2,
 		},
 		{
-			name: "equal1",
+			name: "ex2",
 			args: args{
 				k: 2,
 				n: 6,
@@ -29,7 +29,7 @@ func Test_superEggDrop(t *testing.T) {
 			want: 3,
 		},
 		{
-			name: "equal2",
+			name: "ex3",
 			args: args{
 				k: 3,
 				n: 14,
@@ -37,7 +37,7 @@ func Test_superEggDrop(t *testing.T) {
 			want: 4,
 		},
 		{
-			name: "equal3",
+			name: "ex4",
 			args: args{
 				k: 4,
 				n: 2000,
@@ -52,15 +52,19 @@ func Test_superEggDrop(t *testing.T) {
 			// }
 
 			if got := superEggDropO1(tt.args.k, tt.args.n); got != tt.want {
-				t.Errorf("superEggDrop() = %v, want %v", got, tt.want)
+				t.Errorf("superEggDropO1() = %v, want %v", got, tt.want)
 			}
 
 			if got := superEggDropO2(tt.args.k, tt.args.n); got != tt.want {
-				t.Errorf("superEggDrop() = %v, want %v", got, tt.want)
+				t.Errorf("superEggDropO2() = %v, want %v", got, tt.want)
 			}
 
 			if got := superEggDropO3(tt.args.k, tt.args.n); got != tt.want {
-				t.Errorf("superEggDrop() = %v, want %v", got, tt.want)
+				t.Errorf("superEggDropO3() = %v, want %v", got, tt.want)
+			}
+
+			if got := superEggDropP1(tt.args.k, tt.args.n); got != tt.want {
+				t.Errorf("superEggDropP1() = %v, want %v", got, tt.want)
 			}
 		})
 	}

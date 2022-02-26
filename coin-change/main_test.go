@@ -67,12 +67,16 @@ func Test_coinChange(t *testing.T) {
 				t.Errorf("coinChange() = %v, want %v", got, tt.want)
 			}
 
+			if got := coinChangeS2(tt.args.coins, tt.args.amount); got != tt.want {
+				t.Errorf("coinChangeS2() = %v, want %v", got, tt.want)
+			}
+
 			if got := coinChangeO1(tt.args.coins, tt.args.amount); got != tt.want {
-				t.Errorf("coinChange() = %v, want %v", got, tt.want)
+				t.Errorf("coinChangeO1() = %v, want %v", got, tt.want)
 			}
 
 			if got := coinChangeO2(tt.args.coins, tt.args.amount); got != tt.want {
-				t.Errorf("coinChange() = %v, want %v", got, tt.want)
+				t.Errorf("coinChangeO2() = %v, want %v", got, tt.want)
 			}
 		})
 	}

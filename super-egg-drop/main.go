@@ -1,4 +1,5 @@
 /*
+Package super_egg_drop
 https://leetcode-cn.com/problems/super-egg-drop/
 
 887. 鸡蛋掉落
@@ -157,8 +158,7 @@ func superEggDropO2(k int, n int) int {
 /*
 方法二: 数学法
 
-
-时间复杂度：O(kn)。事实上，更准确的时间复杂度应当为 O(kt)O(kt)，我们不加证明地给出 n = O(t^k)，因此有 O(kt) = O(k\sqrt[k]{n})
+时间复杂度：O(kn)。事实上，更准确的时间复杂度应当为 O(kt)，我们不加证明地给出 n = O(t^k)，因此有 O(kt) = O(k\sqrt[k]{n})
 空间复杂度：O(kn)
 */
 func superEggDropO3(k int, n int) int {
@@ -183,4 +183,31 @@ func superEggDropO3(k int, n int) int {
 		}
 	}
 	return ans
+}
+
+// --- 他人
+
+/*
+方法二: 动态规划 + 递归
+
+时间复杂度：
+空间复杂度：
+*/
+func superEggDropP1(k int, n int) int {
+	var calF func(k, t int) int
+	calF = func(k, t int) int {
+		// 如果只有一次尝试机会或者鸡蛋只有一个，则只能确定尝试机会+1数量的楼层哪一层鸡蛋会碎
+		if t == 1 || k == 1 {
+			return t + 1
+		}
+		// 非上述情况则递归（鸡蛋-1，则机会-1）和（鸡蛋没碎，机会-1）
+		return calF(k-1, t-1) + calF(k, t-1)
+	}
+
+	t := 1
+	// 问题 有 t 次尝试机会， k 个鸡蛋 能确定的最高楼层
+	for calF(k, t) < n+1 { // 凑够n层的时候输出尝试的次数
+		t++
+	}
+	return t
 }

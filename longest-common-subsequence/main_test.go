@@ -63,16 +63,20 @@ func Test_longestCommonSubsequence(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := longestCommonSubsequence(tt.args.text1, tt.args.text2); got != tt.want {
-				t.Errorf("longestCommonSubsequence() = %v, want %v", got, tt.want)
+			if got := longestCommonSubsequenceS1(tt.args.text1, tt.args.text2); got != tt.want {
+				t.Errorf("longestCommonSubsequenceS1() = %v, want %v", got, tt.want)
+			}
+
+			if got := longestCommonSubsequenceP1(tt.args.text1, tt.args.text2); got != tt.want {
+				t.Errorf("longestCommonSubsequenceP1() = %v, want %v", got, tt.want)
 			}
 
 			if got := longestCommonSubsequenceP2(tt.args.text1, tt.args.text2); got != tt.want {
-				t.Errorf("longestCommonSubsequence() = %v, want %v", got, tt.want)
+				t.Errorf("longestCommonSubsequenceP2() = %v, want %v", got, tt.want)
 			}
 
 			if got := longestCommonSubsequenceP3(tt.args.text1, tt.args.text2); got != tt.want {
-				t.Errorf("longestCommonSubsequence() = %v, want %v", got, tt.want)
+				t.Errorf("longestCommonSubsequenceP3() = %v, want %v", got, tt.want)
 			}
 		})
 	}
