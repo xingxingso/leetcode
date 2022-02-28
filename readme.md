@@ -298,6 +298,7 @@
 - [886. 可能的二分法](https://leetcode-cn.com/problems/possible-bipartition/)
 - [889. 根据前序和后序遍历构造二叉树](https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/)
 - [897. 递增顺序查找树](https://leetcode-cn.com/problems/increasing-order-search-tree/)
+- [918. 环形子数组的最大和](https://leetcode-cn.com/problems/maximum-sum-circular-subarray/)
 - [932. 漂亮数组](https://leetcode-cn.com/problems/beautiful-array/)
 - [934. 最短的桥](https://leetcode-cn.com/problems/shortest-bridge/)
 - [969. 煎饼排序](https://leetcode-cn.com/problems/pancake-sorting/)
