@@ -1,4 +1,5 @@
 /*
+Package lfu_cache
 https://leetcode-cn.com/problems/lfu-cache/
 
 460. LFU 缓存
@@ -38,7 +39,7 @@ import "fmt"
  * obj := Constructor(capacity);
  * param_1 := obj.Get(key);
  * obj.Put(key,value);
- *
+ */
 
 // --- 官方
 
@@ -49,6 +50,7 @@ import "fmt"
 	且它们的时间复杂度均为 O(1)，所以保证了两个操作的时间复杂度均为 O(1)。
 空间复杂度：O(capacity)，其中 capacity 为 LFU 的缓存容量。哈希表中不会存放超过缓存容量的键值对。
 */
+
 type LFUCache struct {
 	cap       int
 	minFreq   int

@@ -313,6 +313,7 @@
 - [1140. 石子游戏 II](https://leetcode-cn.com/problems/stone-game-ii/)
 - [1178. 猜字谜](https://leetcode-cn.com/problems/number-of-valid-words-for-each-puzzle/)
 - [1197. 进击的骑士](https://leetcode-cn.com/problems/minimum-knight-moves/)
+- [1218. 最长定差子序列](https://leetcode-cn.com/problems/longest-arithmetic-subsequence-of-given-difference/)
 - [1288. 删除被覆盖区间](https://leetcode-cn.com/problems/remove-covered-intervals/)
 - [1312. 让字符串成为回文串的最少插入次数](https://leetcode-cn.com/problems/minimum-insertion-steps-to-make-a-string-palindrome/)
 - [1406. 石子游戏 III](https://leetcode-cn.com/problems/stone-game-iii/)
