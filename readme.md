@@ -168,6 +168,7 @@
 - [202. 快乐数](https://leetcode-cn.com/problems/happy-number/)
 - [204. 计数质数](https://leetcode-cn.com/problems/count-primes/)
 - [205. 同构字符串](https://leetcode-cn.com/problems/isomorphic-strings/)
+- [209. 长度最小的子数组](https://leetcode-cn.com/problems/minimum-size-subarray-sum/)
 - [210. 课程表 II](https://leetcode-c.com/problems/course-schedule-ii/)
 - [213. 打家劫舍 II](https://leetcode-cn.com/problems/house-robber-ii/)
 - [217. 存在重复元素](https://leetcode-cn.com/problems/contains-duplicate/)
@@ -264,6 +265,7 @@
 - [633. 平方数之和](https://leetcode-cn.com/problems/sum-of-square-numbers/)
 - [634. 寻找数组的错位排列](https://leetcode-cn.com/problems/find-the-derangement-of-an-array/)
 - [637. 二叉树的层平均值](https://leetcode-cn.com/problems/average-of-levels-in-binary-tree/)
+- [643. 子数组最大平均数 I](https://leetcode-cn.com/problems/maximum-average-subarray-i/)
 - [645. 错误的集合](https://leetcode-cn.com/problems/set-mismatch/)
 - [646. 最长数对链](https://leetcode-cn.com/problems/maximum-length-of-pair-chain/)
 - [647. 回文子串](https://leetcode-cn.com/problems/palindromic-substrings/)
@@ -321,6 +323,7 @@
 - [1563. 石子游戏 V](https://leetcode-cn.com/problems/stone-game-v/)
 - [1631. 最小体力消耗路径](https://leetcode-cn.com/problems/path-with-minimum-effort/)
 - [1686. 石子游戏 VI](https://leetcode-cn.com/problems/stone-game-vi/)
+- [1695. 删除子数组的最大得分](https://leetcode-cn.com/problems/maximum-erasure-value/)
 
 ### 剑指Offer 
 

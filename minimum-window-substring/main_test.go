@@ -13,14 +13,6 @@ func Test_minWindow(t *testing.T) {
 		want string
 	}{
 		{
-			name: "ex0",
-			args: args{
-				s: "ADOBECODEBANC",
-				t: "ABC",
-			},
-			want: "BANC",
-		},
-		{
 			name: "ex1",
 			args: args{
 				s: "a",
@@ -59,6 +51,14 @@ func Test_minWindow(t *testing.T) {
 				t: "ABC",
 			},
 			want: "ACB",
+		},
+		{
+			name: "ex7",
+			args: args{
+				s: "ADOBECODEBANC",
+				t: "ABC",
+			},
+			want: "BANC",
 		},
 	}
 	for _, tt := range tests {
