@@ -331,5 +331,9 @@
 - [剑指 Offer 22. 链表中倒数第k个节点](https://leetcode-cn.com/problems/lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof/)
 - [剑指 Offer 40. 最小的k个数](https://leetcode-cn.com/problems/zui-xiao-de-kge-shu-lcof/)
 
+### 面试题
+
+- [面试题 16.07. 最大数值](https://leetcode-cn.com/problems/maximum-lcci/)
+
 
 
