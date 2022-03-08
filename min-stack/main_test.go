@@ -23,21 +23,21 @@ func testEx1(s MinStackInterface, t *testing.T) {
 	s.Push(-3)
 	s.Push(-3)
 
-	if got := s.GetMin(); got != -3 {
-		t.Errorf("s.GetMin() = %v, want %v", got, -3)
+	if got, want := s.GetMin(), -3; got != want {
+		t.Errorf("s.GetMin() = %v, want %v", got, want)
 	}
 
 	s.Pop()
-	if got := s.GetMin(); got != -3 {
-		t.Errorf("s.GetMin() = %v, want %v", got, -3)
+	if got, want := s.GetMin(), -3; got != want {
+		t.Errorf("s.GetMin() = %v, want %v", got, want)
 	}
 	s.Pop()
 
-	if got := s.Top(); got != 0 {
-		t.Errorf("s.Top() = %v, want %v", got, 0)
+	if got, want := s.Top(), 0; got != want {
+		t.Errorf("s.Top() = %v, want %v", got, want)
 	}
 
-	if got := s.GetMin(); got != -2 {
-		t.Errorf("s.GetMin() = %v, want %v", got, -2)
+	if got, want := s.GetMin(), -2; got != want {
+		t.Errorf("s.GetMin() = %v, want %v", got, want)
 	}
 }
