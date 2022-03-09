@@ -11,12 +11,12 @@
 - [651. 4键键盘](https://leetcode-cn.com/problems/4-keys-keyboard/)
 - [1059. 从始点到终点的所有路径](https://leetcode-cn.com/problems/all-paths-from-source-lead-to-destination/)
 - [1118.一月有多少天](https://leetcode-cn.com/problems/number-of-days-in-a-month/)
-- [1135. 最低成本联通所有城市](https://leetcode-cn.com/problems/connecting-cities-with-minimum-cost/)
 
 > todo:
 
 - [340. 至多包含 K 个不同字符的最长子串](https://leetcode-cn.com/problems/longest-substring-with-at-most-k-distinct-characters/)
 - [772.基本计算器III](https://leetcode-cn.com/problems/basic-calculator-iii/)
+- [1135. 最低成本联通所有城市](https://leetcode-cn.com/problems/connecting-cities-with-minimum-cost/)
 
 ### leetcode
 
@@ -67,6 +67,7 @@
 - [382. 链表随机节点](https://leetcode-cn.com/problems/linked-list-random-node/)
 - [384. 打乱数组](https://leetcode-cn.com/problems/shuffle-an-array/)
 - [398. 随机数索引](https://leetcode-cn.com/problems/random-pick-index/)
+- [432. 全 O(1) 的数据结构](https://leetcode-cn.com/problems/all-oone-data-structure/)
 - [460. LFU 缓存](https://leetcode-cn.com/problems/lfu-cache/)
 - [470. 用 Rand7() 实现 Rand10()](https://leetcode-cn.com/problems/implement-rand10-using-rand7/)
 - [528. 按权重随机选择](https://leetcode-cn.com/problems/random-pick-with-weight/)
