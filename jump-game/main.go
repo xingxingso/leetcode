@@ -1,4 +1,5 @@
 /*
+Package jump_game
 https://leetcode-cn.com/problems/jump-game/
 
 55. 跳跃游戏
@@ -74,6 +75,30 @@ func canJumpS2(nums []int) bool {
 		i += step
 	}
 	return true
+}
+
+/*
+方法二: 倒推
+
+时间复杂度：
+空间复杂度：
+*/
+func canJumpS3(nums []int) bool {
+	if len(nums) <= 1 {
+		return true
+	}
+	step := 1
+	for i := len(nums) - 2; i > 0; {
+		if nums[i] >= step {
+			i--
+			step = 1
+		} else {
+			i--
+			step++
+		}
+		// fmt.Println(i, step)
+	}
+	return nums[0] >= step
 }
 
 // --- 官方
