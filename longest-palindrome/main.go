@@ -24,7 +24,7 @@ package longest_palindrome
 空间复杂度：
 */
 func longestPalindrome(s string) int {
-	mark := [126]int{}
+	mark := [128]int{}
 	for _, v := range s {
 		mark[v]++
 	}
