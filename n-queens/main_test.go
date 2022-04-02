@@ -15,21 +15,21 @@ func Test_solveNQueens(t *testing.T) {
 		want [][]string
 	}{
 		{
-			name: "equal0",
+			name: "ex1",
 			args: args{
 				n: 4,
 			},
 			want: [][]string{{".Q..", "...Q", "Q...", "..Q."}, {"..Q.", "Q...", "...Q", ".Q.."}},
 		},
 		{
-			name: "equal1",
+			name: "ex2",
 			args: args{
 				n: 1,
 			},
 			want: [][]string{{"Q"}},
 		},
 		{
-			name: "equal1",
+			name: "ex3",
 			args: args{
 				n: 6,
 			},
