@@ -312,6 +312,7 @@
 - [932. 漂亮数组](https://leetcode-cn.com/problems/beautiful-array/)
 - [934. 最短的桥](https://leetcode-cn.com/problems/shortest-bridge/)
 - [969. 煎饼排序](https://leetcode-cn.com/problems/pancake-sorting/)
+- [977. 有序数组的平方](https://leetcode-cn.com/problems/squares-of-a-sorted-array/)
 - [1000. 合并石头的最低成本](https://leetcode-cn.com/problems/minimum-cost-to-merge-stones/)
 - [1004. 最大连续1的个数 III](https://leetcode-cn.com/problems/max-consecutive-ones-iii/)
 - [1046. 最后一块石头的重量](https://leetcode-cn.com/problems/last-stone-weight/)
