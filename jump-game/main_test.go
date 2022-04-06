@@ -49,8 +49,8 @@ func Test_canJump(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := canJump(tt.args.nums); got != tt.want {
-				t.Errorf("canJump() = %v, want %v", got, tt.want)
+			if got := canJumpS1(tt.args.nums); got != tt.want {
+				t.Errorf("canJumpS1() = %v, want %v", got, tt.want)
 			}
 
 			if got := canJumpS2(tt.args.nums); got != tt.want {
@@ -59,6 +59,10 @@ func Test_canJump(t *testing.T) {
 
 			if got := canJumpS3(tt.args.nums); got != tt.want {
 				t.Errorf("canJumpS3() = %v, want %v", got, tt.want)
+			}
+
+			if got := canJumpS4(tt.args.nums); got != tt.want {
+				t.Errorf("canJumpS4() = %v, want %v", got, tt.want)
 			}
 
 			if got := canJumpO1(tt.args.nums); got != tt.want {

@@ -23,7 +23,7 @@ package jump_game
 时间复杂度：
 空间复杂度：
 */
-func canJump(nums []int) bool {
+func canJumpS1(nums []int) bool {
 	// dp[i][j] 表示从i位置跳跃 是否可以到达终点
 	// 目标值 dp[0]
 	dp := make([]bool, len(nums))
@@ -50,13 +50,34 @@ func canJump(nums []int) bool {
 }
 
 /*
+方法一: 动态规划
+
+时间复杂度：
+空间复杂度：
+*/
+func canJumpS2(nums []int) bool {
+	dp := make([]bool, len(nums))
+	dp[0] = true
+	for i := 1; i < len(nums); i++ {
+		for j := i - 1; j >= 0; j-- {
+			dp[i] = dp[j] && nums[j] >= i-j
+			if dp[i] {
+				break
+			}
+		}
+	}
+	// fmt.Println(dp)
+	return dp[len(nums)-1]
+}
+
+/*
 方法二: 贪心
 	每次跳总选择`利益最大化的`, 即 跳跃步数 + 到达位置的可选步数 值最大
 
 时间复杂度：
 空间复杂度：
 */
-func canJumpS2(nums []int) bool {
+func canJumpS3(nums []int) bool {
 	for i := 0; i < len(nums); {
 		if nums[i]+i >= len(nums)-1 {
 			return true
@@ -83,7 +104,7 @@ func canJumpS2(nums []int) bool {
 时间复杂度：
 空间复杂度：
 */
-func canJumpS3(nums []int) bool {
+func canJumpS4(nums []int) bool {
 	if len(nums) <= 1 {
 		return true
 	}
