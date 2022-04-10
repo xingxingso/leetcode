@@ -63,6 +63,39 @@ func checkInclusion(s1 string, s2 string) bool {
 	return false
 }
 
+/*
+方法一: 双指针
+
+时间复杂度：
+空间复杂度：
+*/
+func checkInclusionS2(s1 string, s2 string) bool {
+	count := make(map[byte]int)
+	for i := 0; i < len(s1); i++ {
+		count[s1[i]]++
+	}
+	// window := make(map[byte]int)
+	for l, r := -1, 0; r < len(s2); r++ {
+		if count[s2[r]] > 0 {
+			count[s2[r]]--
+		} else {
+			l++
+			for l < r && s2[l] != s2[r] {
+				if _, ok := count[s2[l]]; ok {
+					count[s2[l]]++
+				}
+				l++
+			}
+			// fmt.Println(l, r)
+		}
+
+		if r-l == len(s1) {
+			return true
+		}
+	}
+	return false
+}
+
 // --- 官方
 
 /*

@@ -13,7 +13,7 @@ func Test_checkInclusion(t *testing.T) {
 		want bool
 	}{
 		{
-			name: "ex0",
+			name: "ex1",
 			args: args{
 				s1: "ab",
 				s2: "eidbaooo",
@@ -21,7 +21,7 @@ func Test_checkInclusion(t *testing.T) {
 			want: true,
 		},
 		{
-			name: "ex1",
+			name: "ex2",
 			args: args{
 				s1: "ab",
 				s2: "eidboaooo",
@@ -29,7 +29,7 @@ func Test_checkInclusion(t *testing.T) {
 			want: false,
 		},
 		{
-			name: "ex2",
+			name: "ex3",
 			args: args{
 				s1: "ab",
 				s2: "ba",
@@ -37,7 +37,7 @@ func Test_checkInclusion(t *testing.T) {
 			want: true,
 		},
 		{
-			name: "ex3",
+			name: "ex4",
 			args: args{
 				s1: "adc",
 				s2: "dcda",
@@ -49,6 +49,10 @@ func Test_checkInclusion(t *testing.T) {
 		t.Run(tt.name, func(t *testing.T) {
 			if got := checkInclusion(tt.args.s1, tt.args.s2); got != tt.want {
 				t.Errorf("checkInclusion() = %v, want %v", got, tt.want)
+			}
+
+			if got := checkInclusionS2(tt.args.s1, tt.args.s2); got != tt.want {
+				t.Errorf("checkInclusionS2() = %v, want %v", got, tt.want)
 			}
 
 			if got := checkInclusionO1(tt.args.s1, tt.args.s2); got != tt.want {
