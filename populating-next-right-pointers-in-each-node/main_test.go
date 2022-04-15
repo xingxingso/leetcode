@@ -15,14 +15,14 @@ func Test_connect(t *testing.T) {
 		want *Node
 	}{
 		{
-			name: "equal0",
+			name: "ex1",
 			args: args{
 				root: CreateNodeByArray([]int{1, 2, 3, 4, 5, 6, 7}),
 			},
 			want: CreateNode2(),
 		},
 		{
-			name: "equal1",
+			name: "ex2",
 			args: args{
 				root: CreateNodeByArray([]int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15}),
 			},
