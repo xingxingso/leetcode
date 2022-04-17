@@ -321,6 +321,7 @@
 - [977. 有序数组的平方](https://leetcode-cn.com/problems/squares-of-a-sorted-array/)
 - [1000. 合并石头的最低成本](https://leetcode-cn.com/problems/minimum-cost-to-merge-stones/)
 - [1004. 最大连续1的个数 III](https://leetcode-cn.com/problems/max-consecutive-ones-iii/)
+- [1014. 最佳观光组合](https://leetcode-cn.com/problems/best-sightseeing-pair/)
 - [1046. 最后一块石头的重量](https://leetcode-cn.com/problems/last-stone-weight/)
 - [1059. 从始点到终点的所有路径](https://leetcode-cn.com/problems/all-paths-from-source-lead-to-destination/)
 - [1099. 小于 K 的两数之和](https://leetcode-cn.com/problems/two-sum-less-than-k/)
