@@ -54,6 +54,10 @@ func Test_wordBreak(t *testing.T) {
 			if got := wordBreakS2(tt.args.s, tt.args.wordDict); got != tt.want {
 				t.Errorf("wordBreakS2() = %v, want %v", got, tt.want)
 			}
+
+			if got := wordBreakS3(tt.args.s, tt.args.wordDict); got != tt.want {
+				t.Errorf("wordBreakS3() = %v, want %v", got, tt.want)
+			}
 		})
 	}
 }

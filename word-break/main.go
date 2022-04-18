@@ -86,3 +86,34 @@ func wordBreakS2(s string, wordDict []string) bool {
 
 	return dp[len(s)]
 }
+
+/*
+方法二: 动态规划
+
+时间复杂度：
+空间复杂度：
+*/
+func wordBreakS3(s string, wordDict []string) bool {
+	dp := make([]bool, len(s)+1)
+	dp[0] = true
+	for i := 0; i < len(s); i++ {
+		for j := 0; j < len(wordDict); j++ {
+			word := wordDict[j]
+			if i+1 < len(word) {
+				continue
+			}
+			valid := true
+			for k := 0; k < len(word); k++ {
+				if word[k] != s[i+1-len(word)+k] {
+					valid = false
+					break
+				}
+			}
+			if valid && !dp[i+1] {
+				dp[i+1] = dp[i+1-len(word)]
+			}
+		}
+	}
+
+	return dp[len(s)]
+}
