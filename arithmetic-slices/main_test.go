@@ -35,8 +35,12 @@ func Test_numberOfArithmeticSlices(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := numberOfArithmeticSlices(tt.args.nums); got != tt.want {
-				t.Errorf("numberOfArithmeticSlices() = %v, want %v", got, tt.want)
+			if got := numberOfArithmeticSlicesO1(tt.args.nums); got != tt.want {
+				t.Errorf("numberOfArithmeticSlicesO1() = %v, want %v", got, tt.want)
+			}
+
+			if got := numberOfArithmeticSlicesP1(tt.args.nums); got != tt.want {
+				t.Errorf("numberOfArithmeticSlicesP1() = %v, want %v", got, tt.want)
 			}
 		})
 	}
