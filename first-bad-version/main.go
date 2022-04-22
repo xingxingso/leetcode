@@ -18,6 +18,12 @@ https://leetcode-cn.com/problems/first-bad-version/
 */
 package first_bad_version
 
+//* Forward declaration of isBadVersion API.
+//* @param   version   your guess about first bad version
+//* @return 	 	      true if current version is bad
+//*			          false if current version is good
+//* func isBadVersion(version int) bool;
+
 // --- 自己
 
 /*

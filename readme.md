@@ -229,6 +229,7 @@
 - [366. 寻找二叉树的叶子节点](https://leetcode-cn.com/problems/find-leaves-of-binary-tree/)
 - [369. 给单链表加一](https://leetcode-cn.com/problems/plus-one-linked-list/)
 - [372. 超级次方](https://leetcode-cn.com/problems/super-pow/)
+- [374. 猜数字大小](https://leetcode-cn.com/problems/guess-number-higher-or-lower/)
 - [376. 摆动序列](https://leetcode-cn.com/problems/wiggle-subsequence/)
 - [391. 完美矩形](https://leetcode-cn.com/problems/perfect-rectangle/)
 - [394. 字符串解码](https://leetcode-cn.com/problems/decode-string/)
