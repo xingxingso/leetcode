@@ -309,6 +309,7 @@
 - [773. 滑动谜题](https://leetcode-cn.com/problems/sliding-puzzle/)
 - [785. 判断二分图](https://leetcode-cn.com/problems/is-graph-bipartite/)
 - [793. 阶乘函数后 K 个零](https://leetcode-cn.com/problems/preimage-size-of-factorial-zeroes-function/)
+- [852. 山脉数组的峰顶索引](https://leetcode-cn.com/problems/peak-index-in-a-mountain-array/)
 - [870. 优势洗牌](https://leetcode-cn.com/problems/advantage-shuffle/)
 - [875. 爱吃香蕉的珂珂](https://leetcode-cn.com/problems/koko-eating-bananas/)
 - [876. 链表的中间结点](https://leetcode-cn.com/problems/mimerge-k-sorted-listsddle-of-the-linked-list/)
