@@ -227,6 +227,7 @@
 - [354. 俄罗斯套娃信封问题](https://leetcode-cn.com/problems/russian-doll-envelopes/)__
 - [358. K 距离间隔重排字符串](https://leetcode-cn.com/problems/rearrange-string-k-distance-apart/)
 - [366. 寻找二叉树的叶子节点](https://leetcode-cn.com/problems/find-leaves-of-binary-tree/)
+- [367. 有效的完全平方数](https://leetcode-cn.com/problems/valid-perfect-square/)
 - [369. 给单链表加一](https://leetcode-cn.com/problems/plus-one-linked-list/)
 - [372. 超级次方](https://leetcode-cn.com/problems/super-pow/)
 - [374. 猜数字大小](https://leetcode-cn.com/problems/guess-number-higher-or-lower/)
@@ -324,6 +325,7 @@
 - [934. 最短的桥](https://leetcode-cn.com/problems/shortest-bridge/)
 - [969. 煎饼排序](https://leetcode-cn.com/problems/pancake-sorting/)
 - [977. 有序数组的平方](https://leetcode-cn.com/problems/squares-of-a-sorted-array/)
+- [994. 腐烂的橘子](https://leetcode-cn.com/problems/rotting-oranges/)
 - [1000. 合并石头的最低成本](https://leetcode-cn.com/problems/minimum-cost-to-merge-stones/)
 - [1004. 最大连续1的个数 III](https://leetcode-cn.com/problems/max-consecutive-ones-iii/)
 - [1014. 最佳观光组合](https://leetcode-cn.com/problems/best-sightseeing-pair/)
@@ -339,6 +341,7 @@
 - [1218. 最长定差子序列](https://leetcode-cn.com/problems/longest-arithmetic-subsequence-of-given-difference/)
 - [1288. 删除被覆盖区间](https://leetcode-cn.com/problems/remove-covered-intervals/)
 - [1312. 让字符串成为回文串的最少插入次数](https://leetcode-cn.com/problems/minimum-insertion-steps-to-make-a-string-palindrome/)
+- [1385. 两个数组间的距离值](https://leetcode-cn.com/problems/find-the-distance-value-between-two-arrays/)
 - [1406. 石子游戏 III](https://leetcode-cn.com/problems/stone-game-iii/)
 - [1510. 石子游戏 IV](https://leetcode-cn.com/problems/stone-game-iv/)
 - [1563. 石子游戏 V](https://leetcode-cn.com/problems/stone-game-v/)

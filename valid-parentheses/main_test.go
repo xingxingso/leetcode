@@ -12,42 +12,42 @@ func Test_isValid(t *testing.T) {
 		want bool
 	}{
 		{
-			name: "equal0",
+			name: "ex1",
 			args: args{
 				s: "()",
 			},
 			want: true,
 		},
 		{
-			name: "equal1",
+			name: "ex2",
 			args: args{
 				s: "()[]{}",
 			},
 			want: true,
 		},
 		{
-			name: "equal3",
+			name: "ex3",
 			args: args{
 				s: "(]",
 			},
 			want: false,
 		},
 		{
-			name: "equal4",
+			name: "ex4",
 			args: args{
 				s: "([)]",
 			},
 			want: false,
 		},
 		{
-			name: "equal5",
+			name: "ex5",
 			args: args{
 				s: "{[]}",
 			},
 			want: true,
 		},
 		{
-			name: "equal6",
+			name: "ex6",
 			args: args{
 				s: "(){}}{",
 			},

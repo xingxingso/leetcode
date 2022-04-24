@@ -9,7 +9,7 @@ https://leetcode-cn.com/problems/find-the-derangement-of-an-array/
 由于答案可能非常大，你只需要将答案对 109+7 取余输出即可。
 
 注释:
-	n 的范围是 [1, 106]。
+	n 的范围是 [1, 10^6]。
 
 */
 package find_the_derangement_of_an_array
