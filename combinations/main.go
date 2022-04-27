@@ -23,9 +23,10 @@ func combine(n int, k int) [][]int {
 	var backTack func(idx int)
 	backTack = func(idx int) {
 		if k == len(item) {
-			temp := make([]int, k)
-			copy(temp, item)
-			ans = append(ans, temp)
+			//temp := make([]int, k)
+			//copy(temp, item)
+			//ans = append(ans, temp)
+			ans = append(ans, append([]int{}, item...))
 			return
 		}
 		for i := idx; i <= n; i++ {

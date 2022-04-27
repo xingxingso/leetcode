@@ -301,6 +301,7 @@
 - [733. 图像渲染](https://leetcode-cn.com/problems/flood-fill/)
 - [739. 每日温度](https://leetcode-cn.com/problems/daily-temperatures/)
 - [740. 删除并获得点数](https://leetcode-cn.com/problems/delete-and-earn/)
+- [744. 寻找比目标字母大的最小字母](https://leetcode-cn.com/problems/find-smallest-letter-greater-than-target/)
 - [746. 使用最小花费爬楼梯](https://leetcode-cn.com/problems/min-cost-climbing-stairs/)
 - [751. IP 到 CIDR](https://leetcode-cn.com/problems/ip-to-cidr/)
 - [752. 打开转盘锁](https://leetcode-cn.com/problems/open-the-lock/)
